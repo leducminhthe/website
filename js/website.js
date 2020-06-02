@@ -4,8 +4,8 @@ $('.owl-carousel').owlCarousel({
     nav:true,
     autoplay:1000,
     responsive:{
-        0:{
-            items:1
+        300:{
+            items:2
         },
         600:{
             items:3

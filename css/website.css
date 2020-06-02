@@ -5,18 +5,13 @@
 .container{
 	width: 1200px;
 	margin: 5px auto;
+  position: relative;
 }
 li{
 	list-style: none;
 }
-.login{
-	position: relative;
-	height: 130px;
-}
 .member{
-	position: absolute;
-	top: 10px;
-	right: 0px;
+  float: right;
 }
 .member li{
 	float: left;
@@ -30,16 +25,11 @@ li{
 	text-decoration: none;
 	color: #736E6E;
 }
-.logo{
-	left: 50%;
-    position: absolute;
-    top: 50px;
-    margin-left: -53px;
+.login{
+  clear: both;
 }
-.cart_left{
-	position: absolute;
-    top: 50px;
-    left: 15px;
+.logo{
+  text-align: center;
 }
 .cart_left li{
 	float: left;
@@ -50,9 +40,7 @@ li{
 	border: none;
 }
 .cart_right{
-	position: absolute;
-    top: 50px;
-    right: 0px;
+  float: right;
 }
 .cart_right li{
 	float: left;
@@ -63,7 +51,6 @@ li{
 	border: none;
 }
 .menu{
-	position: relative;
 	border-top: 1px solid #e5e5e5;
 	border-bottom: 2px solid #2b2b2b;
 }
@@ -100,10 +87,20 @@ li{
   top: -5px;
   width: 250px;
   display: none;
-  text-align: left;
   border-left: 1px solid #fff;
-  font-size: 90%;
-  border-radius: 0px 10px 10px 0px;
+  z-index: 10;
+}
+#mainnav .sub-menu2{
+  position: absolute;
+  left: 249px;
+  top: -5px;
+  width: 250px;
+  border-left: 1px solid #fff;
+  display: none;
+  z-index: 10;
+}
+#mainnav li:hover .sub-menu2{
+  display: block;
 }
 #mainnav .sub-menu h4{
 	padding: 5px;

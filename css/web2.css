@@ -1,4 +1,3 @@
-
 .item{
 	position: relative;
 }
@@ -124,4 +123,10 @@
 }
 .footer_img{
     text-align: center;
+}
+.marklayer img{
+    height: 40px;
+}
+.container{
+    position: relative;
 }
