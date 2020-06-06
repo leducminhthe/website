@@ -54,6 +54,22 @@ li{
 	border-top: 1px solid #e5e5e5;
 	border-bottom: 2px solid #2b2b2b;
 }
+.menu-area{
+        position: static;
+      }
+      .mega-area{
+        position: absolute;
+        width: 100%;
+        left: 0;
+        right: 0;
+        padding: 15px;
+      }
+      .dropdown-item{
+        padding: 5px 0;
+      }
+      .navbar{
+        margin-top: 2%;
+      }
 #mainnav ul{
   background: #3B5998;
   list-style: none;

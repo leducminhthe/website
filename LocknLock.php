@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" type="text/css" href="css/website.css">
+    <link rel="stylesheet" type="text/css" href="css/web1.css">
     <link rel="stylesheet" type="text/css" href="css/web2.css">
     <link rel="stylesheet" type="text/css" href="css/reponsive.css">
 
@@ -61,22 +61,87 @@
 
         <div class="menu">
           <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            <div class="collapse navbar-collapse" id="navbar">
               <ul class="navbar-nav mr-auto">
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    DANH MỤC SẢN PHẨM
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </div>
-                </li>
+                <li class="nav-item dropdown menu-area">
+                    <a class="nav-link dropdown-toggle" href="#" id="mega-one" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      DANH MỤC SẢN PHẨM
+                    </a>
+                    <div class="dropdown-menu mega-area"  aria-labelledby="mega-one">
+                      <div class="row">
+                        <div class="col-sm-6 col-lg-3">
+                          <h5>Hộp bảo quản</h5>
+                          <a href="" title="" class="dropdown-item">Hộp kín hơi</a>
+                          <a href="" title="" class="dropdown-item">Hộp nhựa</a>
+                          <a href="" title="" class="dropdown-item">Hủ gia vị</a>
+                          <a href="" title="" class="dropdown-item">Nắp hộp kín hơi</a>
+                        </div>
+                        <div class="col-sm-6 col-lg-3">
+                          <h5>Dụng cụ nấu ăn</h5>
+                          <a href="#" title="" class="dropdown-item">Chảo/Chảo sâu lòng</a>
+                          <a href="#" title="" class="dropdown-item">Nồi chảo/Nồi áp xuất</a>
+                          <a href="#" title="" class="dropdown-item">Dùng cho lò nướng</a>
+                          <a href="#" title="" class="dropdown-item">Dụng cụ trộn thực phẩm</a>
+                          <a href="#" title="" class="dropdown-item">Khay/rỗ</a>
+                          <a href="#" title="" class="dropdown-item">Dụng cụ nhà bếp/Đồ gắp</a>
+                          <a href="#" title="" class="dropdown-item">Dao/Kéo</a>
+                          <a href="#" title="" class="dropdown-item">Thớt</a>
+                        </div>
+                        <div class="col-sm-6 col-lg-3">
+                          <h5>Phụ kiện nhà bếp</h5>
+                          <a href="#" title="" class="dropdown-item">Bình nước</a>
+                          <a href="#" title="" class="dropdown-item">Ly/Cốc</a>
+                          <a href="#" title="" class="dropdown-item">Đế nồi</a>
+                          <a href="#" title="" class="dropdown-item">Khay</a>
+                          <a href="#" title="" class="dropdown-item">Tấm lót bàn ăn</a>
+                          <a href="#" title="" class="dropdown-item">Ấm đun nước</a>
+                        </div>
+                        <div class="col-sm-6 col-lg-3">
+                          <h5>Đồ dùng dã ngoại</h5>
+                          <a href="#" title="" class="dropdown-item">Bình nước</a>
+                          <a href="#" title="" class="dropdown-item">Hộp cơm</a>
+                          <a href="#" title="" class="dropdown-item">Đồ dùng du lịch</a>
+                          <a href="#" title="" class="dropdown-item">Đồ dùng cắm trại</a>
+                        </div>
+                        <div class="col-sm-6 col-lg-3">
+                          <h5>Bảo quản đồ đạc</h5>
+                          <a href="#" title="" class="dropdown-item">Thùng đựng đồ</a>
+                          <a href="#" title="" class="dropdown-item">Giỏ</a>
+                          <a href="#" title="" class="dropdown-item">Kệ/Tủ</a>
+                          <a href="#" title="" class="dropdown-item">Kệ kéo</a>
+                          <a href="#" title="" class="dropdown-item">Túi hút chân không</a>
+                        </div>
+                        <div class="col-sm-6 col-lg-3">
+                          <h5>Hàng gia dụng</h5>
+                          <a href="#" title="" class="dropdown-item">Thiết bị nhà bếp</a>
+                          <a href="#" title="" class="dropdown-item">Thiết bị gia dụng</a>
+                        </div>
+                        <div class="col-sm-6 col-lg-3">
+                          <h5>Đồ dùng trẻ em</h5>
+                          <a href="#" title="" class="dropdown-item">Dụng cụ uống sữa</a>
+                          <a href="#" title="" class="dropdown-item">Đồ dùng cho bé</a>
+                          <a href="#" title="" class="dropdown-item">Dụng cụ vệ sinh cho bé</a>
+                          <a href="#" title="" class="dropdown-item">Thảm cho bé</a>
+                        </div>
+                        <div class="col-sm-6 col-lg-3">
+                          <h5>Đồ nội thất</h5>
+                          <a href="#" title="" class="dropdown-item">Bàn đa năng</a>
+                          <a href="#" title="" class="dropdown-item">Kệ treo/Kệ sách</a>
+                          <a href="#" title="" class="dropdown-item">Bàn/Tủ/Ghế</a>
+                          <a href="#" title="" class="dropdown-item">Giường</a>
+                          <a href="#" title="" class="dropdown-item">Sofa/Đồ dùng cho khách</a>
+                          <a href="#" title="" class="dropdown-item">Thảm</a>
+                          <a href="#" title="" class="dropdown-item">Phụ kiện nội thất</a>
+                          <a href="#" title="" class="dropdown-item">Đèn</a>
+                          <a href="#" title="" class="dropdown-item">Tủ quần áo/Tủ lắp ráp</a>
+                          <a href="#" title="" class="dropdown-item">Bàn trang điểm/Gương</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">SẢN PHẨM BÁN CHẠY</a>
                 </li>
@@ -239,8 +304,8 @@
                     <p class="ranking best_1">BEST <span>1</span></p>
                     <p class="mainProduct_listTit">Bộ túi hộp cơm thủy tinh L&amp;L 4EA  (LLG422*3, HWB801WN-B-0*1) - Màu Wine</p>
                     <p class="mainProduct_listPrice"> 
-                        <span>620,000₫</span>
-                      </p>
+                      <span>620,000₫</span>
+                    </p>
                   </figcaption>
                 </figure>
               </a>
@@ -253,8 +318,8 @@
                     <p class="ranking best_2">BEST <span>2</span></p>
                     <p class="mainProduct_listTit">Bộ túi hộp cơm thủy tinh chịu nhiệt L&amp;L 4EA (LLG821*3,LLG821B-BAG-0*1)- Màu xanh dương</p>
                     <p class="mainProduct_listPrice">       
-                        <span>578,000₫</span>
-                      </p>
+                      <span>578,000₫</span>
+                    </p>
                   </figcaption>
                 </figure>
               </a>
