@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Carousel Gallery Slider</title>
+    <link rel="stylesheet" type="text/css" href="css/css.css">
+	<link rel="icon" type="image/x-icon" href="images/favicon.png">
+</head>
+<body>
+<div class="galleryContainer">
+    <div class="slideShowContainer">
+        <div id="playPause" onclick="playPauseSlides()"></div>
+        <div onclick="plusSlides(-1)" class="nextPrevBtn leftArrow"><span class="arrow arrowLeft"></span></div>
+        <div onclick="plusSlides(1)" class="nextPrevBtn rightArrow"><span class="arrow arrowRight"></span></div>
+        <div class="captionTextHolder"><p class="captionText slideTextFromTop"></p></div>
+        <div class="imageHolder">
+            <img src="images/900x350.jpg">
+            <p class="captionText">Caption Text-01</p>
+        </div>
+        <div class="imageHolder">
+            <img src="images/binh-giu-nhiet-colorful-banner.jpg">
+            <p class="captionText">Caption Text-02</p>
+        </div>
+        <div class="imageHolder">
+            <img src="images/member.jpg">
+            <p class="captionText">Caption Text-03</p>
+        </div>
+        <div class="imageHolder">
+            <img src="images/mayeptraicay.jpg">
+            <p class="captionText">Caption Text-04</p>
+        </div>
+        <div class="imageHolder">
+            <img src="images/Untitled-1.jpg">
+            <p class="captionText">Caption Text-05</p>
+        </div>
+    </div>
+    <div id="dotsContainer"></div>
+</div>
+<script src="js/myScript.js"></script>
+</body>
+</html>

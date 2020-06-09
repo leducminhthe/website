@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" type="text/css" href="css/web1.css">
-    <link rel="stylesheet" type="text/css" href="css/web2.css">
+    <link rel="stylesheet" type="text/css" href="css/web_1.css">
     <link rel="stylesheet" type="text/css" href="css/reponsive.css">
+    <link rel="stylesheet" type="text/css" href="css/web_2.css">
+    <link rel="stylesheet" type="text/css" href="css/slide.css">
 
     <title>Hello, world!</title>
   </head>
@@ -200,13 +201,14 @@
                   <li><a href="#">Tấm lót bàn ăn</a></li>
                   <li><a href="#">Ấm đun nước</a></li>
                   <ul class="sub-menu2">
-                    <h4>Đồ dùng trên bàn</h4>
-                    <li><a href="#">Bình nước</a></li>
-                    <li><a href="#">Ly/Cốc</a></li>
-                    <li><a href="#">Đế nồi</a></li>
-                    <li><a href="#">Khay</a></li>
-                    <li><a href="#">Tấm lót bàn ăn</a></li>
-                    <li><a href="#">Ấm đun nước</a></li>
+                    <h4>Phụ kiện nhà bếp</h4>
+                    <li><a href="#">Dụng cụ vệ sinh</a></li>
+                    <li><a href="#">Đồ rửa chén</a></li>
+                    <li><a href="#">Dụng cụ làm đá</a></li>
+                    <li><a href="#">Dụng cụ nấu ăn</a></li>
+                    <li><a href="#">Giá/Kệ</a></li>
+                    <li><a href="#">Hàng dùng một lần</a></li>
+                    <li><a href="#">Dụng cụ bảo quản tủ lạnh</a></li>
                   </ul>
                 </ul>
               </li>
@@ -217,16 +219,13 @@
                   <li><a href="#">Hộp cơm</a></li>
                   <li><a href="#">Đồ dùng du lịch</a></li>
                   <li><a href="#">Đồ dùng cắm trại</a></li>
-                  <li>
-                    <ul class="sub-menu2">
-                      <h4>Bảo quản đồ đạc</h4>
-                      <li><a href="#">Thùng đựng đồ</a></li>
-                      <li><a href="#">Giỏ</a></li>
-                      <li><a href="#">Kệ/Tủ</a></li>
-                      <li><a href="#">Kệ kéo</a></li>
-                      <li><a href="#">Túi hút chân không</a></li>
-                    </ul>
-                  </li>
+                  <ul class="sub-menu2">
+                    <h4>Bình giữ nhiệt/Giữ lạnh</h4>
+                    <li><a href="#">Hộp cơm giữ nhiệt</a></li>
+                    <li><a href="#">Hộp đựng cháo</a></li>
+                    <li><a href="#">Bình giữ nhiệt/Giữ lạnh</a></li>
+                    <li><a href="#">Túi chườm lạnh</a></li>
+                  </ul>
                 </ul> 
               </li>
               <li><a href="#">Đồ dùng sinh hoạt</a>
@@ -238,13 +237,13 @@
                   <li><a href="#">Kệ kéo</a></li>
                   <li><a href="#">Túi hút chân không</a></li>
                   <ul class="sub-menu2">
-                    <h4>Bảo quản đồ đạc</h4>
-                    <li><a href="#">Thùng đựng đồ</a></li>
-                    <li><a href="#">Giỏ</a></li>
-                    <li><a href="#">Kệ/Tủ</a></li>
-                    <li><a href="#">Kệ kéo</a></li>
-                    <li><a href="#">Túi hút chân không</a></li>
-                </ul>
+                    <h4>Đồ dùng sinh hoạt</h4>
+                    <li><a href="#">Dụng cụ nhà tắm</a></li>
+                    <li><a href="#">Thùng rác</a></li>
+                    <li><a href="#">Móc/Kệ treo đồ</a></li>
+                    <li><a href="#">Chăn/ra/gối</a></li>
+                    <li><a href="#">Cây lau nhà</a></li>
+                  </ul>
                 </ul>
               </li>
               <li><a href="#">Hàng gia dụng</a>
@@ -282,7 +281,35 @@
           </div>
         </div>
 
-        <div class="main_right col-9 col-lg-9 col-md-9">    
+        <div class="main_right col-9 col-lg-9 col-md-9"> 
+          <div class="galleryContainer">
+              <div class="slideShowContainer">
+                  <div onclick="plusSlides(-1)" class="nextPrevBtn leftArrow"><span class="arrow arrowLeft"></span></div>
+                  <div onclick="plusSlides(1)" class="nextPrevBtn rightArrow"><span class="arrow arrowRight"></span></div>
+                  <div class="captionTextHolder"><p class="captionText slideTextFromTop"></p></div>
+                  <div class="imageHolder">
+                      <img src="images/900x350.jpg">
+                      <p class="captionText">Ngày Hội Lock&Lock</p>
+                  </div>
+                  <div class="imageHolder">
+                      <img src="images/binh-giu-nhiet-colorful-banner.jpg">
+                      <p class="captionText">Sản Phẩm Mới</p>
+                  </div>
+                  <div class="imageHolder">
+                      <img src="images/member.jpg">
+                      <p class="captionText">ƯU ĐÃI THÀNH VIÊN</p>
+                  </div>
+                  <div class="imageHolder">
+                      <img src="images/mayeptraicay.jpg">
+                      <p class="captionText">Sản phẩm bán chạy</p>
+                  </div>
+                  <div class="imageHolder">
+                      <img src="images/Untitled-1.jpg">
+                      <p class="captionText">Giảm Giá</p>
+                  </div>
+              </div>
+              <div id="dotsContainer"></div>
+          </div>
         </div>
       </div>
 
@@ -1175,7 +1202,8 @@
 
     <script src="./js/jquery.min.js"></script>
     <script src="./js/owl.carousel.min.js"></script>
-    <script src="./js/website.js"></script>
+    <script src="./js/website_js.js"></script>
+    <script src="js/slide_js.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
