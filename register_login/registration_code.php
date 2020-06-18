@@ -10,9 +10,9 @@ $lname = $_POST['lastname'];
 $gender = $_POST['gender'];
 $email = $_POST['email'];
 $pwd = $_POST['password'];
-$password = MD5($pwd);
+$password = password_hash($pwd, PASSWORD_DEFAULT);
 
-$sql = "INSERT INTO user (Firstname,Lastname,Gender,Email,Password) VALUES ('$fname','$lname','$gender','$email','$password')";
+$sql = "INSERT INTO user(Firstname,Lastname,Gender,Email,Password) VALUES ('$fname','$lname','$gender','$email','$password')";
 $result = mysqli_query($conn, $sql);
 if($result)
 {

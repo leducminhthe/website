@@ -29,6 +29,7 @@ function initGallery(){
     }
     dots[slideIndex].classList.add("active");
 }
+
 initGallery();
 function plusSlides(n) {
     moveSlide(slideIndex+n);

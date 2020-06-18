@@ -1,11 +1,11 @@
 <?php
 
 
-class Home extends Controller{
+class HomeController extends Controller{
 
     function Trangchu(){
         //model
-        $sp = $this->model("SanPham");
+        $sp = $this->model("SanPhamModel");
 
         //view
         $this->view("layout1", [

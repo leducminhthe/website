@@ -1,7 +1,9 @@
+
 <?php
+// thư mục core: middleware
 class App{
 
-    protected $controller="Home";
+    protected $controller="HomeController";
     protected $action="Trangchu";
     protected $params=[];
 
@@ -32,8 +34,8 @@ class App{
 
         //tạo biến controller và có hàm là action
         call_user_func_array([$this->controller, $this->action], $this->params );
-
     }
+
 
     //xử lý đưa url về mảng
     function UrlProcess(){

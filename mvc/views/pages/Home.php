@@ -121,23 +121,23 @@
                   <div onclick="plusSlides(1)" class="nextPrevBtn rightArrow"><span class="arrow arrowRight"></span></div>
                   <div class="captionTextHolder"><p class="captionText slideTextFromTop"></p></div>
                   <div class="imageHolder">
-                      <img src="./public/images/900x350.jpg">
+                      <img src="<?php echo file ?>/images/900x350.jpg">
                       <p class="captionText">Ngày Hội Lock&Lock</p>
                   </div>
                   <div class="imageHolder">
-                      <img src="./public/images/binh-giu-nhiet-colorful-banner.jpg">
+                      <img src="<?php echo file ?>/images/binh-giu-nhiet-colorful-banner.jpg">
                       <p class="captionText">Sản Phẩm Mới</p>
                   </div>
                   <div class="imageHolder">
-                      <img src="./public/images/member.jpg">
+                      <img src="<?php echo file ?>/images/member.jpg">
                       <p class="captionText">ƯU ĐÃI THÀNH VIÊN</p>
                   </div>
                   <div class="imageHolder">
-                      <img src="./public/images/mayeptraicay.jpg">
+                      <img src="<?php echo file ?>/images/mayeptraicay.jpg">
                       <p class="captionText">Sản phẩm bán chạy</p>
                   </div>
                   <div class="imageHolder">
-                      <img src="./public/images/Untitled-1.jpg">
+                      <img src="<?php echo file ?>/images/Untitled-1.jpg">
                       <p class="captionText">Giảm Giá</p>
                   </div>
               </div>
@@ -316,7 +316,7 @@
                 <div class="list_box row">
                   <div class="list_box_left col-4 col-md-4 col-lg-4">
                     <a href="">
-                      <img src="./public/images/CA_water_bottle.png" class="img_Box">
+                      <img src="<?php echo file ?>/images/CA_water_bottle.png" class="img_Box">
                     </a>
                   </div>
                   <div class="list_box_right col-8 col-md-8 col-lg-8">
@@ -410,7 +410,7 @@
                 <div class="list_box row">
                   <div class="list_box_left col-4 col-md-4 col-lg-4">
                     <a href="">
-                      <img src="./public/images/CA_cookware_2.png" class="img_Box">
+                      <img src="<?php echo file ?>/images/CA_cookware_2.png" class="img_Box">
                     </a>
                   </div>
                   <div class="list_box_right col-8 col-md-8 col-lg-8">
@@ -516,7 +516,7 @@
                 <div class="list_box row">
                   <div class="list_box_left col-4 col-md-4 col-lg-4">
                     <a href="">
-                      <img src="./public/images/CA_appliances_1.png" class="img_Box">
+                      <img src="<?php echo file ?>/images/CA_appliances_1.png" class="img_Box">
                     </a>
                   </div>
                   <div class="list_box_right col-8 col-md-8 col-lg-8">
@@ -622,7 +622,7 @@
                 <div class="list_box row">
                   <div class="list_box_left col-4 col-md-4 col-lg-4">
                     <a href="">
-                      <img src="./public/images/CA_food_storage.png" class="img_Box">
+                      <img src="<?php echo file ?>/images/CA_food_storage.png" class="img_Box">
                     </a>
                   </div>
                   <div class="list_box_right col-8 col-md-8 col-lg-8">
@@ -728,7 +728,7 @@
                 <div class="list_box row">
                   <div class="list_box_left col-4 col-md-4 col-lg-4">
                     <a href="">
-                      <img src="./public/images/CA_vacuum_flask.png" class="img_Box">
+                      <img src="<?php echo file ?>/images/CA_vacuum_flask.png" class="img_Box">
                     </a>
                   </div>
                   <div class="list_box_right col-8 col-md-8 col-lg-8">
@@ -834,7 +834,7 @@
                 <div class="list_box row">
                   <div class="list_box_left col-4 col-md-4 col-lg-4">
                     <a href="">
-                      <img src="./public/images/CA_lunch_box.png" class="img_Box">
+                      <img src="<?php echo file ?>/images/CA_lunch_box.png" class="img_Box">
                     </a>
                   </div>
                   <div class="list_box_right col-8 col-md-8 col-lg-8">
@@ -950,9 +950,9 @@
           <article style="margin: 20px;">
             <h4><img src="http://www.locknlock.vn/data/base/imgs/main/mainService_rSide_bottomBottom_tit.png"></h4>
             <ul class="mainService_center_list">
-              <li><a href=""  title="Facebook"><img src="./public/images/facebook (1).png"></a></li>
-              <li><a href=""  title="YouTube"><img src="./public/images/youtube.png"></li>
-              <li><a href=""  title="Instagram"><img src="./public/images/instagram.png"></a></li>
+              <li><a href=""  title="Facebook"><img src="<?php echo file ?>/images/facebook (1).png"></a></li>
+              <li><a href=""  title="YouTube"><img src="<?php echo file ?>/images/youtube.png"></li>
+              <li><a href=""  title="Instagram"><img src="<?php echo file ?>/images/instagram.png"></a></li>
             </ul>
           </article>
         </div>
