@@ -17,15 +17,43 @@
     <div class="container">
 
       <div class="header">
-          
-        <div class="member row justify-content-end">
-          <ul class="col-12 col-md-12 col-lg-12">
-            <li><a href="" >Đăng nhập</a></li>
-            <li><a href="" >Gia nhập thảnh viên</a></li>
-            <li><a href="" >My Page</a></li>
-            <li><a href="" >Chăm sóc khánh hàng</a></li>                  
-          </ul>
-        </div>
+
+        <?php 
+          if (isset($_SESSION['email'])) {
+
+            $email = $_SESSION['email'];
+            $name = $_SESSION['name'];
+
+            ?>
+              <div class="btn-group account">
+                <marquee  scrollamount="10"><h3>chào mừng <?php echo $name;?> đến với chúng tôi</h3></marquee>
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <?php echo $email;?>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right option">
+                  <button class="dropdown-item" type="button"><a href="/website/LogoutController">Logout</a></button>
+                  <button class="dropdown-item" type="button"><a href="" >My Page</a></button>
+                  <button class="dropdown-item" type="button">
+                    <a href="/website/LienHeController" >Chăm sóc khánh hàng</a>
+                  </button>
+                </div>
+              </div>
+
+             
+            <?php
+          }else{
+            ?>
+              <div class="member row justify-content-end">
+                <ul class="col-12 col-md-12 col-lg-12">
+                  <li><a href="/website/LoginController" >Đăng nhập</a></li>
+                  <li><a href="/website/RegisterController" >Gia nhập thảnh viên</a></li>
+                  <li><a href="" >My Page</a></li>
+                  <li><a href="/website/LienHeController" >Chăm sóc khánh hàng</a></li>                  
+                </ul>
+              </div>
+            <?php
+          } 
+        ?>
 
         <div class="login row">
           <ul class="cart_left col-4 col-md-4 col-lg-4">
@@ -38,7 +66,7 @@
           </ul>
 
           <h1 class="logo col-4 col-md-4 col-lg-4">
-            <a href="" >
+            <a href="/website/HomeController" >
               <img src="http://www.locknlock.vn/data/base/banner/hd2_logo_4.gif">       
             </a>
          </h1>
@@ -153,7 +181,7 @@
               <form class="form-inline my-2 my-lg-0">
                 <input class="form-control " type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-secondary my-2 my-sm-0" type="submit">
-                  <img src="./public/images/search.png" >
+                  <img src="<?php echo file ?>/images/search.png" >
                 </button>
               </form>
             </div>

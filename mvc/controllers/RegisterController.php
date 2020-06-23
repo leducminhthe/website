@@ -24,13 +24,16 @@
 				$gender = $_POST['gender'];
 				$email = $_POST['email'];
 				$pwd = $_POST['password'];
-				$phone = $_POST["phonenumber"];
 				$password = password_hash($pwd, PASSWORD_DEFAULT);
+				$phone = $_POST["phonenumber"];
    			}
    			
+			$kq = $this->UserModel->InsertUser($fname,$lname,$gender,$email,$password,$phone);
 
-			$kq = $this->UserModel->InsertUser($fname,$lname,$gender,$email,$phone,$password );
-			print_r($kq);
+			$this->view("layout1", [
+            	"Page"=>"Login",
+            	"Result" => $kq
+        	]);
    		}
 	}
 

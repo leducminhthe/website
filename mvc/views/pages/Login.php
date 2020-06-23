@@ -1,15 +1,5 @@
-<!--
-Into this file, we create a layout for login page.
--->
-
-<?php
-include_once('header.php');
-include_once('link.php');
-
-?>
-
-<div id="frmLogin">
-<form class="form-horizontal" action="login_code.php" method="POST">
+<div id="frmRegistration">
+<form class="form-horizontal" method="POST" action="./LoginController/Login">
 	<h1>User Login</h1>
 	
   <div class="form-group">
@@ -31,3 +21,15 @@ include_once('link.php');
   </div>
 </form>
 </div>
+
+<?php if( isset($data['Result'])) { ?>
+  <h3>
+    <?php 
+      if ($data['Result'] == true) {
+        echo "Đăng ký thành công";
+      }else{
+        echo "Đăng ký thất bại";
+      }
+    ?>
+  </h3>
+<?php } ?>

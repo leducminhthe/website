@@ -26,6 +26,15 @@ li{
 	text-decoration: none;
 	color: #736E6E;
 }
+.account{
+  float: right;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.option{
+  padding: 10px;
+  text-align: right;
+}
 
 /* login */
 .login{

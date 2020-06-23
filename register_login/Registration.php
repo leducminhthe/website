@@ -2,7 +2,7 @@
 Into this file, we create a layout for registration page.
 -->
 <?php
-include_once('header.php');
+include_once('header1.php');
 include_once('link.php');
 ?>
 
