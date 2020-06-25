@@ -10,7 +10,12 @@ class HomeController extends Controller{
         //view
         $this->view("layout1", [
             "Page"=>"Home",
-            "SP" => $sp->GetSP()
+            "BinhNuoc" => $sp->BinhNuoc(),
+            "DungCuNauAn" => $sp->DungCuNauAn(),
+            "HangGiaDung" =>$sp->HangGiaDung(),
+            "HopBaoQuan" => $sp->HopBaoQuan(),
+            "BinhGiuNhiet" => $sp->BinhGiuNhiet(),
+            "HopCom" => $sp->HopCom()
         ]);
     }
 }

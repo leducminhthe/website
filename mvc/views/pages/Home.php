@@ -155,6 +155,7 @@
         <div class="slide row">
           <div class="col-12 col-lg-12 col-md-12">
             <div class="owl-carousel owl-theme">
+      
               <div class="item">
                 <a href="">
                   <figure>
@@ -168,7 +169,8 @@
                     </figcaption>
                   </figure>
                 </a>
-              </div>     
+              </div>  
+
               <div class="item">
                 <a href="">
                   <figure>
@@ -312,87 +314,34 @@
                 <p>
                   BÌNH NƯỚC
                   <span style="float: right;"><a href="" >Xem thêm</a></span>
-                </p>
+                </p>               
                 <div class="list_box row">
                   <div class="list_box_left col-4 col-md-4 col-lg-4">
                     <a href="">
                       <img src="<?php echo file ?>/images/CA_water_bottle.png" class="img_Box">
                     </a>
                   </div>
+
                   <div class="list_box_right col-8 col-md-8 col-lg-8">
                     <ul class="row">
+                    <?php
+                      while($row = mysqli_fetch_array($data['BinhNuoc'])) { ?>
+
                       <li class="col-4 col-md-4 col-lg-4">
                         <a href="">
                           <figure>
-                            <p class="mainProduct_listImg"><img src="http://www.locknlock.vn/data/base/goods/small/201817039046792.jpg" alt="Bình nhựa đựng nước Lock&amp;Lock dung tích 520ml" style="width: 100%;"></p>
+                            <p class="mainProduct_listImg"><?=$row['AnhSP'] ?></p>
                             <figcaption>
-                              <p class="mainProduct_listTit">Bình nhựa đựng nước Lock&amp;Lock dung tích 520ml</p>
+                              <p class="mainProduct_listTit"><?=$row['TenSP']?></p>
                               <p class="mainProduct_listPrice">
-                                <span>198,000</span>₫</p>
+                                <span><?=$row['GIA_BD']?></span>₫</p>
                             </figcaption>
                           </figure>
                         </a>
                       </li>
-                      <li class="col-4 col-md-4 col-lg-4">
-                        <a href="">
-                          <figure>
-                            <p class="mainProduct_listImg"><img src="http://www.locknlock.vn/data/base/goods/small/201817036880419.jpg" alt="Bình nước nhựa Lock&amp;Lock 430ml" style="width: 100%;"></p>
-                            <figcaption>
-                              <p class="mainProduct_listTit">Bình nước nhựa Lock&amp;Lock 430ml</p>
-                              <p class="mainProduct_listPrice">
-                                <span>260,000</span>₫</p>
-                            </figcaption>
-                          </figure>
-                        </a>
-                      </li>
-                      <li class="col-4 col-md-4 col-lg-4">
-                        <a href="">
-                          <figure>
-                            <p class="mainProduct_listImg"><img src="http://www.locknlock.vn/data/base/goods/small/201817034804743.jpg" alt="Bình đựng nước Lock&amp;Lock Eco Water Bottle 550ml" style="width: 100%;"></p>
-                            <figcaption>
-                              <p class="mainProduct_listTit">Bình đựng nước Lock&amp;Lock Eco Water Bottle 550ml</p>
-                              <p class="mainProduct_listPrice">
-                                <span>146,000</span>₫</p>
-                            </figcaption>
-                          </figure>
-                        </a>
-                      </li>
-                      <li class="col-4 col-md-4 col-lg-4">
-                        <a href="">
-                          <figure>
-                            <p class="mainProduct_listImg"><img src="http://www.locknlock.vn/data/base/goods/small/201834653628044.JPG" alt="Bình lắc SHAKE IT L&amp;L, 600ml - Màu xanh dương" style="width: 100%;"></p>
-                            <figcaption>
-                              <p class="mainProduct_listTit">Bình lắc SHAKE IT L&amp;L, 600ml - Màu xanh dương</p>
-                              <p class="mainProduct_listPrice">
-                                <span>230,000</span>₫</p>
-                            </figcaption>
-                          </figure>
-                        </a>
-                      </li>
-                      <li class="col-4 col-md-4 col-lg-4">
-                        <a href="">
-                          <figure>
-                            <p class="mainProduct_listImg"><img src="http://www.locknlock.vn/data/base/goods/small/201817041087790.jpg" alt="Bình Đựng Nước Lock&amp;Lock Ice Bottle HLC568 (550ml)" style="width: 100%;"></p>
-                            <figcaption>
-                              <p class="mainProduct_listTit">Bình Đựng Nước Lock&amp;Lock Ice Bottle HLC568 (550ml)</p>
-                              <p class="mainProduct_listPrice">
-                                <span>95,000</span>₫</p>
-                            </figcaption>
-                          </figure>
-                        </a>
-                      </li>
-                      <li class="col-4 col-md-4 col-lg-4">
-                        <a href="">
-                          <figure>
-                            <p class="mainProduct_listImg"><img src="http://www.locknlock.vn/data/base/goods/small/201834656686569.JPG" alt="Bình lắc SHAKE IT L&amp;L, 600ml - Màu hồng" style="width: 100%;"></p>
-                            <figcaption>
-                              <p class="mainProduct_listTit">Bình lắc SHAKE IT L&amp;L, 600ml - Màu hồng</p>
-                              <p class="mainProduct_listPrice">
-                                <span>230,000</span>₫</p>
-                            </figcaption>
-                          </figure>
-                        </a>
-                      </li>
+
+                    <?php } ?>
+                     
                     </ul>
                   </div>
                 </div>
@@ -415,90 +364,25 @@
                   </div>
                   <div class="list_box_right col-8 col-md-8 col-lg-8">
                     <ul class="row">
+
+                      <?php
+                      while($row = mysqli_fetch_array($data['DungCuNauAn'])) { ?>
+
                       <li class="col-4 col-md-4 col-lg-4">
                         <a href="">
                           <figure>
-                            <p class="mainProduct_listImg"><img src="http://www.locknlock.vn/data/base/goods/small/201825359631443.jpg" alt="Chảo sâu lòng Cookplus Hard&amp;Light 32cm, W/Coating inside Okitsumo (Sử dụng bếp từ)" style="width: 100%;"></p>
+                            <p class="mainProduct_listImg"><?=$row['AnhSP'] ?></p>
                             <figcaption>
-                              <p class="mainProduct_listTit">Chảo sâu lòng Cookplus Hard&amp;Light 32cm, W/Coating inside Okitsumo (Sử dụng bếp từ)</p>
-                              
+                              <p class="mainProduct_listTit"><?=$row['TenSP']?></p>
                               <p class="mainProduct_listPrice">
-                                
-                                <span>660,000</span>₫</p>
+                                <span><?=$row['GIA_BD']?></span>₫</p>
                             </figcaption>
                           </figure>
                         </a>
                       </li>
-                      <li class="col-4 col-md-4 col-lg-4">
-                        <a href="">
-                          <figure>
-                            <p class="mainProduct_listImg"><img src="http://www.locknlock.vn/data/base/goods/small/201825359631506.jpg" alt="Chảo Cookplus Hard&amp;Light 28cm, W/Coating inside Okitsumo (Có thể sử dụng bếp từ)" style="width: 100%;"></p>
-                            <figcaption>
-                              <p class="mainProduct_listTit">Chảo Cookplus Hard&amp;Light 28cm, W/Coating inside Okitsumo (Có thể sử dụng bếp từ)</p>
-                              
-                              <p class="mainProduct_listPrice">
-                                
-                                <span>520,000</span>₫</p>
-                            </figcaption>
-                          </figure>
-                        </a>
-                      </li>
-                      <li class="col-4 col-md-4 col-lg-4">
-                        <a href="">
-                          <figure>
-                            <p class="mainProduct_listImg"><img src="http://www.locknlock.vn/data/base/goods/small/201825359631772.jpg" alt="Chảo sâu lòng Cookplus Hard&amp;Light 26cm,W/Coating inside Okitsumo (Sử dụng bếp từ)" style="width: 100%;"></p>
-                            <figcaption>
-                              <p class="mainProduct_listTit">Chảo sâu lòng Cookplus Hard&amp;Light 26cm,W/Coating inside Okitsumo (Sử dụng bếp từ)</p>
-                              
-                              <p class="mainProduct_listPrice">
-                                
-                                <span>500,000</span>₫</p>
-                            </figcaption>
-                          </figure>
-                        </a>
-                      </li>
-                      <li class="col-4 col-md-4 col-lg-4">
-                        <a href="">
-                          <figure>
-                            <p class="mainProduct_listImg"><img src="http://www.locknlock.vn/data/base/goods/small/201825359631044.jpg" alt="Chảo sâu lòng Cookplus Hard&amp;Light 30cm,W/Coating inside Okitsumo (Sử dụng bếp từ)" style="width: 100%;"></p>
-                            <figcaption>
-                              <p class="mainProduct_listTit">Chảo sâu lòng Cookplus Hard&amp;Light 30cm,W/Coating inside Okitsumo (Sử dụng bếp từ)</p>
-                              
-                              <p class="mainProduct_listPrice">
-                                
-                                <span>590,000</span>₫</p>
-                            </figcaption>
-                          </figure>
-                        </a>
-                      </li>
-                      <li class="col-4 col-md-4 col-lg-4">
-                        <a href="">
-                          <figure>
-                            <p class="mainProduct_listImg"><img src="http://www.locknlock.vn/data/base/goods/small/201825359631992.jpg" alt="Chảo Cookplus Hard&amp;Light 30cm, W/Coating inside Okitsumo (Có thể sử dụng bếp từ)" style="width: 100%;"></p>
-                            <figcaption>
-                              <p class="mainProduct_listTit">Chảo Cookplus Hard&amp;Light 30cm, W/Coating inside Okitsumo (Có thể sử dụng bếp từ)</p>
-                              
-                              <p class="mainProduct_listPrice">
-                                
-                                <span>550,000</span>₫</p>
-                            </figcaption>
-                          </figure>
-                        </a>
-                      </li>
-                      <li class="col-4 col-md-4 col-lg-4">
-                        <a href="">
-                          <figure>
-                            <p class="mainProduct_listImg"><img src="http://www.locknlock.vn/data/base/goods/small/201825359631114.jpg" alt="Chảo sâu lòng Cookplus Hard&amp;Light 28cm, W/Coating inside Okitsumo (Sử dụng bếp từ)" style="width: 100%;"></p>
-                            <figcaption>
-                              <p class="mainProduct_listTit">Chảo sâu lòng Cookplus Hard&amp;Light 28cm, W/Coating inside Okitsumo (Sử dụng bếp từ)</p>
-                              
-                              <p class="mainProduct_listPrice">
-                                
-                                <span>560,000</span>₫</p>
-                            </figcaption>
-                          </figure>
-                        </a>
-                      </li>
+
+                    <?php } ?>
+
                     </ul>
                   </div>
                 </div>
@@ -521,90 +405,25 @@
                   </div>
                   <div class="list_box_right col-8 col-md-8 col-lg-8">
                     <ul class="row">
+
+                      <?php
+                      while($row = mysqli_fetch_array($data['HangGiaDung'])) { ?>
+
                       <li class="col-4 col-md-4 col-lg-4">
                         <a href="">
                           <figure>
-                            <p class="mainProduct_listImg"><img src="http://www.locknlock.vn/data/base/goods/small/201835438430430.JPG" alt="Nồi chiên không dầu thương hiệu LOCK&amp;LOCK, 220-240V, 1500W, 4L - Màu trắng (EJF376WHT)" style="width: 100%;"></p>
+                            <p class="mainProduct_listImg"><?=$row['AnhSP'] ?></p>
                             <figcaption>
-                              <p class="mainProduct_listTit">Nồi chiên không dầu thương hiệu LOCK&amp;LOCK, 220-240V, 1500W, 4L - Màu trắng (EJF376WHT)</p>
-                              
+                              <p class="mainProduct_listTit"><?=$row['TenSP']?></p>
                               <p class="mainProduct_listPrice">
-                                
-                                <span>4,500,000</span>₫</p>
+                                <span><?=$row['GIA_BD']?></span>₫</p>
                             </figcaption>
                           </figure>
                         </a>
                       </li>
-                      <li class="col-4 col-md-4 col-lg-4">
-                        <a href="">
-                          <figure>
-                            <p class="mainProduct_listImg"><img src="http://www.locknlock.vn/data/base/goods/small/201913439724209.jpg" alt="Nồi cơm điện thương hiệu Lock&amp;Lock 220V, 860W, 50/60Hz, 1.8L(5L) - Màu nâu" style="width: 100%;"></p>
-                            <figcaption>
-                              <p class="mainProduct_listTit">Nồi cơm điện thương hiệu Lock&amp;Lock 220V, 860W, 50/60Hz, 1.8L(5L) - Màu nâu</p>
-                              
-                              <p class="mainProduct_listPrice">
-                                
-                                <span>2,770,000</span>₫</p>
-                            </figcaption>
-                          </figure>
-                        </a>
-                      </li>
-                      <li class="col-4 col-md-4 col-lg-4">
-                        <a href="">
-                          <figure>
-                            <p class="mainProduct_listImg"><img src="http://www.locknlock.vn/data/base/goods/small/201828950486960.jpg" alt="Ấm Điện Thủy Tinh Siêu Tốc Có Điều Chỉnh Nhiệt Độ Lock&amp;Lock EJK341 (1.8L)" style="width: 100%;"></p>
-                            <figcaption>
-                              <p class="mainProduct_listTit">Ấm Điện Thủy Tinh Siêu Tốc Có Điều Chỉnh Nhiệt Độ Lock&amp;Lock EJK341 (1.8L)</p>
-                              
-                              <p class="mainProduct_listPrice">
-                                
-                                <span>1,020,000</span>₫</p>
-                            </figcaption>
-                          </figure>
-                        </a>
-                      </li>
-                      <li class="col-4 col-md-4 col-lg-4">
-                        <a href="">
-                          <figure>
-                            <p class="mainProduct_listImg"><img src="http://www.locknlock.vn/data/base/goods/small/201821953428453.jpg" alt="Máy ép trái cây tốc độ cao, hiệu L&amp;L, 220V, 50Hz,600W, 292*237*384mm" style="width: 100%;"></p>
-                            <figcaption>
-                              <p class="mainProduct_listTit">Máy ép trái cây tốc độ cao, hiệu L&amp;L, 220V, 50Hz,600W, 292*237*384mm</p>
-                              
-                              <p class="mainProduct_listPrice">
-                                
-                                <span>2,678,000</span>₫</p>
-                            </figcaption>
-                          </figure>
-                        </a>
-                      </li>
-                      <li class="col-4 col-md-4 col-lg-4">
-                        <a href="">
-                          <figure>
-                            <p class="mainProduct_listImg"><img src="http://www.locknlock.vn/data/base/goods/small/201816557430172.jpg" alt="Máy pha café hiệu Lock&amp;Lock - ELCM-202 (0.3L)" style="width: 100%;"></p>
-                            <figcaption>
-                              <p class="mainProduct_listTit">Máy pha café hiệu Lock&amp;Lock - ELCM-202 (0.3L)</p>
-                              
-                              <p class="mainProduct_listPrice">
-                                
-                                <span>1,369,000</span>₫</p>
-                            </figcaption>
-                          </figure>
-                        </a>
-                      </li>
-                      <li class="col-4 col-md-4 col-lg-4">
-                        <a href="">
-                          <figure>
-                            <p class="mainProduct_listImg"><img src="http://www.locknlock.vn/data/base/goods/small/201816553664694.jpg" alt="Máy Xay Trộn Đa Năng Lock&amp;Lock ELHB-220 (420W)" style="width: 100%;"></p>
-                            <figcaption>
-                              <p class="mainProduct_listTit">Máy Xay Trộn Đa Năng Lock&amp;Lock ELHB-220 (420W)</p>
-                              
-                              <p class="mainProduct_listPrice">
-                                
-                                <span>2,400,000</span>₫</p>
-                            </figcaption>
-                          </figure>
-                        </a>
-                      </li>
+
+                      <?php } ?>
+
                     </ul>
                   </div>
                 </div>
@@ -627,90 +446,25 @@
                   </div>
                   <div class="list_box_right col-8 col-md-8 col-lg-8">
                     <ul class="row">
+
+                      <?php
+                      while($row = mysqli_fetch_array($data['HopBaoQuan'])) { ?>
+
                       <li class="col-4 col-md-4 col-lg-4">
                         <a href="">
                           <figure>
-                            <p class="mainProduct_listImg"><img src="http://www.locknlock.vn/data/base/goods/small/201814857271583.jpg" alt="Bộ 2 Hộp Bảo Quản Lock&amp;Lock Special W/Flip Lid HPL700S2 (5L/Hộp)" style="width: 100%;"></p>
+                            <p class="mainProduct_listImg"><?=$row['AnhSP'] ?></p>
                             <figcaption>
-                              <p class="mainProduct_listTit">Bộ 2 Hộp Bảo Quản Lock&amp;Lock Special W/Flip Lid HPL700S2 (5L/Hộp)</p>
-                              
+                              <p class="mainProduct_listTit"><?=$row['TenSP']?></p>
                               <p class="mainProduct_listPrice">
-                                
-                                <span>546,000</span>₫</p>
+                                <span><?=$row['GIA_BD']?></span>₫</p>
                             </figcaption>
                           </figure>
                         </a>
                       </li>
-                      <li class="col-4 col-md-4 col-lg-4">
-                        <a href="">
-                          <figure>
-                            <p class="mainProduct_listImg"><img src="http://www.locknlock.vn/data/base/goods/small/201814855698263.jpg" alt="Bộ 5 Hộp Bảo Quản Thủy Tinh Tròn Lock&amp;Lock Glass Euro LLG821S5" style="width: 100%;"></p>
-                            <figcaption>
-                              <p class="mainProduct_listTit">Bộ 5 Hộp Bảo Quản Thủy Tinh Tròn Lock&amp;Lock Glass Euro LLG821S5</p>
-                              
-                              <p class="mainProduct_listPrice">
-                                
-                                <span>748,000</span>₫</p>
-                            </figcaption>
-                          </figure>
-                        </a>
-                      </li>
-                      <li class="col-4 col-md-4 col-lg-4">
-                        <a href="">
-                          <figure>
-                            <p class="mainProduct_listImg"><img src="http://www.locknlock.vn/data/base/goods/small/201834559498345.jpg" alt="Bộ 8 hộp Interlock (INL301W*4, INL302W*4)" style="width: 100%;"></p>
-                            <figcaption>
-                              <p class="mainProduct_listTit">Bộ 8 hộp Interlock (INL301W*4, INL302W*4)</p>
-                              
-                              <p class="mainProduct_listPrice">
-                                
-                                <span>440,000</span>₫</p>
-                            </figcaption>
-                          </figure>
-                        </a>
-                      </li>
-                      <li class="col-4 col-md-4 col-lg-4">
-                        <a href="">
-                          <figure>
-                            <p class="mainProduct_listImg"><img src="http://www.locknlock.vn/data/base/goods/small/201814854694650.jpg" alt="Bộ 4 Hộp Bảo Quản Thủy Tinh Lock&amp;Lock Glass Euro LLG428S4" style="width: 100%;"></p>
-                            <figcaption>
-                              <p class="mainProduct_listTit">Bộ 4 Hộp Bảo Quản Thủy Tinh Lock&amp;Lock Glass Euro LLG428S4</p>
-                              
-                              <p class="mainProduct_listPrice">
-                                
-                                <span>847,000</span>₫</p>
-                            </figcaption>
-                          </figure>
-                        </a>
-                      </li>
-                      <li class="col-4 col-md-4 col-lg-4">
-                        <a href="">
-                          <figure>
-                            <p class="mainProduct_listImg"><img src="http://www.locknlock.vn/data/base/goods/small/201814233904694.jpg" alt="Bộ 5 hộp thủy tinh hình vuông L&amp;L Euro Steam Hole (LLG224T*2, LLG234T*1,LLG214T*2)" style="width: 100%;"></p>
-                            <figcaption>
-                              <p class="mainProduct_listTit">Bộ 5 hộp thủy tinh hình vuông L&amp;L Euro Steam Hole (LLG224T*2, LLG234T*1,LLG214T*2)</p>
-                              
-                              <p class="mainProduct_listPrice">
-                                
-                                <span>999,000</span>₫</p>
-                            </figcaption>
-                          </figure>
-                        </a>
-                      </li>
-                      <li class="col-4 col-md-4 col-lg-4">
-                        <a href="">
-                          <figure>
-                            <p class="mainProduct_listImg"><img src="http://www.locknlock.vn/data/base/goods/small/201806161182366.jpg" alt="Combo 10 Hộp Nhựa Bisfree Table Top Lock&amp;Lock LBF631S10" style="width: 100%;"></p>
-                            <figcaption>
-                              <p class="mainProduct_listTit">Combo 10 Hộp Nhựa Bisfree Table Top Lock&amp;Lock LBF631S10</p>
-                              
-                              <p class="mainProduct_listPrice">
-                                
-                                <span>1,530,000</span>₫</p>
-                            </figcaption>
-                          </figure>
-                        </a>
-                      </li>
+
+                      <?php } ?>
+
                     </ul>
                   </div>
                 </div>
@@ -733,90 +487,25 @@
                   </div>
                   <div class="list_box_right col-8 col-md-8 col-lg-8">
                     <ul class="row">
+
+                      <?php
+                      while($row = mysqli_fetch_array($data['BinhGiuNhiet'])) { ?>
+
                       <li class="col-4 col-md-4 col-lg-4">
                         <a href="">
                           <figure>
-                            <p class="mainProduct_listImg"><img src="http://www.locknlock.vn/data/base/goods/small/201900755110529.jpg" alt="LHC1448PIK - Bình nước giữ nhiệt Lock&amp;Lock City Vacuum Bottle (Olympic) Montreal 700ml - Màu hồng" style="width: 100%;"></p>
+                            <p class="mainProduct_listImg"><?=$row['AnhSP'] ?></p>
                             <figcaption>
-                              <p class="mainProduct_listTit">LHC1448PIK - Bình nước giữ nhiệt Lock&amp;Lock City Vacuum Bottle (Olympic) Montreal 700ml - Màu hồng</p>
-                              
+                              <p class="mainProduct_listTit"><?=$row['TenSP']?></p>
                               <p class="mainProduct_listPrice">
-                                
-                                <span>482,000</span>₫</p>
+                                <span><?=$row['GIA_BD']?></span>₫</p>
                             </figcaption>
                           </figure>
                         </a>
                       </li>
-                      <li class="col-4 col-md-4 col-lg-4">
-                        <a href="">
-                          <figure>
-                            <p class="mainProduct_listImg"><img src="http://www.locknlock.vn/data/base/goods/small/201913559744948.jpg" alt="LHC8029- Hộp cơm giữ nhiệt thương hiệu Lock &amp; Lock, 500ml (Màu đỏ, xanh, đen)" style="width: 100%;"></p>
-                            <figcaption>
-                              <p class="mainProduct_listTit">LHC8029- Hộp cơm giữ nhiệt thương hiệu Lock &amp; Lock, 500ml (Màu đỏ, xanh, đen)</p>
-                              
-                              <p class="mainProduct_listPrice">
-                                
-                                <span>515,000</span>₫</p>
-                            </figcaption>
-                          </figure>
-                        </a>
-                      </li>
-                      <li class="col-4 col-md-4 col-lg-4">
-                        <a href="">
-                          <figure>
-                            <p class="mainProduct_listImg"><img src="http://www.locknlock.vn/data/base/goods/small/201822947975749.jpg" alt="Bình giữ nhiệt bằng thép không gỉ Lock&amp;Lock Loop Tumbler 620ml" style="width: 100%;"></p>
-                            <figcaption>
-                              <p class="mainProduct_listTit">Bình giữ nhiệt bằng thép không gỉ Lock&amp;Lock Loop Tumbler 620ml</p>
-                              
-                              <p class="mainProduct_listPrice">
-                                
-                                <span>450,000</span>₫</p>
-                            </figcaption>
-                          </figure>
-                        </a>
-                      </li>
-                      <li class="col-4 col-md-4 col-lg-4">
-                        <a href="">
-                          <figure>
-                            <p class="mainProduct_listImg"><img src="http://www.locknlock.vn/data/base/goods/small/201822947766590.jpg" alt="Bình giữ nhiệt bằng thép không gỉ Lock&amp;Lock Clip Tumbler 540ml" style="width: 100%;"></p>
-                            <figcaption>
-                              <p class="mainProduct_listTit">Bình giữ nhiệt bằng thép không gỉ Lock&amp;Lock Clip Tumbler 540ml</p>
-                              
-                              <p class="mainProduct_listPrice">
-                                
-                                <span>460,000</span>₫</p>
-                            </figcaption>
-                          </figure>
-                        </a>
-                      </li>
-                      <li class="col-4 col-md-4 col-lg-4">
-                        <a href="">
-                          <figure>
-                            <p class="mainProduct_listImg"><img src="http://www.locknlock.vn/data/base/goods/small/201822947766937.jpg" alt="Bình giữ nhiệt bằng thép không gỉ Lock&amp;Lock Cylinder Bottle 600ml Màu bạc" style="width: 100%;"></p>
-                            <figcaption>
-                              <p class="mainProduct_listTit">Bình giữ nhiệt bằng thép không gỉ Lock&amp;Lock Cylinder Bottle 600ml Màu bạc</p>
-                              
-                              <p class="mainProduct_listPrice">
-                                
-                                <span>524,000</span>₫</p>
-                            </figcaption>
-                          </figure>
-                        </a>
-                      </li>
-                      <li class="col-4 col-md-4 col-lg-4">
-                        <a href="">
-                          <figure>
-                            <p class="mainProduct_listImg"><img src="http://www.locknlock.vn/data/base/goods/small/201822947765081.jpg" alt="Bình giữ nhiệt bằng thép không gỉ Lock&amp;Lock Bumper Bottle 650ml Màu bạc" style="width: 100%;"></p>
-                            <figcaption>
-                              <p class="mainProduct_listTit">Bình giữ nhiệt bằng thép không gỉ Lock&amp;Lock Bumper Bottle 650ml Màu bạc</p>
-                              
-                              <p class="mainProduct_listPrice">
-                                
-                                <span>513,000</span>₫</p>
-                            </figcaption>
-                          </figure>
-                        </a>
-                      </li>
+
+                      <?php } ?>
+
                     </ul>
                   </div>
                 </div>
@@ -839,89 +528,25 @@
                   </div>
                   <div class="list_box_right col-8 col-md-8 col-lg-8">
                     <ul class="row">
+
+                      <?php
+                      while($row = mysqli_fetch_array($data['HopCom'])) { ?>
+
                       <li class="col-4 col-md-4 col-lg-4">
                         <a href="">
                           <figure>
-                            <p class="mainProduct_listImg"><img src="http://www.locknlock.vn/data/base/goods/small/201814861148412.jpg" alt="Bộ 6 Sản Phẩm Lock&amp;Lock LHC4119BSH606" style="width: 100%;"></p>
+                            <p class="mainProduct_listImg"><?=$row['AnhSP'] ?></p>
                             <figcaption>
-                              <p class="mainProduct_listTit">Bộ 6 Sản Phẩm Lock&amp;Lock LHC4119BSH606</p>
-                              
+                              <p class="mainProduct_listTit"><?=$row['TenSP']?></p>
                               <p class="mainProduct_listPrice">
-                                
-                                <span>1,775,000</span>₫</p>
+                                <span><?=$row['GIA_BD']?></span>₫</p>
                             </figcaption>
                           </figure>
                         </a>
                       </li>
-                      <li class="col-4 col-md-4 col-lg-4">
-                        <a href="">
-                          <figure>
-                            <p class="mainProduct_listImg"><img src="http://www.locknlock.vn/data/base/goods/small/201829053857496.jpg" alt="Bộ túi hộp cơm thủy tinh L&amp;L 4EA  (LLG422*3, HWB801WN-B-0*1) - Màu Wine" style="width: 100%;"></p>
-                            <figcaption>
-                              <p class="mainProduct_listTit">Bộ túi hộp cơm thủy tinh L&amp;L 4EA  (LLG422*3, HWB801WN-B-0*1) - Màu Wine</p>
-                              <p class="mainProduct_listPrice"> 
-                                <span>620,000₫</span>
-                              </p>
-                            </figcaption>
-                          </figure>
-                        </a>
-                      </li>
-                      <li class="col-4 col-md-4 col-lg-4">
-                        <a href="">
-                          <figure>
-                            <p class="mainProduct_listImg"><img src="http://www.locknlock.vn/data/base/goods/small/201814153156395.jpg" alt="Bộ Túi Hộp Cơm Lock&amp;Lock Triangle Pattern Bag - 470*470*300 ml" style="width: 100%;"></p>
-                            <figcaption>
-                              <p class="mainProduct_listTit">Bộ Túi Hộp Cơm Lock&amp;Lock Triangle Pattern Bag - 470*470*300 ml</p>
-                              
-                              <p class="mainProduct_listPrice">
-                                
-                                <span>430,000</span>₫</p>
-                            </figcaption>
-                          </figure>
-                        </a>
-                      </li>
-                      <li class="col-4 col-md-4 col-lg-4">
-                        <a href="">
-                          <figure>
-                            <p class="mainProduct_listImg"><img src="http://www.locknlock.vn/data/base/goods/small/201814150559907.jpg" alt="Bộ Túi Hộp Cơm Thủy Tinh Lock&amp;Lock 4EA LLG224I3 (750ml)" style="width: 100%;"></p>
-                            <figcaption>
-                              <p class="mainProduct_listTit">Bộ Túi Hộp Cơm Thủy Tinh Lock&amp;Lock 4EA LLG224I3 (750ml)</p>
-                              
-                              <p class="mainProduct_listPrice">
-                                
-                                <span>879,000</span>₫</p>
-                            </figcaption>
-                          </figure>
-                        </a>
-                      </li>
-                      <li class="col-4 col-md-4 col-lg-4">
-                        <a href="">
-                          <figure>
-                            <p class="mainProduct_listImg"><img src="http://www.locknlock.vn/data/base/goods/small/201806157274562.jpg" alt="Bộ 3 Hộp Cơm Giữ Nhiệt Lock&amp;Lock Mushroom LHC8025SLV - Bạc" style="width: 100%;"></p>
-                            <figcaption>
-                              <p class="mainProduct_listTit">Bộ 3 Hộp Cơm Giữ Nhiệt Lock&amp;Lock Mushroom LHC8025SLV - Bạc</p>
-                              
-                              <p class="mainProduct_listPrice">
-                                
-                                <span>870,000</span>₫</p>
-                            </figcaption>
-                          </figure>
-                        </a>
-                      </li>
-                      <li class="col-4 col-md-4 col-lg-4">
-                        <a href="">
-                          <figure>
-                            <p class="mainProduct_listImg"><img src="http://www.locknlock.vn/data/base/goods/small/201914957458521.jpg" alt="LHC8031SLV-OCH - Bộ hộp cơm giữ nhiệt L&amp;L bằng thép không gỉ -460ml*1, 420ml*1, 280ml*1, đũa*1, túi" style="width: 100%;"></p>
-                            <figcaption>
-                              <p class="mainProduct_listTit">LHC8031SLV-OCH - Bộ hộp cơm giữ nhiệt L&amp;L bằng thép không gỉ -460ml*1, 420ml*1, 280ml*1, đũa*1, túi</p>
-                              
-                              <p class="mainProduct_listPrice">
-                                
-                                <span>1,112,000</span>₫</p>
-                            </figcaption>
-                          </figure>
-                        </a>
-                      </li>
+
+                      <?php } ?>
+
                     </ul>
                   </div>
                 </div>
