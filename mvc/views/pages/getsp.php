@@ -5,7 +5,7 @@
     <li class="col-4 col-md-4 col-lg-4">
 	    <a href="">
 	      <figure>
-	        <p class="mainProduct_listImg"><?= $row['AnhSP'] ?></p>
+	        <p class="mainProduct_listImg" ><?= $row['AnhSP'] ?></p>
 	        <figcaption>
 	          <p class="mainProduct_listTit"><?=$row['TenSP']?></p>
 	          <p class="mainProduct_listPrice">

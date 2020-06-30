@@ -7,4 +7,7 @@ require_once "./mvc/core/Controller.php";
 
 // Connect Database
 require_once "./mvc/core/DB.php";
+
+//Get session
+require_once "./mvc/core/session.php";
 ?>

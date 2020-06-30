@@ -1,3 +1,4 @@
+
       <div class="main row">
         <div class="main_left col-3 col-lg-3 col-md-3">
           <div id="mainnav">
@@ -328,7 +329,7 @@
                       while($row = mysqli_fetch_array($data['BinhNuoc'])) { ?>
 
                       <li class="col-4 col-md-4 col-lg-4">
-                        <a href="">
+                        <a href="DetailsController?spId=<?=$row['MaSP'] ?>">
                           <figure>
                             <p class="mainProduct_listImg"><?=$row['AnhSP'] ?></p>
                             <figcaption>
@@ -369,7 +370,7 @@
                       while($row = mysqli_fetch_array($data['DungCuNauAn'])) { ?>
 
                       <li class="col-4 col-md-4 col-lg-4">
-                        <a href="">
+                        <a href="DetailsController?spId=<?=$row['MaSP'] ?>">
                           <figure>
                             <p class="mainProduct_listImg"><?=$row['AnhSP'] ?></p>
                             <figcaption>
@@ -410,7 +411,7 @@
                       while($row = mysqli_fetch_array($data['HangGiaDung'])) { ?>
 
                       <li class="col-4 col-md-4 col-lg-4">
-                        <a href="">
+                        <a href="DetailsController?spId=<?=$row['MaSP'] ?>">
                           <figure>
                             <p class="mainProduct_listImg"><?=$row['AnhSP'] ?></p>
                             <figcaption>
@@ -451,7 +452,7 @@
                       while($row = mysqli_fetch_array($data['HopBaoQuan'])) { ?>
 
                       <li class="col-4 col-md-4 col-lg-4">
-                        <a href="">
+                        <a href="DetailsController?spId=<?=$row['MaSP'] ?>">
                           <figure>
                             <p class="mainProduct_listImg"><?=$row['AnhSP'] ?></p>
                             <figcaption>
@@ -492,7 +493,7 @@
                       while($row = mysqli_fetch_array($data['BinhGiuNhiet'])) { ?>
 
                       <li class="col-4 col-md-4 col-lg-4">
-                        <a href="">
+                        <a href="DetailsController?spId=<?=$row['MaSP'] ?>">
                           <figure>
                             <p class="mainProduct_listImg"><?=$row['AnhSP'] ?></p>
                             <figcaption>
@@ -533,7 +534,7 @@
                       while($row = mysqli_fetch_array($data['HopCom'])) { ?>
 
                       <li class="col-4 col-md-4 col-lg-4">
-                        <a href="">
+                        <a href="DetailsController?spId=<?=$row['MaSP'] ?>">
                           <figure>
                             <p class="mainProduct_listImg"><?=$row['AnhSP'] ?></p>
                             <figcaption>

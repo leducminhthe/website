@@ -7,8 +7,8 @@ class GetSPController extends Controller{
         $sp = $this->model("SanPhamModel");
         $sotin1trang = 5;
 
-        if( isset($_GET["GetSPController?trang"]) ){
-			$trang = $_GET["GetSPController?trang"];
+        if( isset($_GET["trang"]) ){
+			$trang = $_GET["trang"];
 			settype($trang, "int");
 		}else{
 			$trang = 1;	
@@ -18,7 +18,7 @@ class GetSPController extends Controller{
 		$from = ($trang -1 ) * $sotin1trang;
 
         //view
-        $this->view("layout1", [
+        $this->view("layout2", [
             "Page"=>"getsp",
             "SP" => $sp->SP($sotin1trang,$from),
             "trang_SP"=>$sp->trang_SP($sotin1trang),

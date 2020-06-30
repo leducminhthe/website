@@ -56,7 +56,7 @@ li{
 }
 .cart_right li{
 	float: left;
-	padding: 0px 10px;
+	padding: 0px 5px;
 	border-right: 1px solid #BFB9B9;
 }
 .cart_right li:last-child{
@@ -298,4 +298,88 @@ li{
 }
 .marklayer img{
     height: 40px;
+}
+
+/* Details SP */
+.navDetail{
+  border-bottom: 1px solid #CDC8C8;
+}
+.iconHome {
+  background: no-repeat;
+  height: 16px;
+  padding-left: 0;
+}
+.thuonghieu{
+  font-size: 20px;
+  padding: 5px 0px;
+}
+.reviewSP li{
+  float: left;
+  padding: 0px 10px;
+  border-right: 1px solid #CDC8C8;
+}
+.reviewSP li:last-child{
+  border: none;
+}
+.image_view img{
+  width: 100%;
+}
+.thongbao li{
+  float: left;
+  font-size: 14px;
+  padding: 0px 5px;
+  margin: 20px 5px;
+  border: 1px solid #CDC8C8;
+  height: 30px;
+}
+.price_SP{
+  margin-bottom: 20px;
+}
+.price_SP .td2{
+  padding: 0px 90px;
+}
+.add_SP{
+  margin: 10px 0px;
+}
+.add_SP .buysubmit{
+  background: black;
+  height: 47px;
+  line-height: 47px;
+  color: #fff;
+  width: 100%;
+  font-size: 19px;
+  margin: 10px 0px;
+}
+
+/* Gio Hang*/
+.nav_GioHang{
+  border-bottom: 1px solid #CDC8C8;
+  margin-bottom: 10px;
+}
+.orderLocation{
+  background: #05F1FA;
+  padding: 15px 0px;
+  border-right: 1px solid #C4BBBB;
+  margin-bottom: 10px;
+}
+.orderLocation h2{
+  line-height: 70px;
+}
+.tblone{
+  width: 100%;
+  margin-bottom: 10px;
+}
+.header_tb{
+  background: #C04B4B;
+  color: white;
+}
+.body_tb , .sub_total tr{
+  height: 40px;
+  background: beige;
+}
+.td_image img{
+  width: 100px;
+}
+.sub_total tr th{
+  padding: 10px
 }
