@@ -8,11 +8,13 @@ class UpdateCartController extends Controller{
        if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
             $quantity = $_POST['quantity'];
             $MaSP = $_POST['MaSP'];
+            if ($quantity > 0 && filter_var($quantity, FILTER_VALIDATE_INT)) {
+                // $_SESSION['SL'] = $quantity;
+            }
         }
 
         $this->view("layout2", [
             "Page"=>"giohang",
-            "Update_Cart"=> $sp->update_Quantity_Cart($quantity,$MaSP)
         ]);
     }
 }

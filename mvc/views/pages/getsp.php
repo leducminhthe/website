@@ -3,7 +3,7 @@
 	while($row = mysqli_fetch_array($data['SP'])){ ?>
 
     <li class="col-4 col-md-4 col-lg-4">
-	    <a href="">
+	    <a href="/website/DetailsController?spId=<?=$row['MaSP'] ?>">
 	      <figure>
 	        <p class="mainProduct_listImg" ><?= $row['AnhSP'] ?></p>
 	        <figcaption>

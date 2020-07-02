@@ -1,7 +1,7 @@
 
 <ul class="nav nav-pills navDetail">
   <li class="nav-item iconHome">
-    <a class="nav-link" href="#"><img src="<?php echo file ?>/images/home.png" alt=""></a>
+    <a class="nav-link" href="/website/HomeController"><img src="<?php echo file ?>/images/home.png" alt=""></a>
   </li>
 <?php
   while($row = mysqli_fetch_array($data['SP'])) { ?>
@@ -42,7 +42,7 @@
         </p>
     </li>
     <li class="back">
-      <img src="<?php echo file ?>/images/logout.png" alt=""></a>
+      <img src="<?php echo file ?>/images/logout.png" alt="">
     </li>
   </ul>
 </div>
@@ -65,7 +65,11 @@
       </table>
       <img src="http://www.locknlock.vn/data/base/button/btn_zzim.png" alt="Nổi bật">
       <div class="add_SP">
-        <input type="spId" name="spId" value="<?php echo $row_detail['MaSP'] ?>">
+        <input type="hidden" name="AnhSP" value="<?php echo $row_detail['AnhSP'] ?>">
+        <input type="hidden" name="Price" value="<?php echo $row_detail['GIA_BD'] ?>">
+        <input type="hidden" name="TenSP" value="<?php echo $row_detail['TenSP'] ?>">
+        <input type="hidden" name="spId" value="<?php echo $row_detail['MaSP'] ?>">
+
         <input type="number" class="buyfield" name="quantity" value="1" min="1" />
         <input type="submit" class="buysubmit" name="submit" value="Buy Now"/>
       </div>

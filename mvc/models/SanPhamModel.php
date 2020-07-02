@@ -3,7 +3,7 @@
 
 		public function SP($sotin1trang,$from){
 
-	        $qr = "SELECT * FROM sanpham LIMIT $from, $sotin1trang";
+	        $qr = "SELECT * FROM sanpham LIMIT $from,$sotin1trang";
 	        $rows = mysqli_query($this->con, $qr);
 	         // $mang = array();
 			// while($row = mysqli_fetch_array($rows)){
@@ -56,6 +56,12 @@
 	        $qr = "SELECT * FROM sanpham WHERE id_Con_FK = 20";
 	        $rows = mysqli_query($this->con, $qr);
 	        return $rows;
+		}
+
+		public function check_cart(){
+			$query = "SELECT * FROM giohang";
+			$rows = mysqli_query($this->con, $query);
+			return $rows;
 		}
 	}
 ?>

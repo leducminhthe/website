@@ -20,23 +20,11 @@
 				$query_insert = "INSERT INTO giohang(MaSP,TENSP,SL,image,price) VALUES('$spId','$TenSP','$quantity','$image','$price') ";
 				$insert_row = mysqli_query($this->con, $query_insert);
 				if ($insert_row) {
-					header("location: GioHangController");
+					header("location: /website/GioHangController");
 				}else{
-					echo "false";
+					 echo "<script>Product is alredy exist</script>";
 				}
 			// }
-		}
-
-		public function get_prodcut_cart(){
-			$query = "SELECT * FROM giohang";
-			$rows = mysqli_query($this->con, $query);
-			return $rows; 
-		}
-
-		public function check_cart(){
-			$query = "SELECT * FROM giohang";
-			$rows = mysqli_query($this->con, $query);
-			return $rows;
 		}
 
 	}

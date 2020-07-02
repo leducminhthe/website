@@ -15,13 +15,14 @@ class GetSPController extends Controller{
 		};
 
         
-		$from = ($trang -1 ) * $sotin1trang;
+		$from = ($trang - 1 ) * $sotin1trang;
 
         //view
-        $this->view("layout2", [
+        $this->view("layout1", [
             "Page"=>"getsp",
             "SP" => $sp->SP($sotin1trang,$from),
             "trang_SP"=>$sp->trang_SP($sotin1trang),
+            "Check_Cart"=>$sp->check_cart()
         ]);
     }
 }

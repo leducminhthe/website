@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <!-- Required meta tags -->
+    <meta http-equiv="refresh" content=""; url="<?php echo $_SERVER['PHP_SELF']; ?>">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -40,6 +41,7 @@
             <?php
           }else{
             ?>
+            <?php print_r($_SESSION['cart']) ?>
               <div class="member row justify-content-end">
                 <ul class="col-12 col-md-12 col-lg-12">
                   <li><a href="/website/LoginController" >Đăng nhập</a></li>
@@ -72,14 +74,13 @@
             <li>
               <a href="/website/GioHangController" ><img src="http://www.locknlock.vn/data/base/imgs/global/top_icon_cart.png" alt="Giỏ hàng">
                 <?php
-                  $check_cart = $data['Check_Cart'];
-                  if ($check_cart) {
-                    $qty = Session::get("qty");
-                    echo $qty;
+                  if (isset($_SESSION['cart'])){
+                    $count = count($_SESSION['cart']);
+                    echo "<span id=\"cart_count\" class=\"text-warning bg-light\">$count</span>";
                   }else{
-                    echo "0";
+                    echo "<span id=\"cart_count\" class=\"text-warning bg-light\">0</span>";
                   }
-                ?>
+              ?>
               </a>
             </li>
             <li>
@@ -185,9 +186,9 @@
                 </li>
                 
               </ul>
-              <form class="form-inline my-2 my-lg-0">
-                <input class="form-control " type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-secondary my-2 my-sm-0" type="submit">
+              <form class="form-inline my-2 my-lg-0" action="SearchController" method="post">
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search" name="search">
+                <button class="btn btn-secondary my-2 my-sm-0" name="submit" type="submit">
                   <img src="<?php echo file ?>/images/search.png" >
                 </button>
               </form>

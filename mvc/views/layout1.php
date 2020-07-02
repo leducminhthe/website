@@ -178,9 +178,9 @@
                 </li>
                 
               </ul>
-              <form class="form-inline my-2 my-lg-0">
-                <input class="form-control " type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-secondary my-2 my-sm-0" type="submit">
+             <form class="form-inline my-2 my-lg-0" action="SearchController" method="post">
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search" name="search">
+                <button class="btn btn-secondary my-2 my-sm-0" name="submit" type="submit">
                   <img src="<?php echo file ?>/images/search.png" >
                 </button>
               </form>

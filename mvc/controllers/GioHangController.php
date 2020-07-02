@@ -7,30 +7,53 @@ class GioHangController extends Controller{
 
         $this->view("layout2", [
             "Page"=>"giohang",
-            "GetCart"=> $sp->get_prodcut_cart(),
-            "Check_Cart"=>$sp->check_cart()
         ]);
+
+        if (isset($_GET['spId'])) {
+            echo "<meta http-equiv='refresh' content='0;URL=?id=live'>";
+        }
     }
 
     public function BuySP(){
 
         $sp = $this->model("GioHangModel");
 
-        if( isset($_POST["spId"]) ){
-            $spId = $_POST["spId"];
-        }else{
-            echo "false";
-        };
-
         if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
-            $quantity = $_POST['quantity'];
+
+            if(isset($_SESSION['cart'])){
+
+                $item_array_id = array_column($_SESSION['cart'], "MaSP");
+
+                if(in_array($_POST['spId'], $item_array_id)){
+                    echo "<script>alert('Product is already added in the cart..!')</script>";
+                }else{
+                    $count = count($_SESSION['cart']);
+                    $item_array = array(
+                        'MaSP' => $_POST['spId'],
+                        'SL' => $_POST['quantity'],
+                        'TENSP' => $_POST['TenSP'],
+                        'AnhSP' => $_POST['AnhSP'],
+                        'price'=> $_POST['Price']
+                    );
+
+                    $_SESSION['cart'][$count] = $item_array;
+                }
+            }else{
+                 $item_array = array(
+                    'MaSP' => $_POST['spId'],
+                    'SL' => $_POST['quantity'],
+                    'TENSP' => $_POST['TenSP'],
+                    'AnhSP' => $_POST['AnhSP'],
+                    'price'=> $_POST['Price']
+                    );
+
+                // Create new session variable
+                $_SESSION['cart'][0] = $item_array;
+            }
         }
 
         $this->view("layout2", [
             "Page"=>"giohang",
-            "BuySP"=> $sp->BuySP($quantity, $spId),
-            "GetCart"=> $sp->get_prodcut_cart(),
-            "Check_Cart"=>$sp->check_cart()
         ]);
     }
 }
