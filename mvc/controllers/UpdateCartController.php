@@ -9,7 +9,14 @@ class UpdateCartController extends Controller{
             $quantity = $_POST['quantity'];
             $MaSP = $_POST['MaSP'];
             if ($quantity > 0 && filter_var($quantity, FILTER_VALIDATE_INT)) {
-                // $_SESSION['SL'] = $quantity;
+                //& thay đổi giá trị phần tử khi duyệt
+                foreach ($_SESSION["cart"] as &$val)
+                {
+                    if ($val["MaSP"] == $_POST['MaSP']) {
+                        $val["SL"] =  $quantity;
+                    }
+                }
+                
             }
         }
 

@@ -41,7 +41,11 @@
             <?php
           }else{
             ?>
-            <?php print_r($_SESSION['cart']) ?>
+            <?php 
+            echo "<pre>";
+            print_r($_SESSION['cart']);
+            echo "</pre>"; 
+            ?>
               <div class="member row justify-content-end">
                 <ul class="col-12 col-md-12 col-lg-12">
                   <li><a href="/website/LoginController" >Đăng nhập</a></li>
@@ -75,8 +79,11 @@
               <a href="/website/GioHangController" ><img src="http://www.locknlock.vn/data/base/imgs/global/top_icon_cart.png" alt="Giỏ hàng">
                 <?php
                   if (isset($_SESSION['cart'])){
-                    $count = count($_SESSION['cart']);
-                    echo "<span id=\"cart_count\" class=\"text-warning bg-light\">$count</span>";
+                    $total = 0;
+                    foreach ($_SESSION['cart'] as $value) {
+                      $total += $value['SL'];
+                    }
+                    echo $total;
                   }else{
                     echo "<span id=\"cart_count\" class=\"text-warning bg-light\">0</span>";
                   }
@@ -186,7 +193,7 @@
                 </li>
                 
               </ul>
-              <form class="form-inline my-2 my-lg-0" action="SearchController" method="post">
+              <form class="form-inline my-2 my-lg-0" action="/website/SearchController" method="post">
                 <input class="form-control" type="search" placeholder="Search" aria-label="Search" name="search">
                 <button class="btn btn-secondary my-2 my-sm-0" name="submit" type="submit">
                   <img src="<?php echo file ?>/images/search.png" >

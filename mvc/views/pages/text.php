@@ -2,116 +2,25 @@
       <div class="main row">
         <div class="main_left col-3 col-lg-3 col-md-3">
           <div id="mainnav">
+            <?php 
+              while($row = mysqli_fetch_array($data['MenuCha'])) { ?> 
+
             <ul>
-              <li class="thefirst"><a href="/website/GetSPController">Hộp bảo quản</a>
+              <li class="thefirst"><a href="/website/GetSPController"><?php echo $row['TenMenuCha'] ?></a>
                 <ul class="sub-menu">
-                  <h4>Hộp bảo quản</h4>
-                  <li><a href="#">Hộp kín hơi</a></li>
-                  <li><a href="#">Hộp nhựa</a></li>
-                  <li><a href="#">Hủ gia vị</a></li>
-                  <li><a href="#">Nắp hộp kín hơi</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dụng cụ nấu ăn</a>
-                <ul class="sub-menu">
-                  <h4>Dụng cụ nấu ăn</h4>
-                  <li><a href="#">Chảo/Chảo sâu lòng</a></li>
-                  <li><a href="#">Nồi chảo/Nồi áp xuất</a></li>
-                  <li><a href="#">Dùng cho lò nướng</a></li>
-                  <li><a href="#">Dụng cụ trộn thực phẩm</a></li>
-                  <li><a href="#">Khay/rỗ</a></li>
-                  <li><a href="#">Dụng cụ nhà bếp/Đồ gắp</a></li>
-                  <li><a href="#">Dao/Kéo</a></li>
-                  <li><a href="#">Thớt</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Phụ kiện nhà bếp</a>
-                <ul class="sub-menu">
-                  <h4>Đồ dùng trên bàn</h4>
-                  <li><a href="#">Bình nước</a></li>
-                  <li><a href="#">Ly/Cốc</a></li>
-                  <li><a href="#">Đế nồi</a></li>
-                  <li><a href="#">Khay</a></li>
-                  <li><a href="#">Tấm lót bàn ăn</a></li>
-                  <li><a href="#">Ấm đun nước</a></li>
-                  <ul class="sub-menu2">
-                    <h4>Phụ kiện nhà bếp</h4>
-                    <li><a href="#">Dụng cụ vệ sinh</a></li>
-                    <li><a href="#">Đồ rửa chén</a></li>
-                    <li><a href="#">Dụng cụ làm đá</a></li>
-                    <li><a href="#">Dụng cụ nấu ăn</a></li>
-                    <li><a href="#">Giá/Kệ</a></li>
-                    <li><a href="#">Hàng dùng một lần</a></li>
-                    <li><a href="#">Dụng cụ bảo quản tủ lạnh</a></li>
-                  </ul>
-                </ul>
-              </li>
-              <li><a href="#">Đồ dùng dã ngoại</a>
-               <ul class="sub-menu">
-                  <h4>Đồ dùng dã ngoại</h4>
-                  <li><a href="#">Bình nước</a></li>
-                  <li><a href="#">Hộp cơm</a></li>
-                  <li><a href="#">Đồ dùng du lịch</a></li>
-                  <li><a href="#">Đồ dùng cắm trại</a></li>
-                  <ul class="sub-menu2">
-                    <h4>Bình giữ nhiệt/Giữ lạnh</h4>
-                    <li><a href="#">Hộp cơm giữ nhiệt</a></li>
-                    <li><a href="#">Hộp đựng cháo</a></li>
-                    <li><a href="#">Bình giữ nhiệt/Giữ lạnh</a></li>
-                    <li><a href="#">Túi chườm lạnh</a></li>
-                  </ul>
-                </ul> 
-              </li>
-              <li><a href="#">Đồ dùng sinh hoạt</a>
-                <ul class="sub-menu">
-                  <h4>Bảo quản đồ đạc</h4>
-                  <li><a href="#">Thùng đựng đồ</a></li>
-                  <li><a href="#">Giỏ</a></li>
-                  <li><a href="#">Kệ/Tủ</a></li>
-                  <li><a href="#">Kệ kéo</a></li>
-                  <li><a href="#">Túi hút chân không</a></li>
-                  <ul class="sub-menu2">
-                    <h4>Đồ dùng sinh hoạt</h4>
-                    <li><a href="#">Dụng cụ nhà tắm</a></li>
-                    <li><a href="#">Thùng rác</a></li>
-                    <li><a href="#">Móc/Kệ treo đồ</a></li>
-                    <li><a href="#">Chăn/ra/gối</a></li>
-                    <li><a href="#">Cây lau nhà</a></li>
-                  </ul>
-                </ul>
-              </li>
-              <li><a href="#">Hàng gia dụng</a>
-                <ul class="sub-menu">
-                  <h4>Hàng gia dụng</h4>
-                  <li><a href="#">Thiết bị nhà bếp</a></li>
-                  <li><a href="#">Thiết bị gia dụng</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Đồ dùng trẻ em</a>
-                <ul class="sub-menu">
-                  <h4>Đồ dùng trẻ em</h4>
-                  <li><a href="#">Dụng cụ uống sữa</a></li>
-                  <li><a href="#">Đồ dùng cho bé</a></li>
-                  <li><a href="#">Dụng cụ vệ sinh cho bé</a></li>
-                  <li><a href="#">Thảm cho bé</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Đồ nội thất</a>
-                <ul class="sub-menu">
-                  <h4>Đồ nội thất</h4>
-                  <li><a href="#">Bàn đa năng</a></li>
-                  <li><a href="#">Kệ treo/Kệ sách</a></li>
-                  <li><a href="#">Bàn/Tủ/Ghế</a></li>
-                  <li><a href="#">Giường</a></li>
-                  <li><a href="#">Sofa/Đồ dùng cho khách</a></li>
-                  <li><a href="#">Thảm</a></li>
-                  <li><a href="#">Phụ kiện nội thất</a></li>
-                  <li><a href="#">Đèn</a></li>
-                  <li><a href="#">Tủ quần áo/Tủ lắp ráp</a></li>
-                  <li><a href="#">Bàn trang điểm/Gương</a></li>
+                  <h4><?php echo $row['TenMenuCha'] ?></h4>
+                  <?php 
+                    while($row_con = mysqli_fetch_array($data['MenuCon'])) { ?>
+
+                    <li><a href="#"><?php echo $row_con['TenMenuCon'] ?></a></li>
+
+                  <?php } ?>
+
                 </ul>
               </li>
             </ul>
+
+          <?php }  ?>
           </div>
         </div>
 

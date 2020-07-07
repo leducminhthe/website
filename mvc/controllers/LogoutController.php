@@ -4,7 +4,7 @@
 
 		function Trangchu(){
 		  	session_destroy();
-		  	header('location: HomeController.php');
+		  	header('location: /website/HomeController.php');
 		}
 	}
 

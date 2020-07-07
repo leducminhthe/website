@@ -6,7 +6,7 @@ class GetSPController extends Controller{
         //model
         $sp = $this->model("SanPhamModel");
         $sotin1trang = 5;
-
+        
         if( isset($_GET["trang"]) ){
 			$trang = $_GET["trang"];
 			settype($trang, "int");

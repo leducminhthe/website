@@ -5,7 +5,7 @@
     <li class="col-4 col-md-4 col-lg-4">
 	    <a href="/website/DetailsController?spId=<?=$row['MaSP'] ?>">
 	      <figure>
-	        <p class="mainProduct_listImg" ><?= $row['AnhSP'] ?></p>
+	        <p class="mainProduct_listImg" ><img src="<?= $row['AnhSP'] ?>" alt=""></p>
 	        <figcaption>
 	          <p class="mainProduct_listTit"><?=$row['TenSP']?></p>
 	          <p class="mainProduct_listPrice">

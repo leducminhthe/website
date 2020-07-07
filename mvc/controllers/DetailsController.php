@@ -18,7 +18,8 @@ class DetailsController extends Controller{
             "SP" => $sp->getDetail($spId),
             "MenuCon" => $sp->MenuCon(),
             "SPDetail"=> $sp->SPDetail($spId),
-            "Check_Cart"=>$sp->check_cart()
+            "Check_Cart"=>$sp->check_cart(),
+            "Image" => $sp->Images_SP($spId)
         ]);
     }
 }

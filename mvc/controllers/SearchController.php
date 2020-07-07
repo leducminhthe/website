@@ -16,6 +16,7 @@ class SearchController extends Controller{
             "SP" => $sp->getDetail($spId),
             "MenuCon" => $sp->MenuCon(),
             "SPDetail"=> $sp->SPDetail($spId),
+            "Image" => $sp->Images_SP($spId)
         ]);
     }
 }

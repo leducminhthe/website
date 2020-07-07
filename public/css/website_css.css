@@ -350,6 +350,10 @@ li{
   font-size: 19px;
   margin: 10px 0px;
 }
+.another_image img{
+  width: 60%;
+  margin: 0px 30px;
+}
 
 /* Gio Hang*/
 .nav_GioHang{

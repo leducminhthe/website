@@ -52,7 +52,7 @@
 						<input type="submit" name="submit" value="Update"/>
 					</form>
 				</td>
-				<td class="td_image"><?php echo $row['AnhSP'] ?></td>
+				<td class="td_image"><img src="<?php echo $row['AnhSP'] ?>" alt=""></td>
 				<td><a href="/website/DeleteSPController?MaSP=<?php echo $row['MaSP'] ?>" >Delete</a></td>
 			</tr>
 		</table>

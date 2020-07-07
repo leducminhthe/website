@@ -19,9 +19,9 @@
 					$_SESSION['id'] = $id;
 					$_SESSION['email'] = $email;
 				}
-
+				echo "<script>window.location= '/website/HomeController'</script>";
 			}else{
-				echo "Đăng nhập thất bại";
+				echo "<script>Đăng nhập thất bại</script>";
 			}
 		}
 	}

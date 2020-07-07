@@ -73,7 +73,19 @@
 
           <ul class="cart_right col-4 col-md-4 col-lg-4">
             <li>
-              <a href="/website/GioHangController" ><img src="http://www.locknlock.vn/data/base/imgs/global/top_icon_cart.png" alt="Giỏ hàng"></a>
+              <a href="/website/GioHangController" ><img src="http://www.locknlock.vn/data/base/imgs/global/top_icon_cart.png" alt="Giỏ hàng">
+              <?php
+                  if (isset($_SESSION['cart'])){
+                    $total = 0;
+                    foreach ($_SESSION['cart'] as $value) {
+                      $total += $value['SL'];
+                    }
+                    echo $total;
+                  }else{
+                    echo "<span id=\"cart_count\" class=\"text-warning bg-light\">0</span>";
+                  }
+              ?>
+            </a>
             </li>
             <li>
               <a href="" ><img src="http://www.locknlock.vn/data/base/imgs/global/top_icon_wish.png" alt="Sản phẩm nổi bật"></a>

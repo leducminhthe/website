@@ -48,7 +48,7 @@ class GioHangController extends Controller{
                     );
 
                 // Create new session variable
-                $_SESSION['cart'][0] = $item_array;
+                $_SESSION['cart'][] = $item_array;
             }
         }
 
