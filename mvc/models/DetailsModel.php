@@ -25,13 +25,6 @@
 			return $rows;
 		}
 
-
-		public function check_cart(){
-			$query = "SELECT * FROM giohang";
-			$rows = mysqli_query($this->con, $query);
-			return $rows;
-		}
-
 		public function Images_SP($spId){
 			$query = "SELECT * FROM images WHERE MaSP_FK = '$spId'";
 			$rows = mysqli_query($this->con, $query);

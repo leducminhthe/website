@@ -3,20 +3,13 @@
 class GioHangController extends Controller{
 
     function Trangchu(){
-       $sp = $this->model("GioHangModel");
 
         $this->view("layout2", [
             "Page"=>"giohang",
         ]);
-
-        if (isset($_GET['spId'])) {
-            echo "<meta http-equiv='refresh' content='0;URL=?id=live'>";
-        }
     }
 
     public function BuySP(){
-
-        $sp = $this->model("GioHangModel");
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
 

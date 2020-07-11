@@ -193,7 +193,7 @@
                 </li>
                 
               </ul>
-              <form class="form-inline my-2 my-lg-0" action="/website/SearchController" method="post">
+              <form class="form-inline my-2 my-lg-0" action="/website/TextController" method="post">
                 <input class="form-control" type="search" placeholder="Search" aria-label="Search" name="search">
                 <button class="btn btn-secondary my-2 my-sm-0" name="submit" type="submit">
                   <img src="<?php echo file ?>/images/search.png" >

@@ -3,7 +3,6 @@
 class UpdateCartController extends Controller{
 
     function Trangchu(){
-       $sp = $this->model("UpdateCartModel");
 
        if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
             $quantity = $_POST['quantity'];
@@ -16,7 +15,6 @@ class UpdateCartController extends Controller{
                         $val["SL"] =  $quantity;
                     }
                 }
-                
             }
         }
 

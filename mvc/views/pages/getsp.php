@@ -21,7 +21,7 @@
 	<?php 
 
 		for ($i=1; $i < $data['trang_SP'] ; $i++) { 
-			echo "<button><a href='GetSPController?trang=$i'>Trang $i</a></button> ";
+			echo "<button><a href='TextController?trang=$i'>Trang $i</a></button> ";
 		}
 	 ?>
 </div>

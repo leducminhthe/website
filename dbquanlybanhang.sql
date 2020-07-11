@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th7 07, 2020 lúc 10:40 AM
+-- Thời gian đã tạo: Th7 11, 2020 lúc 09:46 AM
 -- Phiên bản máy phục vụ: 10.4.11-MariaDB
 -- Phiên bản PHP: 7.4.5
 
@@ -29,27 +29,27 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `donhang` (
   `id` int(11) NOT NULL,
-  `TenKhachHang` varchar(100) DEFAULT NULL,
-  `diachi` varchar(100) DEFAULT NULL,
-  `email` varchar(100) DEFAULT NULL,
-  `GhiChu` varchar(100) DEFAULT NULL,
-  `TongTien` double DEFAULT NULL,
-  `TrangThai` bit(50) DEFAULT NULL
+  `Name` varchar(100) DEFAULT NULL,
+  `Address` varchar(100) DEFAULT NULL,
+  `Email` varchar(100) DEFAULT NULL,
+  `Phone` varchar(255) NOT NULL,
+  `Message` longtext DEFAULT NULL,
+  `Grandtotal` varchar(255) DEFAULT NULL,
+  `TenSP` varchar(255) NOT NULL,
+  `MaSP` varchar(255) NOT NULL,
+  `SL` varchar(255) NOT NULL,
+  `Subtotal` varchar(255) NOT NULL,
+  `Phuongthuc` varchar(255) NOT NULL,
+  `date_order` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- --------------------------------------------------------
-
 --
--- Cấu trúc bảng cho bảng `giohang`
+-- Đang đổ dữ liệu cho bảng `donhang`
 --
 
-CREATE TABLE `giohang` (
-  `MaSP` varchar(100) NOT NULL,
-  `TENSP` varchar(100) NOT NULL,
-  `SL` tinyint(10) NOT NULL,
-  `image` varchar(255) NOT NULL,
-  `price` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+INSERT INTO `donhang` (`id`, `Name`, `Address`, `Email`, `Phone`, `Message`, `Grandtotal`, `TenSP`, `MaSP`, `SL`, `Subtotal`, `Phuongthuc`, `date_order`) VALUES
+(8, 'lethe', '12345', 'the@gmail', '12345', '', '110000', 'Bình đựng nước BISFREE 500ml', 'ABF710', '1', '100000', 'Thanh toán khi nhận hàng', '2020-07-11 05:00:21'),
+(10, 'lethe', '12345', 'the@gmail', '12345', '', '110000', 'Bình đựng nước BISFREE 500ml', 'ABF710', '1', '100000', 'Thanh toán khi nhận hàng', '2020-07-11 06:18:46');
 
 -- --------------------------------------------------------
 
@@ -119,7 +119,13 @@ INSERT INTO `images` (`id`, `AnhSP`, `MaSP_FK`) VALUES
 (49, 'http://www.locknlock.vn/data/base/goods/etc/201806/201816553664694_1.jpg', 'ELHB-220'),
 (50, 'http://www.locknlock.vn/data/base/goods/big/201816554650465.jpg', 'ELJE-110'),
 (51, 'http://www.locknlock.vn/data/base/goods/etc/201806/201816554650465_1.jpg', 'ELJE-110'),
-(52, 'http://www.locknlock.vn/data/base/goods/etc/201806/201816554650465_4.jpg', 'ELJE-110');
+(52, 'http://www.locknlock.vn/data/base/goods/etc/201806/201816554650465_4.jpg', 'ELJE-110'),
+(53, 'http://www.locknlock.vn/data/base/goods/big/201821960708502.jpg', 'ABF710'),
+(54, 'http://www.locknlock.vn/data/base/goods/big/201821960708283.jpg', 'ABF722'),
+(55, 'http://www.locknlock.vn/data/base/goods/big/201821960708170.jpg', 'HPL733'),
+(56, 'http://www.locknlock.vn/data/base/goods/big/201822850737577.jpg', 'HPL934M'),
+(57, 'http://www.locknlock.vn/data/base/goods/big/201822850737950.jpg', 'HPL938'),
+(58, 'http://www.locknlock.vn/data/base/goods/big/201828937687732.jpg', 'LKT643W');
 
 -- --------------------------------------------------------
 
@@ -250,23 +256,6 @@ INSERT INTO `menucon` (`id`, `TenMenuCon`, `id_Cha_FK`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `register`
---
-
-CREATE TABLE `register` (
-  `TenTaiKhoan` varchar(250) NOT NULL,
-  `TenKhachHang` varchar(250) NOT NULL,
-  `email` varchar(250) NOT NULL,
-  `pasword` varchar(250) NOT NULL,
-  `SoDienThoai` varchar(250) NOT NULL,
-  `NgaySinh` date NOT NULL,
-  `DiaChi` varchar(250) NOT NULL,
-  `GioiTinh` bit(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
 -- Cấu trúc bảng cho bảng `sanpham`
 --
 
@@ -361,26 +350,26 @@ CREATE TABLE `user` (
   `Gender` varchar(100) NOT NULL,
   `Email` varchar(100) NOT NULL,
   `Password` varchar(100) NOT NULL,
-  `Phone` varchar(20) NOT NULL
+  `Phone` varchar(20) NOT NULL,
+  `Address` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Đang đổ dữ liệu cho bảng `user`
 --
 
-INSERT INTO `user` (`ID`, `Firstname`, `Lastname`, `Gender`, `Email`, `Password`, `Phone`) VALUES
-(7, 'nguyen', 'a', 'Male', 'a@gmail', '$2y$10$sCbODO0/xNF75vkbPKP9I.fDi3pHNHJZ86rYbr3d6LsiBXdvXTYCS', ''),
-(10, 'nguyen', 'b', 'Male', 'b@gmail', '$2y$10$e09ru5GEn2yctBUHI6wVJuk.qiprpU4WdFKtYOZGPgnqrizeVdbPa', '12345');
+INSERT INTO `user` (`ID`, `Firstname`, `Lastname`, `Gender`, `Email`, `Password`, `Phone`, `Address`) VALUES
+(13, 'nguyen', 'van b', 'Male', 'b@gmail', '$2y$10$IYovXK2kTPPhw4QEdOX3duyQPNSofkEVKPhLPwciw7KWYJyfv0l4O', '12345', '1122tphcm');
 
 --
 -- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Chỉ mục cho bảng `giohang`
+-- Chỉ mục cho bảng `donhang`
 --
-ALTER TABLE `giohang`
-  ADD PRIMARY KEY (`MaSP`,`TENSP`);
+ALTER TABLE `donhang`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Chỉ mục cho bảng `images`
@@ -409,12 +398,6 @@ ALTER TABLE `menucon`
   ADD KEY `id_Cha_FK` (`id_Cha_FK`);
 
 --
--- Chỉ mục cho bảng `register`
---
-ALTER TABLE `register`
-  ADD PRIMARY KEY (`TenTaiKhoan`);
-
---
 -- Chỉ mục cho bảng `sanpham`
 --
 ALTER TABLE `sanpham`
@@ -439,26 +422,26 @@ ALTER TABLE `user`
 --
 
 --
+-- AUTO_INCREMENT cho bảng `donhang`
+--
+ALTER TABLE `donhang`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
 -- AUTO_INCREMENT cho bảng `images`
 --
 ALTER TABLE `images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
 
 --
 -- AUTO_INCREMENT cho bảng `user`
 --
 ALTER TABLE `user`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- Các ràng buộc cho các bảng đã đổ
 --
-
---
--- Các ràng buộc cho bảng `giohang`
---
-ALTER TABLE `giohang`
-  ADD CONSTRAINT `giohang_ibfk_1` FOREIGN KEY (`MaSP`) REFERENCES `sanpham` (`MaSP`);
 
 --
 -- Các ràng buộc cho bảng `images`

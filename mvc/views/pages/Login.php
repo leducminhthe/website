@@ -22,14 +22,3 @@
 </form>
 </div>
 
-<?php if( isset($data['Result'])) { ?>
-  <h3>
-    <?php 
-      if ($data['Result'] == true) {
-        echo "Đăng ký thành công";
-      }else{
-        echo "Đăng ký thất bại";
-      }
-    ?>
-  </h3>
-<?php } ?>

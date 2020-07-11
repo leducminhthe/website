@@ -25,7 +25,7 @@
 
 <?php  
 	$subtotal = 0;
-	$qty = 0;
+	// $cart = count($_SESSION['cart']);
 	if (isset($_SESSION['cart'])) {
 
 		foreach ($_SESSION['cart'] as $row) {
@@ -59,8 +59,7 @@
 	 
 		<?php 
 			$subtotal += $total;
-			$qty += $row['SL'];
-	}?>
+		}?>
 
 		<table class="sub_total" width="40%">
 			<tr>
@@ -87,8 +86,19 @@
 			</tr>
 		</table>
 
+		<div class="shopping row">
+			<div class="shopleft col-6 col-md-6 col-lg-6">
+				<a href="/website/HomeController"><img src="<?php echo file ?>/images/shop.png" alt="" /></a>
+			</div>
+			<div class="shopright col-6 col-md-6 col-lg-6">
+				<a href="/website/CheckoutController"><img src="<?php echo file ?>/images/check.png" alt="" /></a>
+			</div>
+		</div>
+
 	<?php 
 		}else{
 			echo "<h3>Your cart empty ! Please Shopping</h3>";
 		} 
 	?>
+	
+	

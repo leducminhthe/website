@@ -32,7 +32,7 @@
                 </button>
                 <div class="dropdown-menu dropdown-menu-right option">
                   <button class="dropdown-item" type="button"><a href="/website/LogoutController">Logout</a></button>
-                  <button class="dropdown-item" type="button"><a href="" >My Page</a></button>
+                  <button class="dropdown-item" type="button"><a href="/website/UpdateProfileController" >My Page</a></button>
                   <button class="dropdown-item" type="button">
                     <a href="/website/LienHeController" >Chăm sóc khánh hàng</a>
                   </button>
@@ -190,7 +190,7 @@
                 </li>
                 
               </ul>
-             <form class="form-inline my-2 my-lg-0" action="SearchController" method="post">
+             <form class="form-inline my-2 my-lg-0" action="/website/TextController" method="post">
                 <input class="form-control" type="search" placeholder="Search" aria-label="Search" name="search">
                 <button class="btn btn-secondary my-2 my-sm-0" name="submit" type="submit">
                   <img src="<?php echo file ?>/images/search.png" >

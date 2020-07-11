@@ -12,12 +12,21 @@
 					password_verify($pwd, $row['Password']);
 					$id = $row["ID"];
 					$email = $row["Email"];
-					$firstname = $row['Firstname'];
-					$lastname = $row['Lastname'];
 					$name = $row['Firstname'] . ' ' . $row['Lastname'];
 					$_SESSION['name'] = $name;
 					$_SESSION['id'] = $id;
 					$_SESSION['email'] = $email;
+
+					$user = array(
+                    'Id' =>  $row["ID"],
+                    'FirstName' =>$row['Firstname'],
+                    'LastName' => $row['Lastname'],
+                    'Name' => $name,
+                    'Email' => $email,
+                    'Phone' => $row['Phone'],
+                    'Address'=> $row['Address']
+                    );
+                    $_SESSION['user'] = $user;
 				}
 				echo "<script>window.location= '/website/HomeController'</script>";
 			}else{

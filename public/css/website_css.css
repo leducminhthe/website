@@ -372,6 +372,7 @@ li{
 .tblone{
   width: 100%;
   margin-bottom: 10px;
+  text-align: center;
 }
 .header_tb{
   background: #C04B4B;
@@ -386,4 +387,43 @@ li{
 }
 .sub_total tr th{
   padding: 10px
+}
+.shopright img{
+  width: 50%;
+}
+
+/*Checkout*/
+.donhang{
+  border: 1px solid black;
+  margin: 10px 0px;
+  padding: 5px;
+}
+.nguoimua{
+  border: 1px solid black;
+  margin: 10px 0px;  
+  padding: 5px;
+}
+.nguoimua tr{
+  height: 40px;
+}
+.tbluser{
+  width: 100%;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.thead_user{
+  background: #C04B4B;
+  color: white;
+}
+.tbody_user{
+  background: beige;
+}
+.update_profile{
+  display: flex;
+  margin: auto;
+  padding: 0px 5px;
+}
+.message_user{
+  width: 100%;
+  height: 70px;
 }

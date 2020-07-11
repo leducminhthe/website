@@ -38,6 +38,12 @@
       <input type="password" name="phonenumber" class="form-control" id="phone" placeholder="Enter phonenumber">
     </div>
   </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="pwd">Address:</label>
+    <div class="col-sm-6"> 
+      <input type="text" name="address" class="form-control" id="phone" placeholder="Enter address">
+    </div>
+  </div>
   <div class="form-group"> 
     <div class="col-sm-offset-2 col-sm-10">
       <button type="submit" name="create" class="btn btn-primary">Submit</button>
