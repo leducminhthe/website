@@ -1,5 +1,5 @@
 <nav class="nav nav_GioHang">
-  <a class="nav-link" href="/website/HomeController"><img src="<?php echo file ?>/images/home.png" alt=""></a>
+  <a class="nav-link" href="<?php echo link ?>HomeController"><img src="<?php echo file ?>/images/home.png" alt=""></a>
   <a class="nav-link" href="#">Giỏ Hàng</a>
 </nav>
 
@@ -27,6 +27,7 @@
 	$subtotal = 0;
 	// $cart = count($_SESSION['cart']);
 	if (isset($_SESSION['cart'])) {
+		if (count($_SESSION['cart']) > 0 ) {
 
 		foreach ($_SESSION['cart'] as $row) {
 		?>
@@ -53,7 +54,7 @@
 					</form>
 				</td>
 				<td class="td_image"><img src="<?php echo $row['AnhSP'] ?>" alt=""></td>
-				<td><a href="/website/DeleteSPController?MaSP=<?php echo $row['MaSP'] ?>" >Delete</a></td>
+				<td><a href="<?php echo link ?>DeleteSPController?MaSP=<?php echo $row['MaSP'] ?>" >Delete</a></td>
 			</tr>
 		</table>
 	 
@@ -88,17 +89,21 @@
 
 		<div class="shopping row">
 			<div class="shopleft col-6 col-md-6 col-lg-6">
-				<a href="/website/HomeController"><img src="<?php echo file ?>/images/shop.png" alt="" /></a>
+				<a href="<?php echo link ?>HomeController"><img src="<?php echo file ?>/images/shop.png" alt="" /></a>
 			</div>
 			<div class="shopright col-6 col-md-6 col-lg-6">
-				<a href="/website/CheckoutController"><img src="<?php echo file ?>/images/check.png" alt="" /></a>
+				<a href="<?php echo link ?>CheckoutController"><img src="<?php echo file ?>/images/check.png" alt="" /></a>
 			</div>
 		</div>
 
 	<?php 
 		}else{
 			echo "<h3>Your cart empty ! Please Shopping</h3>";
-		} 
-	?>
+		}
+	}else{
+
+		echo "<h3>Your cart empty ! Please Shopping</h3>";
+	} 
+?>
 	
 	

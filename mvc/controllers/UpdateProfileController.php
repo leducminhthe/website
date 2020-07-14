@@ -13,7 +13,7 @@ class UpdateProfileController extends Controller{
 
         $UserModel = $this->model('UpdateProfileModel');
 
-        if (isset($_POST['update'])) {
+        if (isset($_POST['Edit'])) {
             $firstname = $_POST['firstname'];
             $lastname = $_POST['lastname'];
             $email = $_POST['email'];
@@ -23,7 +23,8 @@ class UpdateProfileController extends Controller{
 
         $this->view("layout2", [
             "Page"=>"Profile",
-            "Update"=>$UserModel->Update( $firstname,$lastname,$email,$address,$phone),
+            "Edit"=>$UserModel->Edit( $firstname,$lastname,$email,$address,$phone),
+            "Update"=>$UserModel->Update(),
         ]);
     }
 }

@@ -32,7 +32,7 @@ class CheckoutController extends Controller{
         //view
         $this->view("layout2", [
             "Page"=>"Checkout",
-            "Check"=>$sp->Checkout($name,$email,$phone,$address,$message,$phuongthuc)
+            "Check"=>$sp->Checkout($name,$email,$phone,$address,$message,$phuongthuc),
         ]);
     }
 }

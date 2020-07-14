@@ -3,7 +3,7 @@
 	class LogoutController extends Controller{
 
 		function Trangchu(){
-		  	session_destroy();
+		  	unset($_SESSION['user']);
 		  	header('location: /website/HomeController.php');
 		}
 	}

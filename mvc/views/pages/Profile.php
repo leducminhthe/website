@@ -1,7 +1,7 @@
 <?php 
 if (isset($_SESSION['user'])) {
 ?>
-<form action="/website/UpdateProfileController/Update" method="post">
+<form action="<?php echo link ?>UpdateProfileController/Update" method="post">
 <table class="tbluser">
 	<thead class="thead_user">
 		<tr>
@@ -36,6 +36,6 @@ if (isset($_SESSION['user'])) {
 		</tr>
 	</tbody>
 </table>
-<center><input type="submit" name="update" value="Update Profile"></center>
+<center><input type="submit" name="Edit" value="Update Profile"></center>
 </form>
 <?php  }?>

@@ -10,7 +10,7 @@ class MenuController extends Controller{
         //view
         $this->view("layout1", [
             "Page"=>"text",
-            "MenuCha"=>$sp->MenuCha(),
+            "MenuCha"=>$sp->get_menus(),
             "MenuCon"=>$sp->MenuCon()
         ]);
     }

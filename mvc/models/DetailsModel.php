@@ -2,10 +2,12 @@
 
 	class DetailsModel extends DB{
 
-		public function getDetail($spId){
-			$query = "SELECT sanpham.*, menucon.TenMenuCon
+		public function DanhMucCha($spId){
+			$query = "SELECT sanpham.*, menucha.TenMenuCha, menucon.TenMenuCon
 
-			FROM sanpham INNER JOIN menucon ON sanpham.id_Con_FK = menucon.id
+			FROM sanpham INNER JOIN menucha ON sanpham.id_Cha_FK = menucha.id
+
+			INNER JOIN menucon ON sanpham.id_Con_FK = menucon.id
 
 			WHERE sanpham.MaSP = '$spId' ";
 
@@ -13,8 +15,8 @@
 	        return $rows;
 		}
 
-		public function MenuCon(){
-			$qr = "SELECT * FROM menucon LIMIT 7";
+		public function MenuCha(){
+			$qr = "SELECT * FROM menucha";
 	        $rows = mysqli_query($this->con, $qr);
 			return $rows;
 		}

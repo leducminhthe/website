@@ -19,10 +19,10 @@
       <div class="header">
 
         <?php 
-          if (isset($_SESSION['email'])) {
+          if (isset($_SESSION['user'])) {
 
-            $email = $_SESSION['email'];
-            $name = $_SESSION['name'];
+            $email = $_SESSION['user']['Email'];
+            $name = $_SESSION['user']['Name'];
 
             ?>
               <div class="btn-group account">
@@ -31,10 +31,10 @@
                   <?php echo $email;?>
                 </button>
                 <div class="dropdown-menu dropdown-menu-right option">
-                  <button class="dropdown-item" type="button"><a href="/website/LogoutController">Logout</a></button>
-                  <button class="dropdown-item" type="button"><a href="/website/UpdateProfileController" >My Page</a></button>
+                  <button class="dropdown-item" type="button"><a href="<?php echo link ?>LogoutController">Logout</a></button>
+                  <button class="dropdown-item" type="button"><a href="<?php echo link ?>UpdateProfileController" >My Page</a></button>
                   <button class="dropdown-item" type="button">
-                    <a href="/website/LienHeController" >Chăm sóc khánh hàng</a>
+                    <a href="<?php echo link ?>LienHeController" >Chăm sóc khánh hàng</a>
                   </button>
                 </div>
               </div>
@@ -45,10 +45,10 @@
             ?>
               <div class="member row justify-content-end">
                 <ul class="col-12 col-md-12 col-lg-12">
-                  <li><a href="/website/LoginController" >Đăng nhập</a></li>
-                  <li><a href="/website/RegisterController" >Gia nhập thảnh viên</a></li>
+                  <li><a href="<?php echo link ?>LoginController" >Đăng nhập</a></li>
+                  <li><a href="<?php echo link ?>RegisterController" >Gia nhập thảnh viên</a></li>
                   <li><a href="" >My Page</a></li>
-                  <li><a href="/website/LienHeController" >Chăm sóc khánh hàng</a></li>                  
+                  <li><a href="<?php echo link ?>LienHeController" >Chăm sóc khánh hàng</a></li>                  
                 </ul>
               </div>
             <?php
@@ -66,14 +66,14 @@
           </ul>
 
           <h1 class="logo col-4 col-md-4 col-lg-4">
-            <a href="/website/HomeController" >
+            <a href="<?php echo link ?>HomeController" >
               <img src="http://www.locknlock.vn/data/base/banner/hd2_logo_4.gif">       
             </a>
          </h1>
 
           <ul class="cart_right col-4 col-md-4 col-lg-4">
             <li>
-              <a href="/website/GioHangController" ><img src="http://www.locknlock.vn/data/base/imgs/global/top_icon_cart.png" alt="Giỏ hàng">
+              <a href="<?php echo link ?>GioHangController" ><img src="http://www.locknlock.vn/data/base/imgs/global/top_icon_cart.png" alt="Giỏ hàng">
               <?php
                   if (isset($_SESSION['cart'])){
                     $total = 0;
@@ -91,7 +91,7 @@
               <a href="" ><img src="http://www.locknlock.vn/data/base/imgs/global/top_icon_wish.png" alt="Sản phẩm nổi bật"></a>
             </li>
             <li>
-              <a href="" ><img src="http://www.locknlock.vn/data/base/imgs/global/top_icon_truck.png" alt="Kiểm tra đơn hàng"></a>
+              <a href="<?php echo link ?>CheckOrderController" ><img src="http://www.locknlock.vn/data/base/imgs/global/top_icon_truck.png" alt="Kiểm tra đơn hàng"></a>
             </li>
           </ul>
         </div>
@@ -190,7 +190,7 @@
                 </li>
                 
               </ul>
-             <form class="form-inline my-2 my-lg-0" action="/website/TextController" method="post">
+             <form class="form-inline my-2 my-lg-0" action="<?php echo link ?>SearchController" method="get">
                 <input class="form-control" type="search" placeholder="Search" aria-label="Search" name="search">
                 <button class="btn btn-secondary my-2 my-sm-0" name="submit" type="submit">
                   <img src="<?php echo file ?>/images/search.png" >

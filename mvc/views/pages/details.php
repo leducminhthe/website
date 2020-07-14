@@ -1,22 +1,22 @@
 
 <ul class="nav nav-pills navDetail">
   <li class="nav-item iconHome">
-    <a class="nav-link" href="/website/HomeController"><img src="<?php echo file ?>/images/home.png" alt=""></a>
+    <a class="nav-link" href="<?php echo link ?>HomeController"><img src="<?php echo file ?>/images/home.png" alt=""></a>
   </li>
 <?php
-  while($row = mysqli_fetch_array($data['SP'])) { ?>
+  while($row = mysqli_fetch_array($data['DanhMucCha'])) { ?>
 
   <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $row['TenMenuCon'] ?></a>
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $row['TenMenuCha'] ?></a>
     <div class="dropdown-menu">
 
-      <?php  while($row = mysqli_fetch_array($data['MenuCon'])) { ?>
-      <a class="dropdown-item" href="#"><?php echo $row['TenMenuCon'] ?></a>
+      <?php  while($row = mysqli_fetch_array($data['MenuCha'])) { ?>
+      <a class="dropdown-item" href="#"><?php echo $row['TenMenuCha'] ?></a>
       <?php } ?>
 
     </div>
   </li>
-  <?php } ?>
+<?php } ?>
 </ul>
 
 <p class="thuonghieu">LOCK&LOCK</p>

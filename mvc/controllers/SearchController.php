@@ -6,17 +6,27 @@ class SearchController extends Controller{
         //model
         $sp = $this->model("SearchModel");
 
-        if (isset($_POST['submit']) !== '') {
-            $spId = $_POST['search'];
+        if (isset($_GET['search']) !== '') {
+            $search = $_GET['search'];
         }
+
+        $sotin1trang = 3;
+        
+        if( isset($_GET["trang"]) ){
+            $trang = (int)$_GET["trang"];
+        }else{
+            $trang = 1; 
+        };
+
+        $from = ($trang - 1 ) * $sotin1trang;
        
         //view
         $this->view("layout2", [
-            "Page"=>"details",
-            "SP" => $sp->getDetail($spId),
-            "MenuCon" => $sp->MenuCon(),
-            "SPDetail"=> $sp->SPDetail($spId),
-            "Image" => $sp->Images_SP($spId)
+            "Page"=>"getsp",
+            // "Danhmuc" => $sp->getDetail($search),
+            "SP"=>$sp->SP($sotin1trang,$from,$search),
+            // "MenuCon" => $sp->MenuCon(),
+            "trang_SP"=>$sp->trang_SP($sotin1trang,$search),
         ]);
     }
 }

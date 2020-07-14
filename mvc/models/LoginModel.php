@@ -13,9 +13,6 @@
 					$id = $row["ID"];
 					$email = $row["Email"];
 					$name = $row['Firstname'] . ' ' . $row['Lastname'];
-					$_SESSION['name'] = $name;
-					$_SESSION['id'] = $id;
-					$_SESSION['email'] = $email;
 
 					$user = array(
                     'Id' =>  $row["ID"],

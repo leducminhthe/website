@@ -20,9 +20,11 @@
 <div class="phantrang">
 	<?php 
 
-		for ($i=1; $i < $data['trang_SP'] ; $i++) { 
-			echo "<button><a href='TextController?trang=$i'>Trang $i</a></button> ";
-		}
-	 ?>
+		for ($i=1; $i <= $data['trang_SP'] ; $i++) { ?>
+
+			<button><a href='SearchController?search=<?php echo $_GET['search'] ?>&trang=<?php echo $i ?>'>Trang <?php echo $i ?></a></button>
+
+		<?php  
+		} ?>
 </div>
 

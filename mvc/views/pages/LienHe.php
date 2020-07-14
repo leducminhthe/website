@@ -1,6 +1,6 @@
 <h3>Contact Us</h3>
 
-    <form action="/website/LienHeController/LienHe" method="POST">
+    <form action="<?php echo link ?>LienHeController/LienHe" method="POST">
          <div class="row">
             <div class="form-group col-sm-6">
                 <label for="name" class="h4">Name</label>
