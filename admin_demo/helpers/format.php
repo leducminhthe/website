@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
 * Format Class
 */
