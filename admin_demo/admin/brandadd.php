@@ -1,5 +1,6 @@
 <?php include 'inc/header.php';?>
 <?php include 'inc/sidebar.php';?>
+<?php include '../classes/category.php';  ?>
 
 <?php include '../classes/brand.php';  ?>
 <?php
@@ -8,7 +9,8 @@
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
         // LẤY DỮ LIỆU TỪ PHƯƠNG THỨC Ở FORM POST
         $brandName = $_POST['brandName'];
-        $insertBrand = $brand -> insert_brand($brandName); // hàm check catName khi submit lên
+        $category = $_POST['category'];
+        $insertBrand = $brand -> insert_brand($brandName, $category); // hàm check catName khi submit lên
     }
   ?> 
         <div class="grid_10">
@@ -25,6 +27,31 @@
                         <tr>
                             <td>
                                 <input type="text" name="brandName" placeholder="Làm ơn thêm thương hiệu sản phẩm..." class="medium" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Danh mục sản phẩm</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <select id="select" name="category">
+                                    <option>Chọn chuyên mục</option>
+                                    <?php 
+                                    $cat = new category();
+                                    $catlist = $cat->show_category();
+                                    if($catlist){
+                                        while ($result = $catlist->fetch_assoc()){
+                                    
+                                     ?>
+                                    <option value=" <?php echo $result['id'] ?> "> <?php echo $result['TenMenuCha'] ?> </option>
+                                    
+                                    <?php 
+                                    }
+                                     }
+                                     ?>
+                                </select>
                             </td>
                         </tr>
 						<tr> 
