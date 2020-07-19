@@ -19,16 +19,19 @@
 			$this->db = new Database();
 			$this->fm = new Format();
 		}
-		public function insert_brand($brandName){
-			$brandName = $this->fm->validation($brandName); //gọi ham validation để ktra có rỗng hay ko để ktra
+		public function insert_brand($brandName, $category){
+			$brandName = $this->fm->validation($brandName);
+			$category = $this->fm->validation($category); //gọi ham validation để ktra có rỗng hay ko để ktra
+
 			$brandName = mysqli_real_escape_string($this->db->link, $brandName);
+			$category = mysqli_real_escape_string($this->db->link, $category);
 			 //mysqli gọi 2 biến. (catName and link) biến link -> gọi conect db từ file db
 			
-			if(empty($brandName)){
+			if(empty($brandName) && empty($category)){
 				$alert = "<span class='error'>Brand must be not empty</span>";
 				return $alert;
 			}else{
-				$query = "INSERT INTO menucon(TenMenuCon) VALUES('$brandName') ";
+				$query = "INSERT INTO menucon(TenMenuCon, id_Cha_FK) VALUES('$brandName', '$category') ";
 				$result = $this->db->insert($query);
 				if($result){
 					$alert = "<span class='success'>Insert brand Successfully</span>";
@@ -45,22 +48,27 @@
 			$result = $this->db->select($query);
 			return $result;
 		}
+
 		public function getbrandbyId($id)
 		{
 			$query = "SELECT * FROM menucon where id = '$id' ";
 			$result = $this->db->select($query);
 			return $result;
 		}
-		public function update_brand($brandName,$id)
+
+		public function update_brand($brandName,$id,$category)
 		{
 			$brandName = $this->fm->validation($brandName); //gọi ham validation từ file Format để ktra
+			$$category = $this->fm->validation($category);
+
 			$brandName = mysqli_real_escape_string($this->db->link, $brandName);
+			$category = mysqli_real_escape_string($this->db->link, $category);
 			$id = mysqli_real_escape_string($this->db->link, $id);
 			if(empty($brandName)){
 				$alert = "<span class='error'>Brand must be not empty</span>";
 				return $alert;
 			}else{
-				$query = "UPDATE menucon SET TenMenuCon = '$brandName' WHERE id = '$id' ";
+				$query = "UPDATE menucon SET TenMenuCon = '$brandName', id_Cha_FK = '$category' WHERE id = '$id' ";
 				$result = $this->db->update($query);
 				if($result){
 					$alert = "<span class='success'>Brand Update Successfully</span>";
@@ -74,7 +82,7 @@
 		}
 		public function del_brand($id)
 		{
-			$query = "DELETE FROM tbl_brand where brandId = '$id' ";
+			$query = "DELETE FROM menucon where id = '$id' ";
 			$result = $this->db->delete($query);
 			if($result){
 				$alert = "<span class='success'>Brand Deleted Successfully</span>";
