@@ -1,5 +1,6 @@
 <?php include 'inc/header.php';?>
 <?php include 'inc/sidebar.php';?>
+<?php include '../classes/category.php';  ?>
 <?php include '../classes/brand.php';  ?>
 <?php
     // gọi class category
@@ -27,6 +28,7 @@
 						<tr>
 							<th>No.</th>
 							<th>Thương hiệu</th>
+							<th>Danh mục</th>
 							<th>Xử lý</th>
 						</tr>
 					</thead>
@@ -42,6 +44,24 @@
 						<tr class="odd gradeX">
 							<td><?php echo $i; ?></td>
 							<td><?php echo $result['TenMenuCon']; ?></td>
+							<td>
+                                <?php 
+                                $cat = new category();
+                                $catlist = $cat->show_category();
+                                if($catlist){
+                                    while ($result_id_cha = $catlist->fetch_assoc()){
+                                ?>
+                                    <?php 
+                                        if($result_id_cha['id'] == $result['id_Cha_FK']){
+                                    ?>    
+                                            <?php echo $result_id_cha['TenMenuCha'] ?>
+                                    <?php  
+                                		}
+                                    }
+                                }
+                                ?>
+                            </td>
+
 							<td><a href="brandedit.php?brandid=<?php echo $result['id']; ?>">Edit</a> || <a onclick = "return confirm('Are you want to delete???')" href="?delid=<?php echo $result['id'] ?>">Delete</a></td>
 						</tr>
 						<?php 
