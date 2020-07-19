@@ -49,8 +49,8 @@
                     <img src="img/livelogo.png" alt="Logo" />
 				</div>
 				<div class="floatleft middle">
-					<h1>SHOP CÔNG NGHỆ</h1>
-					<p>www.abc.com</p>
+					<h1>LOCK&LOCK</h1>
+					<p>www.Lock&Lock.com</p>
 				</div>
                 <div class="floatright">
                     <div class="floatleft">
@@ -77,7 +77,6 @@
         <div class="grid_12">
             <ul class="nav main">
                 <li class="ic-dashboard"><a href="index.php"><span>Dashboard</span></a> </li>
-				<li class="ic-grid-tables"><a href="inbox.php"><span>Đơn hàng</span></a></li>
             </ul>
         </div>
         <div class="clear">
