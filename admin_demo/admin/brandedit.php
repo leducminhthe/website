@@ -1,6 +1,6 @@
 <?php include 'inc/header.php';?>
 <?php include 'inc/sidebar.php';?>
-
+<?php include '../classes/category.php';  ?>
 <?php include '../classes/brand.php';  ?>
 <?php
     $brand = new brand(); 
@@ -14,7 +14,8 @@
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
         // LẤY DỮ LIỆU TỪ PHƯƠNG THỨC Ở FORM POST
         $brandName = $_POST['brandName'];
-        $updateBrand = $brand -> update_brand($brandName,$id); // hàm check catName khi submit lên
+        $category = $_POST['category'];
+        $updateBrand = $brand -> update_brand($brandName,$id,$category); // hàm check catName khi submit lên
     }
     
   ?>
@@ -39,6 +40,35 @@
                         <tr>
                             <td>
                                 <input type="text" value="<?php echo $result['TenMenuCon']; ?>" name="brandName" placeholder="Sửa thương hiệu sản phẩm..." class="medium" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Category</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <select id="select" name="category">
+
+                                    <?php 
+                                    $cat = new category();
+                                    $catlist = $cat->show_category();
+                                    if($catlist){
+                                        while ($result_id_cha = $catlist->fetch_assoc()){
+                                    ?>
+                                        <option 
+                                        <?php 
+                                            if($result_id_cha['id'] == $result['id_Cha_FK'])
+                                                { echo 'selected'; }
+                                        ?>    
+                                                value=" <?php echo $result_id_cha['id'] ?> "> <?php echo $result_id_cha['TenMenuCha'] ?></option>
+                            
+                                        <?php  
+                                        }
+                                    }
+                                    ?>
+                                </select>
                             </td>
                         </tr>
 						<tr> 
