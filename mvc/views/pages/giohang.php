@@ -104,6 +104,4 @@
 
 		echo "<h3>Your cart empty ! Please Shopping</h3>";
 	} 
-?>
-	
-	
+

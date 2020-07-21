@@ -13,6 +13,7 @@ class DetailsController extends Controller{
         }else{
             echo "false";
         };
+
        
         //view
         $this->view("layout2", [

@@ -1,3 +1,6 @@
+<?php 
+  $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+ ?>
 
 <ul class="nav nav-pills navDetail">
   <li class="nav-item iconHome">
@@ -20,6 +23,7 @@
 </ul>
 
 <p class="thuonghieu">LOCK&LOCK</p>
+<div class="fb-like" data-href="<?php echo $actual_link ?>" data-width="" data-layout="button_count" data-action="like" data-size="small" data-share="true"></div>
 
 <?php
   while($row_detail = mysqli_fetch_array($data['SPDetail'])) { ?>
@@ -92,6 +96,7 @@
   </div>
 </div>
 <?php } ?>
+<div class="fb-comments" data-href="<?php echo $actual_link ?>" data-numposts="20" data-width=""></div>
 
 <script>
       const thumbs=document.querySelector(".thumb-img").children;

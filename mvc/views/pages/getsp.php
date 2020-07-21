@@ -1,5 +1,6 @@
-	
+
 <?php
+
 	while($row = mysqli_fetch_array($data['SP'])){ ?>
 
     <li class="col-4 col-md-4 col-lg-4">
@@ -14,8 +15,9 @@
 	      </figure>
 	    </a>
   	</li>
-
+	
 	<?php } ?>
+
 
 <div class="phantrang">
 	<?php 
