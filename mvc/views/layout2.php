@@ -29,7 +29,7 @@
                 </button>
                 <div class="dropdown-menu dropdown-menu-right option">
                   <button class="dropdown-item" type="button"><a href="<?php echo link ?>LogoutController">Logout</a></button>
-                  <button class="dropdown-item" type="button"><a href="" >My Page</a></button>
+                  <button class="dropdown-item" type="button"><a href="<?php echo link ?>UpdateProfileController" >My Page</a></button>
                   <button class="dropdown-item" type="button">
                     <a href="<?php echo link ?>LienHeController" >Chăm sóc khánh hàng</a>
                   </button>
@@ -110,7 +110,9 @@
                         <?php 
                           foreach ($data['MenuCha'] as $value) { ?>
                             <div class="col-sm-6 col-lg-3">
-                              <h5><?php echo $value['tenMenuCha'] ?></h5>
+                              <a href="<?php echo link ?>/DanhMucChaController?menucha=<?php echo $value['id_cha'] ?>" >
+                                <h5><?php echo $value['tenMenuCha'] ?></h5>
+                              </a>
 
                               <?php 
                                 foreach ($value['listMenuCon'] as $menucon) { ?>

@@ -15,12 +15,6 @@
 	        return $rows;
 		}
 
-		public function MenuCha(){
-			$qr = "SELECT * FROM menucha";
-	        $rows = mysqli_query($this->con, $qr);
-			return $rows;
-		}
-
 		public function SPDetail($spId){
 			$qr = "SELECT * FROM sanpham WHERE MaSP = '$spId'";
 	        $rows = mysqli_query($this->con, $qr);

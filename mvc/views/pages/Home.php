@@ -6,7 +6,7 @@
               <?php 
               foreach ($data['MenuCha'] as $value) { ?>
 
-              <li><a href="#"><?php echo $value['tenMenuCha'] ?></a>
+              <li><a href="<?php echo link ?>DanhMucChaController?menucha=<?php echo $value['id_cha'] ?>"><?php echo $value['tenMenuCha'] ?></a>
                 <ul class="sub-menu">
                   <h4><?php echo $value['tenMenuCha'] ?></h4>
 

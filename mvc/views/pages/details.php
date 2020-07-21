@@ -14,7 +14,7 @@
     <div class="dropdown-menu">
 
       <?php  while($row = mysqli_fetch_array($data['listMenuCha'])) { ?>
-      <a class="dropdown-item" href="#"><?php echo $row['TenMenuCha'] ?></a>
+      <a class="dropdown-item" href="<?php echo link ?>/DanhMucChaController?menucha=<?php echo $row['id'] ?>"><?php echo $row['TenMenuCha'] ?></a>
       <?php } ?>
 
     </div>

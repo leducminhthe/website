@@ -113,7 +113,9 @@
                         <?php 
                           foreach ($data['MenuCha'] as $value) { ?>
                             <div class="col-sm-6 col-lg-3">
-                              <h5><?php echo $value['tenMenuCha'] ?></h5>
+                              <a href="<?php echo link ?>/DanhMucChaController?menucha=<?php echo $value['id_cha'] ?>" >
+                                <h5><?php echo $value['tenMenuCha'] ?></h5>
+                              </a>
 
                               <?php 
                                 foreach ($value['listMenuCon'] as $menucon) { ?>

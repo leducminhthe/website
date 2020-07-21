@@ -28,7 +28,7 @@ class GetSPController extends Controller{
             "MenuCha"=>$menu->get_menus(),
             "SP" => $sp->SP($sotin1trang,$from,$danhmuc),
             "trang_SP"=>$sp->trang_SP($sotin1trang,$danhmuc),
-            "DanhMucMenuCon" => $sp->DanhMucMenuCon($danhmuc),
+            "DanhMucMenuCon" => $menu->DanhMucMenuCon($danhmuc),
         ]);
     }
 }
