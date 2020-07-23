@@ -26,7 +26,10 @@
 <div class="fb-like" data-href="<?php echo $actual_link ?>" data-width="" data-layout="button_count" data-action="like" data-size="small" data-share="true"></div>
 
 <?php
-  while($row_detail = mysqli_fetch_array($data['SPDetail'])) { ?>
+  while($row_detail = mysqli_fetch_array($data['SPDetail'])) { 
+    $a = $row_detail['id_Con_FK'];
+    $b = $row_detail['MaSP'];
+  ?>
 
 <div class="pageCommunity row">
   <div class="TenMaSP col-8 col-lg-8 col-md-8">
@@ -95,37 +98,37 @@
     </form>
   </div>
 </div>
+<?php } ?>
+
+<!-- <div class="fb-comments" data-href="<?php echo $actual_link ?>" data-numposts="20" data-width=""></div> -->
+
+<div id="danhsach"></div>
+  <div id="xemthem">
+    <center><button>xem thêm sản phẩm liên quan</button></center>
+  </div>
+
 <script>
   var sotrang = 0
   $(document).ready(function(){
     $("#xemthem").click(function(){
       sotrang = sotrang + 1;
-      $.get("text", {trang:sotrang, danhmuc:<?php echo $row_detail['id_Con_FK'] ?>} , function(data){
+      $.get("text", {trang:sotrang,spId:'<?php echo $b ?>',danhmuc:<?php echo $a ?>} , function(data){
         $("#danhsach").append(data);
       })
     })
   })
+
+  const thumbs=document.querySelector(".thumb-img").children;
+
+     function changeImage(event){
+        document.querySelector(".pro-img").src=event.children[0].src
+        
+        for(let i=0; i<thumbs.length;i++){
+          thumbs[i].classList.remove("active");
+        }
+        event.classList.add("active");
+     }
 </script>
-<?php } ?>
 
-<div class="fb-comments" data-href="<?php echo $actual_link ?>" data-numposts="20" data-width=""></div>
-
-<div id="danhsach"></div>
-  <div id="xemthem">
-    xem thêm sản phẩm liên quan
-  </div>
-
-<script>
-      const thumbs=document.querySelector(".thumb-img").children;
-
-         function changeImage(event){
-            document.querySelector(".pro-img").src=event.children[0].src
-            
-            for(let i=0; i<thumbs.length;i++){
-              thumbs[i].classList.remove("active");
-            }
-            event.classList.add("active");
-         }
-</script> 
 
 
