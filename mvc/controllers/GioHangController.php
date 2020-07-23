@@ -8,7 +8,7 @@ class GioHangController extends Controller{
 
         $this->view("layout2", [
             "Page"=>"giohang",
-            "MenuCha"=>$menu->get_menus(),
+            "Menu"=>$menu->get_menus(),
         ]);
     }
 

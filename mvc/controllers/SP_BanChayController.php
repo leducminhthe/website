@@ -22,7 +22,7 @@ class SP_BanChayController extends Controller{
         //view
         $this->view("layout2", [
             "Page"=>"SP_BanChay",
-            "MenuCha"=>$menu->get_menus(),
+            "Menu"=>$menu->get_menus(),
             "SP" => $sp->SP($sotin1trang,$from),
             "trang_SP"=>$sp->trang_SP($sotin1trang),
         ]);

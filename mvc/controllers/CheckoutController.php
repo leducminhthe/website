@@ -8,7 +8,7 @@ class CheckoutController extends Controller{
 
         $this->view("layout2", [
             "Page"=>"Checkout",
-            "MenuCha"=>$menu->get_menus(),
+            "Menu"=>$menu->get_menus(),
         ]);
     }
 

@@ -12,13 +12,6 @@
 	        return $rows;
 		}
 
-		public function DanhMucMenuCon(){
-			$qr = "SELECT * FROM menucon WHERE id = '$danhmuc' ";
-	        $rows = mysqli_query($this->con, $qr);
-	       
-			return $rows;
-		}
-
 		public function trang_SP( $sotin1trang){
 			$qr = "SELECT count(MaSP) as tongsp FROM sanpham  WHERE SP_Best > 0";
 	        $rows = mysqli_query($this->con, $qr);
@@ -27,12 +20,5 @@
 	       
 			return $sotrang;
 		}
-
-		public function SP_Best(){
-	        $qr = "SELECT * FROM sanpham WHERE SP_Best > 0 ORDER BY SP_Best ASC";
-	        $rows = mysqli_query($this->con, $qr);
-	       
-			return $rows;
-	    }
 	}
 ?>

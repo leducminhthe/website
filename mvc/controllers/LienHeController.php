@@ -7,7 +7,7 @@
 
       		$this->view("layout2", [
           		"Page"=>"LienHe",
-          		"MenuCha"=>$menu->get_menus(),
+          		"Menu"=>$menu->get_menus(),
       		]);
     	}
 

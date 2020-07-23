@@ -4,7 +4,7 @@
           <div id="mainnav">
             <ul>
               <?php 
-              foreach ($data['MenuCha'] as $value) { ?>
+              foreach ($data['Menu'] as $value) { ?>
 
               <li><a href="<?php echo link ?>DanhMucChaController?menucha=<?php echo $value['id_cha'] ?>"><?php echo $value['tenMenuCha'] ?></a>
                 <ul class="sub-menu">

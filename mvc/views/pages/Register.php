@@ -26,6 +26,9 @@
       <input type="email" name="email" class="form-control" id="email" placeholder="Enter email">
     </div>
   </div>
+
+  <div class="loi"></div>
+
   <div class="form-group">
     <label class="control-label col-sm-2" for="pwd">Password:</label>
     <div class="col-sm-6"> 
@@ -41,7 +44,7 @@
   <div class="form-group">
     <label class="control-label col-sm-2" for="pwd">Address:</label>
     <div class="col-sm-6"> 
-      <input type="text" name="address" class="form-control" id="phone" placeholder="Enter address">
+      <input type="text" name="address" class="form-control" id="address" placeholder="Enter address">
     </div>
   </div>
   <div class="form-group"> 
@@ -50,4 +53,5 @@
     </div>
   </div>
 </form>
+
 

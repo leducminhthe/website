@@ -46,7 +46,7 @@
         </p>
     </li>
     <li class="back">
-      <a href="<?php echo link ?>/HomeController" title=""><img src="<?php echo file ?>/images/logout.png" alt=""></a>
+      <a href="<?php echo link ?>HomeController" title=""><img src="<?php echo file ?>/images/logout.png" alt=""></a>
     </li>
   </ul>
 </div>
@@ -95,8 +95,25 @@
     </form>
   </div>
 </div>
+<script>
+  var sotrang = 0
+  $(document).ready(function(){
+    $("#xemthem").click(function(){
+      sotrang = sotrang + 1;
+      $.get("text", {trang:sotrang, danhmuc:<?php echo $row_detail['id_Con_FK'] ?>} , function(data){
+        $("#danhsach").append(data);
+      })
+    })
+  })
+</script>
 <?php } ?>
+
 <div class="fb-comments" data-href="<?php echo $actual_link ?>" data-numposts="20" data-width=""></div>
+
+<div id="danhsach"></div>
+  <div id="xemthem">
+    xem thêm sản phẩm liên quan
+  </div>
 
 <script>
       const thumbs=document.querySelector(".thumb-img").children;
@@ -110,3 +127,5 @@
             event.classList.add("active");
          }
 </script> 
+
+

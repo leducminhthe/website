@@ -14,7 +14,7 @@
 
         	$this->view("layout2", [
             	"Page"=>"Register",
-            	"MenuCha"=>$menu->get_menus(),
+            	"Menu"=>$menu->get_menus(),
         	]);
    		}
 
@@ -32,7 +32,7 @@
    			}
    			
 			$kq = $this->UserModel->InsertUser($fname,$lname,$gender,$email,$address,$password,$phone);
-
+			
 			$this->view("layout2", [
             	"Page"=>"Login"
         	]);

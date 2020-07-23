@@ -10,7 +10,7 @@ class DanhMucChaController extends Controller{
 
         $this->view("layout2", [
             "Page"=>"MenuCha",
-            "MenuCha"=>$menu->get_menus(),
+            "Menu"=>$menu->get_menus(),
             "DanhMucMenuCha"=>$menu->DanhMucMenuCha($menucha),
             "DanhMucCha"=>$menu->MenuCha($menucha),
             "ListMenuCha"=>$menu->ListMenuCha(),

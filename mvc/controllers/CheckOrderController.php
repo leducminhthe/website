@@ -10,7 +10,7 @@ class CheckOrderController extends Controller{
 
         $this->view("layout2", [
             "Page"=>"CheckOrder",
-            "MenuCha"=>$menu->get_menus(),
+            "Menu"=>$menu->get_menus(),
             "Check"=>$sp->Check(),
         ]);
     }

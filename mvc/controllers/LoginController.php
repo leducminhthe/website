@@ -6,8 +6,9 @@
       $menu = $this->model("MenuModel");
       $this->view("layout2", [
           "Page"=>"Login",
-          "MenuCha"=>$menu->get_menus(),
+          "Menu"=>$menu->get_menus(),
       ]);
+
     }
 
     public function Login(){

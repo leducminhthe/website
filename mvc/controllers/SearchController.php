@@ -25,10 +25,8 @@ class SearchController extends Controller{
         //view
         $this->view("layout2", [
             "Page"=>"getsp",
-            "MenuCha"=>$menu->get_menus(),
-            // "Danhmuc" => $sp->getDetail($search),
+            "Menu"=>$menu->get_menus(),
             "SP"=>$sp->SP($sotin1trang,$from,$search),
-            // "MenuCon" => $sp->MenuCon(),
             "trang_SP"=>$sp->trang_SP($sotin1trang,$search),
         ]);
     }

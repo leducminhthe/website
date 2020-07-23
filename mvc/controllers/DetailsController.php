@@ -18,7 +18,7 @@ class DetailsController extends Controller{
         //view
         $this->view("layout2", [
             "Page"=>"details",
-            "MenuCha"=>$menu->get_menus(),
+            "Menu"=>$menu->get_menus(),
             "DanhMucCha" => $sp->DanhMucCha($spId),
             "listMenuCha" =>$menu->ListMenuCha(),
             "SPDetail"=> $sp->SPDetail($spId),

@@ -12,7 +12,7 @@ class HomeController extends Controller{
         //view
         $this->view("layout1", [
             "Page"=>"Home",
-            "MenuCha"=>$menu->get_menus(),
+            "Menu"=>$menu->get_menus(),
             "SP_Best" => $sp->SP_Best(),
             "BinhNuoc" => $sp->BinhNuoc(),
             "DungCuNauAn" => $sp->DungCuNauAn(),

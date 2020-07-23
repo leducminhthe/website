@@ -8,7 +8,7 @@ class UpdateProfileController extends Controller{
 
         $this->view("layout2", [
             "Page"=>"Profile",
-            "MenuCha"=>$menu->get_menus(),
+            "Menu"=>$menu->get_menus(),
         ]);
     }
 
