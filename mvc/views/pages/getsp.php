@@ -1,4 +1,7 @@
-
+<nav class="nav nav_GioHang">
+  <a class="nav-link" href="<?php echo link ?>HomeController"><img src="<?php echo file ?>/images/home.png" alt=""></a>
+  <a class="nav-link" href="#">Kết quả kiểm tra</a>
+</nav>
 <?php
 
 	while($row = mysqli_fetch_array($data['SP'])){ ?>
