@@ -12,6 +12,8 @@ class text extends Controller{
 
         $danhmuc = $_GET['danhmuc'];
 
+        $spId = $_GET['spId'];
+
         if( isset($_GET["trang"]) ){
 			$trang = $_GET["trang"];
 			settype($trang, "int");
@@ -26,7 +28,7 @@ class text extends Controller{
         $this->view("textlayout", [
             "Page"=>"text",
             "MenuCha"=>$menu->get_menus(),
-            "SP" => $sp->SP($sotin1trang,$from,$danhmuc),
+            "SP" => $sp->SP($sotin1trang,$from,$danhmuc,$spId),
         ]);
     }
 }
