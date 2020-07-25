@@ -2,10 +2,10 @@
 -- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th7 18, 2020 lúc 09:08 AM
--- Phiên bản máy phục vụ: 10.4.11-MariaDB
--- Phiên bản PHP: 7.4.5
+-- Host: 127.0.0.1
+-- Generation Time: Jul 25, 2020 at 02:38 PM
+-- Server version: 10.4.13-MariaDB
+-- PHP Version: 7.4.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `dbquanlybanhang`
+-- Database: `dbquanlybanhang`
 --
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `admin`
+-- Table structure for table `admin`
 --
 
 CREATE TABLE `admin` (
@@ -37,7 +37,7 @@ CREATE TABLE `admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `admin`
+-- Dumping data for table `admin`
 --
 
 INSERT INTO `admin` (`adminID`, `adminName`, `adminEmail`, `adminUser`, `adminPass`, `level`) VALUES
@@ -46,7 +46,7 @@ INSERT INTO `admin` (`adminID`, `adminName`, `adminEmail`, `adminUser`, `adminPa
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `donhang`
+-- Table structure for table `donhang`
 --
 
 CREATE TABLE `donhang` (
@@ -66,18 +66,21 @@ CREATE TABLE `donhang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `donhang`
+-- Dumping data for table `donhang`
 --
 
 INSERT INTO `donhang` (`id`, `Name`, `Address`, `Email`, `Phone`, `Message`, `Grandtotal`, `TenSP`, `MaSP`, `SL`, `Subtotal`, `Phuongthuc`, `date_order`) VALUES
-(18, 'nguyen van b', '1122tphcm', 'b@gmail', '12345', '', '845900', 'Chảo nhôm sâu lòng chống dính BAUM Marble 28cm, 1 tay cầm, nắp thủy tinh, hiệu L&L', 'LBU1285', '1', '769000', 'Thanh toán khi nhận hàng', '2020-07-12 04:04:14'),
-(19, 'lethe', '12345', 'a@gmail', '12345', '', '151800', 'Bình nước nhựa thể thao Tritan 700ml', 'ABF722', '1', '138000', 'Thanh toán khi nhận hàng', '2020-07-12 04:14:21'),
-(20, 'nguyen van b', '202 tphcm', 'b@gmail', '31245', '', '231000', 'Bình trà di động L&L có lớp chặn lá trà 600ml', 'HPL938', '3', '210000', 'Thanh toán khi nhận hàng', '2020-07-14 06:14:11');
+(20, 'nguyen van b', '202 tphcm', 'b@gmail', '31245', '', '231000', 'Bình trà di động L&L có lớp chặn lá trà 600ml', 'HPL938', '3', '210000', 'Thanh toán khi nhận hàng', '2020-07-14 06:14:11'),
+(21, 'nguyen van b', '202 tphcm', 'b@gmail', '31245', 'giao hàng', '3295600', 'Nồi nhôm chống dính BAUM Marble 24cm, 2 tay cầm, nắp thủy tinh, hiệu L&L', 'LBU1242', '4', '2996000', 'Chuyển khoản ngân hàng', '2020-07-18 11:31:29'),
+(22, 'nguyen van b', '202 tphcm', 'b@gmail', '31245', 'giao hàng', '5935600', 'Máy Xay Trộn Đa Năng Lock&Lock ELHB-220 (420W)', 'ELHB-220', '1', '5396000', 'Chuyển khoản ngân hàng', '2020-07-18 11:31:29'),
+(23, 'lethe', '12345', 'the1@gmail', '12345', 'thanh toán', '823900', 'Nồi nhôm chống dính BAUM Marble 24cm, 2 tay cầm, nắp thủy tinh, hiệu L&L', 'LBU1242', '1', '749000', 'Chuyển khoản ngân hàng', '2020-07-21 11:36:50'),
+(24, 'lethe', '12345', 'the1@gmail', '12345', 'thanh toán', '6103900', 'Máy Xay Trộn Đa Năng Lock&Lock ELHB-220 (420W)', 'ELHB-220', '2', '5549000', 'Chuyển khoản ngân hàng', '2020-07-21 11:36:50'),
+(25, 'Lê Đức Minh Thế', '202 tphcm', 'the1@gmail', '12345', 'asvb', '511500', 'Tô Salad 1.6L W/Khay&Khay nước sốt', 'HSM8450T', '3', '465000', 'VTC pay', '2020-07-23 12:48:01');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `images`
+-- Table structure for table `images`
 --
 
 CREATE TABLE `images` (
@@ -87,7 +90,7 @@ CREATE TABLE `images` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `images`
+-- Dumping data for table `images`
 --
 
 INSERT INTO `images` (`id`, `AnhSP`, `MaSP_FK`) VALUES
@@ -153,7 +156,7 @@ INSERT INTO `images` (`id`, `AnhSP`, `MaSP_FK`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `lienhe`
+-- Table structure for table `lienhe`
 --
 
 CREATE TABLE `lienhe` (
@@ -165,7 +168,7 @@ CREATE TABLE `lienhe` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `lienhe`
+-- Dumping data for table `lienhe`
 --
 
 INSERT INTO `lienhe` (`id`, `HoTen`, `email`, `Phone`, `Message`) VALUES
@@ -174,7 +177,7 @@ INSERT INTO `lienhe` (`id`, `HoTen`, `email`, `Phone`, `Message`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `menucha`
+-- Table structure for table `menucha`
 --
 
 CREATE TABLE `menucha` (
@@ -183,7 +186,7 @@ CREATE TABLE `menucha` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `menucha`
+-- Dumping data for table `menucha`
 --
 
 INSERT INTO `menucha` (`id`, `TenMenuCha`) VALUES
@@ -202,7 +205,7 @@ INSERT INTO `menucha` (`id`, `TenMenuCha`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `menucon`
+-- Table structure for table `menucon`
 --
 
 CREATE TABLE `menucon` (
@@ -212,7 +215,7 @@ CREATE TABLE `menucon` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `menucon`
+-- Dumping data for table `menucon`
 --
 
 INSERT INTO `menucon` (`id`, `TenMenuCon`, `id_Cha_FK`) VALUES
@@ -279,7 +282,7 @@ INSERT INTO `menucon` (`id`, `TenMenuCon`, `id_Cha_FK`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `sanpham`
+-- Table structure for table `sanpham`
 --
 
 CREATE TABLE `sanpham` (
@@ -298,56 +301,56 @@ CREATE TABLE `sanpham` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `sanpham`
+-- Dumping data for table `sanpham`
 --
 
 INSERT INTO `sanpham` (`MaSP`, `TenSP`, `AnhSP`, `ThongTinChiTiet`, `GIA_BD`, `GIA_HT`, `NgayDang`, `id_Con_FK`, `id_Cha_FK`, `SP_KM`, `SP_Best`, `Active`) VALUES
-('ABF710', 'Bình đựng nước BISFREE 500ml', 'http://www.locknlock.vn/data/base/goods/big/201821960708502.jpg', '<p>Thương hiệu Lock&amp;Lock Sản xuất tại Việt Nam Chất liệu nhựa Tritan kh&ocirc;ng chứa Bisphenol A Dung t&iacute;ch 500ml Hướng dẫn bảo quản Bảo quản nơi kh&ocirc; r&aacute;o, tho&aacute;ng m&aacute;t</p>', 100000, 100000, '0000-00-00', 13, 3, b'1', 7, 'Còn hàng'),
-('ABF722', 'Bình nước nhựa thể thao Tritan 700ml', 'http://www.locknlock.vn/data/base/goods/big/201821960708283.jpg', 'Thương hiệu	Lock&Lock\r\nSản xuất tại	Việt Nam\r\nChất liệu	nhựa Tritan không chứa Bisphenol A\r\nDung tích	700ml\r\nHướng dẫn bảo quản	Bảo quản nơi khô ráo, thoáng mát', 138000, 138000, '0000-00-00', 13, 3, b'0', 0, 'Tạm thời hết hàng'),
-('ECF-301R', 'Nồi Chiên Không Dầu Lock& Lock ECF-301R (3.1L) - Đen', 'http://www.locknlock.vn/data/base/goods/big/201815961785125.jpg', 'THÔNG TIN SẢN PHẨM	\r\n-Thương hiệu:Lock&Lock\r\n-Xuất xứ thương hiệu:Hàn Quốc\r\n-Sản xuất tại:Trung Quốc\r\n-Model:ECF-301R\r\n-Điện áp:220V~240V\r\n-Dung tích:3.1L\r\n-Trọng lượng: 5kg\r\n-Kích thước:40 x 40 x 30 cm', 4600000, 4600000, '0000-00-00', 32, 7, b'0', 0, 'Tạm thời hết hàng'),
-('EJF376BLK', 'Nồi chiên không dầu kỹ thuật số thương hiệu LOCK&LOCK, 220-240V, 1500W, 4L - Màu đen (EJF376BLK)', 'http://www.locknlock.vn/data/base/goods/big/201835435195506.JPG', 'Thương hiệu	Lock&Lock\r\nSản xuất tại	Trung Quốc\r\nCông Suât	1500W\r\nĐiện áp	220V,50Hz\r\nMàu	Đen\r\nChất liệu	Nhựa PP, ABS\r\nDung tích	4L', 4500000, 4500000, '0000-00-00', 32, 7, b'0', 0, 'Còn hàng'),
-('EJR151', 'Nồi cơm điện thương hiệu Lock&Lock 220V, 700W, 50/60Hz, 1.8L(5L) - Màu đen', 'http://www.locknlock.vn/data/base/goods/big/201913438759252.jpg', 'Thương hiệu	Lock&Lock\r\nSản xuất tại	Trung Quốc\r\nLoại nồi	Nồi Cơm Điện Tử\r\nDung tích	1.8L\r\nCông suất	700W\r\nChất liệu	-Thép không gỉ\r\n-Nhựa PP\r\n-Physical Tolerance Heat-resisting toughened glass\r\n-Nhôm\r\nĐiện áp	220V\r\nKích thước	32 x 27 x 24 cm', 1947000, 1947000, '0000-00-00', 32, 7, b'0', 13, 'Tạm thời hết hàng'),
-('EJR356', 'Nồi cơm điện thương hiệu Lock&Lock 220V, 700W, 50/60Hz, 1.8L(5L) - Màu đen', 'http://www.locknlock.vn/data/base/goods/big/201913441313219.jpg', 'Thương hiệu	Lock&Lock\r\nNơi sản xuất	Trung Quốc\r\nLoại nồi	Cơm điện tử\r\nDung tích	1.5L\r\nChất liệu	- Lòng nồi : Phủ chất chống dính Ceramic\r\n-PP, SPCC, ABS, thép không gỉ\r\nĐiện áp	220-240V', 1845000, 1845000, '0000-00-00', 32, 7, b'0', 0, 'Tạm thời hết hàng'),
-('ELHB-220', 'Máy Xay Trộn Đa Năng Lock&Lock ELHB-220 (420W)', 'http://www.locknlock.vn/data/base/goods/big/201816553664694.jpg', 'THÔNG TIN SẢN PHẨM	\r\n-Thương hiệu: Lock&Lock\r\n-Xuất xứ thương hiệu: Hàn Quốc\r\n-Sản xuất tại: Trung Quốc\r\n-Model: ELHB-220\r\n-Chất liệu: cối xay-Nhựa\r\n-Số lượng cối: 2\r\n-Dung tích: 800ml\r\n-Điện áp: 220V\r\n-Công suất: 420W', 2400000, 2400000, '0000-00-00', 32, 7, b'0', 3, 'Tạm thời hết hàng'),
-('ELJE-110', 'Máy Ép Trái Cây Tốc Độ Cao Lock&Lock ELJE-110 (700W) - Đen', 'http://www.locknlock.vn/data/base/goods/big/201816554650465.jpg', 'THÔNG TIN SẢN PHẨM	\r\n-Thương hiệu: Lock&Lock\r\n-Xuất xứ thương hiệu: Hàn Quốc\r\n-Sản xuất tại: Trung Quốc\r\n-Model: ELJE-110\r\n-Chất liệu	\r\n   *Chất liệu vỏ máy: Nhựa cứng\r\n   *Chất liệu nắp: Nhựa kháng vỡ\r\n   *Chất liệu lưỡi dao: Thép không gỉ\r\n   *Chất liệu cối xay:Thép không gỉ\r\n-Công suất: 700W\r\n-Tr', 3500000, 3500000, '0000-00-00', 32, 7, b'0', 14, 'Còn hàng'),
-('HPL550', 'HPL550- Hộp bảo quản gạo bằng nhựa Lock&Lock 12kg', 'http://www.locknlock.vn/data/base/goods/big/201900832117140.jpg\r\n', '', 290000, 290000, '0000-00-00', 1, 1, b'0', 1, 'còn hàng'),
-('HPL733', 'Bình nước Jug PP 1.5L', 'http://www.locknlock.vn/data/base/goods/big/201821960708170.jpg', 'Thương hiệu	Lock&Lock\r\nSản xuất tại	Việt Nam\r\nChất liệu	PP\r\nDung tích	1.5L\r\nHướng dẫn bảo quản	Bảo quản nơi khô ráo, thoáng mát', 110000, 110000, '0000-00-00', 13, 3, b'0', 0, 'Còn hàng'),
-('HPL758S3A', 'Bộ Túi Hộp Cơm Lock&Lock Triangle Pattern Bag - 470*470*300 ml\r\n', 'http://www.locknlock.vn/data/base/goods/big/201814153156395.jpg', 'THÔNG TIN SẢN PHẨM	\r\nThương hiệu:Lock&Lock\r\nXuất xứ thương hiệu:	Hàn Quốc\r\nSản xuất tại:Việt Nam\r\nChất liệu: Nhựa vải\r\nKích thước: Dài 20cm x Rộng 17cm x Cao 11cm', 430000, 430000, '0000-00-00', 20, 4, b'0', 0, 'Còn hàng'),
-('HPL806S6', 'Bộ 6 hộp bảo quản Lock&Lock Classic (HPL806*2, HPL807*2, HPL816*1, HPL817*1)', 'http://www.locknlock.vn/data/base/goods/big/201834440539728.JPG', '<img src=\"/prod/spec_img/3.JPG\">\r\n<img src=\"/prod/spec_img/HPL806S6.JPG\">\r\n<img src=\"/prod/spec_img/HPL806S6%2DCover.JPG\">\r\nThương hiệu	Lock&Lock\r\nXuất xứ thương hiệu	Hàn Quốc\r\nSản xuất tại	Viêt Nam\r\nChất liệu	Nhựa PP', 380000, 380000, '0000-00-00', 1, 1, b'0', 0, 'còn hàng'),
-('HPL817S5', 'Bộ 6 hộp bảo quản Lock&Lock Classic (HPL817*2, HPL817C*1, HPL854*2, HPL855*1)', 'http://www.locknlock.vn/data/base/goods/big/201834440539358.JPG', '<img src=\"/prod/spec_img/HPL817S5%5Fcover%5F5.JPG\" title=\"HPL817S5%5Fcover%5F5.JPG\" ow=\"1500\" oh=\"1500\" style=\"width: 1100px; height: auto;\">\r\n<img src=\"/prod/spec_img/HPL817S5%5Fcover%5F2.JPG\" title=\"HPL817S5%5Fcover%5F2.JPG\" ow=\"1500\" oh=\"1500\" style=\"width: 1100px; height: auto;\">\r\n<img src=\"/pro', 530000, 530000, '0000-00-00', 1, 1, b'0', 2, 'còn hàng'),
-('HPL934M', 'Bình trà Lock&Lock 690ml', 'http://www.locknlock.vn/data/base/goods/big/201822850737577.jpg', 'Thương hiệu	Lock&Lock\r\nSản xuất tại	Việt Nam\r\nChất liệu	PP\r\nDung tích	690ml\r\nHướng dẫn bảo quản	Bảo quản nơi khô ráo, thoáng mát', 128000, 128000, '0000-00-00', 13, 3, b'0', 0, 'Còn hàng'),
-('HPL938', 'Bình trà di động L&L có lớp chặn lá trà 600ml', 'http://www.locknlock.vn/data/base/goods/big/201822850737950.jpg', 'Thương hiệu	Lock&Lock\r\nSản xuất tại	Việt Nam\r\nChất liệu	PP\r\nDung tích	600ml\r\nHướng dẫn bảo quản	Bảo quản nơi khô ráo, thoáng mát', 70000, 70000, '0000-00-00', 13, 3, b'0', 8, 'Còn hàng'),
-('HSM8440T', 'Hộp bảo quản thực phẩm Lock&Lock 950ml', 'http://www.locknlock.vn/data/base/goods/big/201836251331324.jpg\r\n', '<img src=\"/prod/spec_img/HSM8440T%2D2.jpg\" title=\"HSM8440T%2D2.jpg\" ow=\"500\" oh=\"331\">\r\n<img src=\"/prod/spec_img/HSM8440T%2D1.jpg\" title=\"HSM8440T%2D1.jpg\" ow=\"600\" oh=\"516\">\r\nThương hiệu	Lock&Lock\r\nSản xuất tại	Viêt Nam\r\nChất liệu	nhựa PP\r\nDung tích	950ml', 129000, 129000, '0000-00-00', 2, 1, b'0', 0, 'còn hàng'),
-('HSM8450T', 'Tô Salad 1.6L W/Khay&Khay nước sốt', 'http://www.locknlock.vn/data/base/goods/big/201836251331782.jpg\r\n', '<img src=\"/prod/spec_img/HSM8450T%2D2.jpg\" title=\"HSM8450T%2D2.jpg\" ow=\"500\" oh=\"500\">\r\n<img src=\"/prod/spec_img/HSM8450T%2D1.jpg\" title=\"HSM8450T%2D1.jpg\" ow=\"550\" oh=\"550\">\r\nThương hiệu	Lock&Lock\r\nSản xuất tại	Viêt Nam\r\nChất liệu	Nhựa PP\r\nDung tích	1.6L', 155000, 150000, '0000-00-00', 2, 1, b'0', 4, 'còn hàng'),
-('INL301WS10', 'Bộ 10 hộp Interlock (INL301W*4, INL302W*4, INL303W*2)', 'http://www.locknlock.vn/data/base/goods/big/201834440537098.JPG', 'Thương hiệu	Lock&Lock\r\nXuất xứ thương hiệu	Hàn Quốc\r\nSản xuất tại	Viêt Nam\r\nChất liệu	Thân: Nhựa Pet , Nắp: Nhựa PP\r\nDung tích	1.6L*2EA , 1L*4EA, 500ml*4EA', 600000, 600000, '0000-00-00', 1, 1, b'0', 0, 'còn hàng'),
-('LBU1242', 'Nồi nhôm chống dính BAUM Marble 24cm, 2 tay cầm, nắp thủy tinh, hiệu L&L', 'http://www.locknlock.vn/data/base/goods/big/201834536586984.jpg', '<img src=\"/prod/spec_img/LBU1242.jpg\" title=\"LBU1242.jpg\" ow=\"750\" oh=\"5243\">\r\nThương hiệu	Lock&Lock\r\nXuất xứ thương hiệu	Hàn Quốc\r\nSản xuất tại	Viêt Nam', 749000, 749000, '0000-00-00', 5, 2, b'0', 5, 'Tạm thời hết hàng'),
-('LBU1243', 'Chảo nhôm chống dính BAUM Marble 24cm, 1 tay cầm, hiệu L&L', 'http://www.locknlock.vn/data/base/goods/big/201834536586878.jpg\r\n', '<img src=\"/prod/spec_img/LBU1243.jpg\" title=\"LBU1243.jpg\" ow=\"750\" oh=\"5150\">\r\nThương hiệu	Lock&Lock\r\nXuất xứ thương hiệu	Hàn Quốc\r\nSản xuất tại	Viêt Nam\r\nKích thước	24 cm', 390000, 390000, '0000-00-00', 5, 2, b'0', 0, 'Tạm thời hết hàng'),
-('LBU1283\r\n', 'Chảo nhôm chống dính BAUM Marble 28cm, 1 tay cầm, hiệu L&L', 'http://www.locknlock.vn/data/base/goods/big/201834536587465.jpg\r\n', '<img src=\"/prod/spec_img/LBU1283.jpg\" title=\"LBU1283.jpg\" ow=\"750\" oh=\"5150\">\r\nThương hiệu	Lock&Lock\r\nXuất xứ thương hiệu	Hàn Quốc\r\nSản xuất tại	Viêt Nam\r\nKích thước	24 cm', 490000, 490000, '0000-00-00', 5, 2, b'0', 0, 'Tạm thời hết hàng'),
-('LBU1285', 'Chảo nhôm sâu lòng chống dính BAUM Marble 28cm, 1 tay cầm, nắp thủy tinh, hiệu L&L', 'http://www.locknlock.vn/data/base/goods/big/201834536587472.jpg', '<img src=\"/prod/spec_img/LBU1285.jpg\" title=\"LBU1285.jpg\" ow=\"750\" oh=\"5243\">\r\nThương hiệu	Lock&Lock\r\nXuất xứ thương hiệu	Hàn Quốc\r\nSản xuất tại	Viêt Nam\r\nKích thước	28 cm', 669000, 669000, '0000-00-00', 5, 2, b'0', 0, 'Tạm thời hết hàng'),
-('LBU1305', 'Chảo nhôm sâu lòng chống dính BAUM Marble 30cm, 1 tay cầm, nắp thủy tinh, hiệu L&L', 'http://www.locknlock.vn/data/base/goods/big/201834536587801.jpg', '<img src=\"/prod/spec_img/LBU1305.jpg\" title=\"LBU1305.jpg\" ow=\"750\" oh=\"5243\">\r\nThương hiệu	Lock&Lock\r\nXuất xứ thương hiệu	Hàn Quốc\r\nSản xuất tại	Viêt Nam\r\nKích thước	30 cm', 759000, 759000, '0000-00-00', 5, 2, b'0', 6, 'Tạm thời hết hàng'),
-('LHB2303OK-IH', 'Chảo Cookplus Hard&Light 30cm, W/Coating inside Okitsumo (Có thể sử dụng bếp từ)', 'http://www.locknlock.vn/data/base/goods/big/201825359631992.jpg', 'hương hiệu	Lock&Lock\r\nXuất xứ thương hiệu	Hàn Quốc\r\nSản xuất tại	Việt Nam\r\nMàu/Mẫu	Đen\r\nChất liệu	Nhôm, lớp chống dính', 550000, 550000, '0000-00-00', 5, 2, b'0', 0, 'Tạm thời hết hàng'),
-('LHC1448PIK', 'LHC1448PIK - Bình nước giữ nhiệt Lock&Lock City Vacuum Bottle (Olympic) Montreal 700ml - Màu hồng', 'http://www.locknlock.vn/data/base/goods/big/201900755110529.jpg', 'Thương hiệu	Lock&Lock\r\nNơi sản xuất	Trung Quốc\r\nChất liệu	Thân bình bằng thép không gỉ; nắp bằng nhựa PP, Gioăng Silicone\r\nDung tích	700ml', 482000, 482000, '0000-00-00', 25, 5, b'0', 0, 'Còn hàng'),
-('LHC4131', 'Bình giữ nhiệt Lock&Lock Feather Light 450ml', 'http://www.locknlock.vn/data/base/goods/big/201822947765599.jpg', 'Thương hiệu	Lock&Lock\r\nSản xuất tại	Trung Quốc\r\nChất liệu	Thép không gỉ\r\nDung tích	500ml\r\nMàu	Trắng nắp đỏ, Trắng nắp xanh , Đen nắp đỏ, Đen nắp xanh\r\nHướng dẫn bảo quản	Bảo quản nơi khô ráo, thoáng mát', 470000, 470000, '0000-00-00', 25, 5, b'0', 0, 'Còn hàng'),
-('LHC4153', 'Bình giữ nhiệt bằng thép không gỉ Lock&Lock Loop Tumbler 530ml', 'http://www.locknlock.vn/data/base/goods/big/202006239387361.jpg', 'Thương hiệu	Lock&Lock\r\nSản xuất tại	Trung Quốc\r\nChất liệu	Thép không gỉ\r\nDung tích	530ml\r\nMàu	Hồng, Xanh Mint\r\nHướng dẫn bảo quản	Bảo quản nơi khô ráo, thoáng mát', 430000, 430000, '0000-00-00', 25, 5, b'0', 0, 'Còn hàng'),
-('LHC4169BLU', 'LHC4169BLU- Bình giữ nhiệt i.d Tumbler bằng thép không gỉ Lock & Lock 450ml, màu xanh da trời', 'http://www.locknlock.vn/data/base/goods/big/201913555591084.jpg', 'Thương hiệu	Lock&Lock\r\nNơi sản xuất	Trung Quốc\r\nChất liệu	Thân: thép không gỉ (phủ sứ)\r\n- Nắp: nhựa PP, Gioăng: silicone\r\nDung tích	450ml', 440000, 440000, '0000-00-00', 25, 5, b'0', 0, 'Tạm thời hết hàng'),
-('LHC561', 'LHC561-Bình giữ nhiệt nóng và lạnh Hot&Cool Mini 300ml - Màu đen', 'http://www.locknlock.vn/data/base/goods/big/201900760946430.jpg', 'THÔNG TIN SẢN PHẨM	\r\n-Thương hiệu:	Lock&Lock\r\n-Xuất xứ thương hiệu:Hàn Quốc\r\n-Sản xuất tại:Trung Quốc\r\n-Model:LHC561\r\n-Dung tích:300ml\r\n-Chất liệu	:Inox 304-Nhựa PP-Vòng silicone\r\n-Hướng dẫn sử dụng:	Đựng thức uống nóng, lạnh\r\n-Hướng dẫn bảo quản:Bảo quản nơi khô ráo, thoáng mát\r\nMàu	\r\n- Đỏ\r\n- Đen', 385000, 385000, '0000-00-00', 25, 5, b'0', 11, 'Còn hàng'),
-('LHC8029', 'LHC8029- Hộp cơm giữ nhiệt thương hiệu Lock & Lock, 500ml (Màu đỏ, xanh, đen)', 'http://www.locknlock.vn/data/base/goods/big/201913559744948.jpg', 'Thương hiệu	Lock&Lock\r\nNơi sản xuất	Trung Quốc\r\nDung tích	500ml\r\nChất liệu	- Thân: thép không rỉ 304\r\n- Nắp đậy bên trong: nhựa Polypropylene(PP)\r\n- Gioăng: silicone', 515000, 515000, '0000-00-00', 25, 5, b'0', 12, 'Còn hàng'),
-('lhc803slv', 'LHC8031SLV-OCH - Bộ hộp cơm giữ nhiệt L&L bằng thép không gỉ -460ml*1, 420ml*1, 280ml*1, đũa*1, túi', 'http://www.locknlock.vn/data/base/goods/big/201914957458521.jpg', 'Thương hiệu	Lock&Lock\r\nNơi sản xuất	Trung Quốc\r\nChất liệu	- Thân, đũa: thép không gỉ\r\n- Nắp: nhựa PP\r\nDung tích	* 460ml : 1 hộp\r\n* 420ml : 1 hộp\r\n* 280ml : 1 hộp', 1100000, 1100000, '0000-00-00', 20, 4, b'0', 0, 'Còn hàng'),
-('LKT643W', 'Bình nước bằng nhựa Hello Kitty_Wonderful - 700 ml', 'http://www.locknlock.vn/data/base/goods/big/201828937687732.jpg', 'Thương hiệu	Lock&Lock\r\nXuất xứ thương hiệu	Hàn Quốc\r\nSản xuất tại	Việt Nam\r\nDung tích	700ml', 122000, 122000, '0000-00-00', 13, 3, b'0', 0, 'Còn hàng'),
-('LLG224S3', 'Bộ 3 hộp thủy tinh L&L Euro (LLG214*2, LLG224*1)', 'http://www.locknlock.vn/data/base/goods/big/201900833453671.jpg\r\n', '<img src=\"/prod/spec_img/LLG224S3%5F1.jpg\" title=\"LLG224S3%5F1.jpg\" ow=\"650\" oh=\"6066\">\r\nThương hiệu	Lock&Lock\r\nNơi sản xuất	Việt Nam\r\nChất liệu	Borosilicate\r\nDung tích	500ml*2; 750ml*1', 570000, 570000, '0000-00-00', 1, 1, b'0', 0, 'còn hàng'),
-('LLG422WN3', 'Bộ túi hộp cơm thủy tinh L&L 4EA (LLG422*3, HWB801WN-B-0*1) - Màu Wine', 'http://www.locknlock.vn/data/base/goods/big/201829053857496.jpg', 'Thương Hiệu	Lock&Lock\r\nSản xuất tại	Việt Nam\r\nChất liệu	Thủy tinh Chịu nhiệt\r\nMàu	Wine', 620000, 620000, '0000-00-00', 20, 4, b'0', 0, 'Còn hàng'),
-('LLG424BTZ3', 'Bộ hộp cơm thủy tinh chịu nhiệt L&L 4EA (LLG424*3,LLG424BLU(TZ)-0*1) - Màu xanh TZ', 'http://www.locknlock.vn/data/base/goods/big/201829053857447.jpg', 'Thương Hiệu	Lock&Lock\r\nSản xuất tại	Việt Nam\r\nChất liệu	Thủy tinh Chịu nhiệt\r\nMàu	Xanh TZ', 550000, 550000, '0000-00-00', 20, 4, b'0', 0, 'Còn hàng'),
-('LLG428M2', 'Bộ túi hộp cơm thủy tinh L&L 3EA (LLG429D*1,LLG428*1,HWB398GF*1) - Màu xanh Mint', 'http://www.locknlock.vn/data/base/goods/big/201829053857346.jpg', 'Thương Hiệu	Lock&Lock\r\nSản xuất tại	Việt Nam\r\nChất liệu	Thủy tinh Chịu nhiệt\r\nMàu	Xanh Mint', 600000, 600000, '0000-00-00', 20, 4, b'0', 9, 'Còn hàng'),
-('LLG430GN3', 'Bộ túi hộp cơm thủy tinh L&L 4EA (LLG424*1, LLG430*2, HWB801GN-B-0*1) - Màu xanh lá', 'http://www.locknlock.vn/data/base/goods/big/201829053858890.jpg', 'Thương Hiệu	Lock&Lock\r\nSản xuất tại	Việt Nam\r\nChất liệu	Thủy tinh Chịu nhiệt\r\nMàu	Xanh lá', 620000, 620000, '0000-00-00', 20, 4, b'0', 10, 'Còn hàng'),
-('LLS213R', 'Hộp nhựa L&L Twist Two way 330ml+150ml - Nắp màu đỏ', 'http://www.locknlock.vn/data/base/goods/big/201836251332093.jpeg\r\n', '<img src=\"/prod/spec_img/LLS213R.jpg\" title=\"LLS213R.jpg\" ow=\"750\" oh=\"9554\">\r\nThương hiệu	Lock&Lock\r\nSản xuất tại	Viêt Nam\r\nChất liệu	Nhựa PP\r\nDung tích	330ml + 150ml', 75000, 75000, '0000-00-00', 2, 1, b'0', 0, 'còn hàng'),
-('LLS221R', 'Hộp nhựa L&L Twist Two way 360ml+310ml - Nắp màu đỏ', 'http://www.locknlock.vn/data/base/goods/big/201835450014217.jpg', '<img src=\"/prod/spec_img/LLS221R.jpg\">\r\nThương hiệu	Lock&Lock\r\nNơi sản xuất	Việt Nam\r\nChất liệu	Nhựa PP\r\nDung tích	360ml+310ml', 85000, 85000, '0000-00-00', 1, 1, b'0', 0, 'còn hàng'),
-('LLS222R', 'Hộp nhựa L&L Twist Two way 560ml+310ml - Nắp màu đỏ', 'http://www.locknlock.vn/data/base/goods/big/201836251332109.jpg\r\n', '<img src=\"/prod/spec_img/LLS222R.jpg\" title=\"LLS222R.jpg\" ow=\"750\" oh=\"9554\">\r\nThương hiệu	Lock&Lock\r\nSản xuất tại	Viêt Nam\r\nChất liệu	Nhựa PP\r\nDung tích	560ml + 310ml', 95000, 95000, '0000-00-00', 2, 1, b'0', 0, 'còn hàng'),
-('LLS223R\r\n', 'Hộp nhựa L&L Twist Two way 760ml+310ml - Nắp màu đỏ', 'http://www.locknlock.vn/data/base/goods/big/201836251332237.jpg\r\n', '<img src=\"/prod/spec_img/LLS223R.jpg\" title=\"LLS223R.jpg\" ow=\"750\" oh=\"9554\">\r\nThương hiệu	Lock&Lock\r\nSản xuất tại	Viêt Nam\r\nChất liệu	Nhựa PP\r\nDung tích	760ml + 310ml', 99000, 99000, '0000-00-00', 2, 1, b'0', 0, 'Tạm thời hết hàng');
+('ABF710', 'Bình đựng nước BISFREE 500ml', 'http://www.locknlock.vn/data/base/goods/big/201821960708502.jpg', '<table class=\"detail_gosi\">\r\n<tbody>\r\n<tr><th>Thương hiệu</th>\r\n<td>Lock&amp;Lock</td>\r\n</tr>\r\n<tr><th>Sản xuất tại</th>\r\n<td>Việt Nam</td>\r\n</tr>\r\n<tr><th>Chất liệu</th>\r\n<td>nhựa Tritan kh&ocirc;ng chứa Bisphenol A</td>\r\n</tr>\r\n<tr><th>Dung t&iacute;ch</th>\r\n<td>500ml</td>\r\n</tr>\r\n<tr><th>Hướng dẫn bảo quản</th>\r\n<td>Bảo quản nơi kh&ocirc; r&aacute;o, tho&aacute;ng m&aacute;t</td>\r\n</tr>\r\n</tbody>\r\n</table>', 100000, 100000, '0000-00-00', 13, 3, b'1', 7, 'Còn hàng'),
+('ABF722', 'Bình nước nhựa thể thao Tritan 700ml', 'http://www.locknlock.vn/data/base/goods/big/201821960708283.jpg', '<table class=\"detail_gosi\">\r\n						<tbody>\r\n\r\n							<tr>\r\n								<th>Thương hiệu</th>\r\n								<td>Lock&amp;Lock</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Sản xuất tại</th>\r\n								<td>Việt Nam</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Chất liệu</th>\r\n								<td>nhựa Tritan không chứa Bisphenol A</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Dung tích</th>\r\n								<td>700ml</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Hướng dẫn bảo quản</th>\r\n								<td>Bảo quản nơi khô ráo, thoáng mát</td>\r\n							</tr>\r\n\r\n						</tbody>\r\n					</table>', 138000, 138000, '0000-00-00', 13, 3, b'1', 0, 'Tạm thời hết hàng'),
+('ECF-301R', 'Nồi Chiên Không Dầu Lock& Lock ECF-301R (3.1L) - Đen', 'http://www.locknlock.vn/data/base/goods/big/201815961785125.jpg', '<table class=\"detail_gosi\">\r\n						<tbody>\r\n\r\n							<tr>\r\n								<th>THÔNG TIN SẢN PHẨM</th>\r\n								<td>-Thương hiệu:Lock&amp;Lock<br />-Xuất xứ thương hiệu:Hàn Quốc<br />-Sản xuất tại:Trung Quốc<br />-Model:ECF-301R<br />-Điện áp:220V~240V<br />-Dung tích:3.1L<br />-Trọng lượng: 5kg<br />-Kích thước:40 x 40 x 30 cm</td>\r\n							</tr>\r\n\r\n						</tbody>\r\n					</table>', 4600000, 4600000, '0000-00-00', 32, 7, b'0', 0, 'Tạm thời hết hàng'),
+('EJF376BLK', 'Nồi chiên không dầu kỹ thuật số thương hiệu LOCK&LOCK, 220-240V, 1500W, 4L - Màu đen (EJF376BLK)', 'http://www.locknlock.vn/data/base/goods/big/201835435195506.JPG', '<table class=\"detail_gosi\">\r\n						<tbody>\r\n\r\n							<tr>\r\n								<th>Thương hiệu</th>\r\n								<td>Lock&amp;Lock</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Sản xuất tại</th>\r\n								<td>Trung Quốc</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Công Suât</th>\r\n								<td>1500W</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Điện áp</th>\r\n								<td>220V,50Hz</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Màu</th>\r\n								<td>Đen</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Chất liệu</th>\r\n								<td>Nhựa PP, ABS</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Dung tích</th>\r\n								<td>4L</td>\r\n							</tr>\r\n\r\n						</tbody>\r\n					</table>', 4500000, 4500000, '0000-00-00', 32, 7, b'0', 0, 'Còn hàng'),
+('EJR151', 'Nồi cơm điện thương hiệu Lock&Lock 220V, 700W, 50/60Hz, 1.8L(5L) - Màu đen', 'http://www.locknlock.vn/data/base/goods/big/201913438759252.jpg', '<table class=\"detail_gosi\">\r\n						<tbody>\r\n\r\n							<tr>\r\n								<th>Thương hiệu</th>\r\n								<td>Lock&amp;Lock</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Sản xuất tại</th>\r\n								<td>Trung Quốc</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Loại nồi</th>\r\n								<td>Nồi Cơm Điện Tử</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Dung tích</th>\r\n								<td>1.8L</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Công suất</th>\r\n								<td>700W</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Chất liệu</th>\r\n								<td>-Thép không gỉ<br />-Nhựa PP<br />-Physical Tolerance Heat-resisting toughened glass<br />-Nhôm</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Điện áp</th>\r\n								<td>220V</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Kích thước</th>\r\n								<td>32 x 27 x 24 cm</td>\r\n							</tr>\r\n\r\n						</tbody>\r\n					</table>', 1947000, 1947000, '0000-00-00', 32, 7, b'0', 13, 'Tạm thời hết hàng'),
+('EJR356', 'Nồi cơm điện thương hiệu Lock&Lock 220V, 700W, 50/60Hz, 1.8L(5L) - Màu đen', 'http://www.locknlock.vn/data/base/goods/big/201913441313219.jpg', '<table class=\"detail_gosi\">\r\n						<tbody>\r\n\r\n							<tr>\r\n								<th>Thương hiệu</th>\r\n								<td>Lock&amp;Lock</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Nơi sản xuất</th>\r\n								<td>Trung Quốc</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Loại nồi</th>\r\n								<td>Cơm điện tử</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Dung tích</th>\r\n								<td>1.5L</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Chất liệu</th>\r\n								<td>- Lòng nồi : Phủ chất chống dính Ceramic<br />-PP, SPCC, ABS, thép không gỉ</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Điện áp</th>\r\n								<td>220-240V</td>\r\n							</tr>\r\n\r\n						</tbody>\r\n					</table>', 1845000, 1845000, '0000-00-00', 32, 7, b'0', 0, 'Tạm thời hết hàng'),
+('ELHB-220', 'Máy Xay Trộn Đa Năng Lock&Lock ELHB-220 (420W)', 'http://www.locknlock.vn/data/base/goods/big/201816553664694.jpg', '<table class=\"detail_gosi\">\r\n						<tbody>\r\n\r\n							<tr>\r\n								<th>THÔNG TIN SẢN PHẨM</th>\r\n								<td>-Thương hiệu: Lock&amp;Lock<br />-Xuất xứ thương hiệu: Hàn Quốc<br />-Sản xuất tại: Trung Quốc<br />-Model: ELHB-220<br />-Chất liệu: cối xay-Nhựa<br />-Số lượng cối: 2<br />-Dung tích: 800ml<br />-Điện áp: 220V<br />-Công suất: 420W</td>\r\n							</tr>\r\n\r\n						</tbody>\r\n					</table>', 2400000, 2400000, '0000-00-00', 32, 7, b'0', 3, 'Tạm thời hết hàng'),
+('ELJE-110', 'Máy Ép Trái Cây Tốc Độ Cao Lock&Lock ELJE-110 (700W) - Đen', 'http://www.locknlock.vn/data/base/goods/big/201816554650465.jpg', '<table class=\"detail_gosi\">\r\n						<tbody>\r\n\r\n							<tr>\r\n								<th>THÔNG TIN SẢN PHẨM</th>\r\n								<td>-Thương hiệu: Lock&amp;Lock<br />-Xuất xứ thương hiệu: Hàn Quốc<br />-Sản xuất tại: Trung Quốc<br />-Model: ELJE-110<br />-Chất liệu	<br />   *Chất liệu vỏ máy: Nhựa cứng<br />   *Chất liệu nắp: Nhựa kháng vỡ<br />   *Chất liệu lưỡi dao: Thép không gỉ<br />   *Chất liệu cối xay:Thép không gỉ<br />-Công suất: 700W<br />-Trọng lượng: 4kg</td>\r\n							</tr>\r\n\r\n						</tbody>\r\n					</table>', 3500000, 3500000, '0000-00-00', 32, 7, b'0', 14, 'Còn hàng'),
+('HPL550', 'HPL550- Hộp bảo quản gạo bằng nhựa Lock&Lock 12kg', 'http://www.locknlock.vn/data/base/goods/big/201900832117140.jpg\r\n', '<table class=\"detail_gosi\">\r\n						<tbody>\r\n\r\n							<tr>\r\n								<th>Thương hiệu</th>\r\n								<td>Lock&amp;Lock</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Nơi Sản xuất</th>\r\n								<td>Trung Quốc<br /></td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Kích thước</th>\r\n								<td>370 x 215 x 290 (mm)</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Chất liệu</th>\r\n								<td>Nhựa PP , PS</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Màu sắc</th>\r\n								<td>Trắng</td>\r\n							</tr>\r\n\r\n						</tbody>\r\n					</table>', 290000, 290000, '0000-00-00', 1, 1, b'0', 1, 'còn hàng'),
+('HPL733', 'Bình nước Jug PP 1.5L', 'http://www.locknlock.vn/data/base/goods/big/201821960708170.jpg', '<table class=\"detail_gosi\">\r\n						<tbody>\r\n\r\n							<tr>\r\n								<th>Thương hiệu</th>\r\n								<td>Lock&amp;Lock</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Sản xuất tại</th>\r\n								<td>Việt Nam</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Chất liệu</th>\r\n								<td>PP</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Dung tích</th>\r\n								<td>1.5L</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Hướng dẫn bảo quản</th>\r\n								<td>Bảo quản nơi khô ráo, thoáng mát</td>\r\n							</tr>\r\n\r\n						</tbody>\r\n					</table>', 110000, 110000, '0000-00-00', 13, 3, b'0', 0, 'Còn hàng'),
+('HPL758S3A', 'Bộ Túi Hộp Cơm Lock&Lock Triangle Pattern Bag - 470*470*300 ml\r\n', 'http://www.locknlock.vn/data/base/goods/big/201814153156395.jpg', '<table class=\"detail_gosi\">\r\n						<tbody>\r\n\r\n							<tr>\r\n								<th>THÔNG TIN SẢN PHẨM</th>\r\n								<td>Thương hiệu:Lock&amp;Lock<br />Xuất xứ thương hiệu:	Hàn Quốc<br />Sản xuất tại:Việt Nam<br />Chất liệu: Nhựa vải<br />Kích thước: Dài 20cm x Rộng 17cm x Cao 11cm</td>\r\n							</tr>\r\n\r\n						</tbody>\r\n					</table>', 430000, 430000, '0000-00-00', 20, 4, b'0', 0, 'Còn hàng'),
+('HPL806S6', 'Bộ 6 hộp bảo quản Lock&Lock Classic (HPL806*2, HPL807*2, HPL816*1, HPL817*1)', 'http://www.locknlock.vn/data/base/goods/big/201834440539728.JPG', '<table class=\"detail_gosi\">\r\n						<tbody>\r\n\r\n							<tr>\r\n								<th>Thương hiệu</th>\r\n								<td>Lock&amp;Lock</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Xuất xứ thương hiệu</th>\r\n								<td>Hàn Quốc</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Sản xuất tại</th>\r\n								<td>Viêt Nam</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Chất liệu</th>\r\n								<td>Nhựa PP</td>\r\n							</tr>\r\n\r\n						</tbody>\r\n					</table>', 380000, 380000, '0000-00-00', 1, 1, b'0', 0, 'còn hàng'),
+('HPL817S5', 'Bộ 6 hộp bảo quản Lock&Lock Classic (HPL817*2, HPL817C*1, HPL854*2, HPL855*1)', 'http://www.locknlock.vn/data/base/goods/big/201834440539358.JPG', '<table class=\"detail_gosi\">\r\n						<tbody>\r\n\r\n							<tr>\r\n								<th>Thương hiệu</th>\r\n								<td>Lock&amp;Lock</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Xuất xứ thương hiệu</th>\r\n								<td>Hàn Quốc</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Sản xuất tại</th>\r\n								<td>Viêt Nam</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Chất liệu</th>\r\n								<td>Nhựa PP</td>\r\n							</tr>\r\n\r\n						</tbody>\r\n					</table>', 530000, 530000, '0000-00-00', 1, 1, b'0', 2, 'còn hàng'),
+('HPL934M', 'Bình trà Lock&Lock 690ml', 'http://www.locknlock.vn/data/base/goods/big/201822850737577.jpg', '<table class=\"detail_gosi\">\r\n						<tbody>\r\n\r\n							<tr>\r\n								<th>Thương hiệu</th>\r\n								<td>Lock&amp;Lock</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Sản xuất tại</th>\r\n								<td>Việt Nam</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Chất liệu</th>\r\n								<td>PP</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Dung tích</th>\r\n								<td>690ml</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Hướng dẫn bảo quản</th>\r\n								<td>Bảo quản nơi khô ráo, thoáng mát</td>\r\n							</tr>\r\n\r\n						</tbody>\r\n					</table>', 128000, 128000, '0000-00-00', 13, 3, b'0', 0, 'Còn hàng'),
+('HPL938', 'Bình trà di động L&L có lớp chặn lá trà 600ml', 'http://www.locknlock.vn/data/base/goods/big/201822850737950.jpg', '<table class=\"detail_gosi\">\r\n						<tbody>\r\n\r\n							<tr>\r\n								<th>Thương hiệu</th>\r\n								<td>Lock&amp;Lock</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Sản xuất tại</th>\r\n								<td>Việt Nam</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Chất liệu</th>\r\n								<td>PP</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Dung tích</th>\r\n								<td>600ml</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Hướng dẫn bảo quản</th>\r\n								<td>Bảo quản nơi khô ráo, thoáng mát</td>\r\n							</tr>\r\n\r\n						</tbody>\r\n					</table>', 70000, 70000, '0000-00-00', 13, 3, b'0', 8, 'Còn hàng'),
+('HSM8440T', 'Hộp bảo quản thực phẩm Lock&Lock 950ml', 'http://www.locknlock.vn/data/base/goods/big/201836251331324.jpg\r\n', '<table class=\"detail_gosi\">\r\n						<tbody>\r\n\r\n							<tr>\r\n								<th>Thương hiệu</th>\r\n								<td>Lock&amp;Lock</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Sản xuất tại</th>\r\n								<td>Viêt Nam</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Chất liệu</th>\r\n								<td>nhựa PP</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Dung tích</th>\r\n								<td>950ml</td>\r\n							</tr>\r\n\r\n						</tbody>\r\n					</table>', 129000, 129000, '0000-00-00', 2, 1, b'0', 0, 'còn hàng'),
+('HSM8450T', 'Tô Salad 1.6L W/Khay&Khay nước sốt', 'http://www.locknlock.vn/data/base/goods/big/201836251331782.jpg\r\n', '<table class=\"detail_gosi\">\r\n						<tbody>\r\n\r\n							<tr>\r\n								<th>Thương hiệu</th>\r\n								<td>Lock&amp;Lock</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Sản xuất tại</th>\r\n								<td>Viêt Nam</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Chất liệu</th>\r\n								<td>Nhựa PP</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Dung tích</th>\r\n								<td>1.6L</td>\r\n							</tr>\r\n\r\n						</tbody>\r\n					</table>', 155000, 150000, '0000-00-00', 2, 1, b'0', 4, 'còn hàng'),
+('INL301WS10', 'Bộ 10 hộp Interlock (INL301W*4, INL302W*4, INL303W*2)', 'http://www.locknlock.vn/data/base/goods/big/201834440537098.JPG', '<table class=\"detail_gosi\">\r\n						<tbody>\r\n\r\n							<tr>\r\n								<th>Thương hiệu</th>\r\n								<td>Lock&amp;Lock</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Xuất xứ thương hiệu</th>\r\n								<td>Hàn Quốc</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Sản xuất tại</th>\r\n								<td>Viêt Nam</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Chất liệu</th>\r\n								<td>Thân: Nhựa Pet , Nắp: Nhựa PP</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Dung tích</th>\r\n								<td>1.6L*2EA , 1L*4EA, 500ml*4EA</td>\r\n							</tr>\r\n\r\n						</tbody>\r\n					</table>', 600000, 600000, '0000-00-00', 1, 1, b'0', 0, 'còn hàng'),
+('LBU1203', 'Chảo nhôm chống dính BAUM Marble 20cm, 1 tay cầm, hiệu L&amp;L', 'http://www.locknlock.vn/data/base/goods/big/201834536586893.jpg', '<table class=\"detail_gosi\">\r\n						<tbody>\r\n\r\n							<tr>\r\n								<th>Thương hiệu</th>\r\n								<td>Lock&amp;Lock</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Xuất xứ thương hiệu</th>\r\n								<td>Hàn Quốc</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Sản xuất tại</th>\r\n								<td>Viêt Nam</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Kích thước</th>\r\n								<td>20 cm</td>\r\n							</tr>\r\n\r\n						</tbody>\r\n					</table>', 349000, 349000, '0000-00-00', 5, 2, NULL, 0, 'còn hàng'),
+('LBU1242', 'Nồi nhôm chống dính BAUM Marble 24cm, 2 tay cầm, nắp thủy tinh, hiệu L&L', 'http://www.locknlock.vn/data/base/goods/big/201834536586984.jpg', '<table class=\"detail_gosi\">\r\n						<tbody>\r\n\r\n							<tr>\r\n								<th>Thương hiệu</th>\r\n								<td>Lock&amp;Lock</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Xuất xứ thương hiệu</th>\r\n								<td>Hàn Quốc</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Sản xuất tại</th>\r\n								<td>Viêt Nam</td>\r\n							</tr>\r\n\r\n						</tbody>\r\n					</table>', 749000, 749000, '0000-00-00', 5, 2, b'0', 5, 'Tạm thời hết hàng'),
+('LBU1243', 'Chảo nhôm chống dính BAUM Marble 24cm, 1 tay cầm, hiệu L&L', 'http://www.locknlock.vn/data/base/goods/big/201834536586878.jpg\r\n', '<table class=\"detail_gosi\">\r\n						<tbody>\r\n\r\n							<tr>\r\n								<th>Thương hiệu</th>\r\n								<td>Lock&amp;Lock</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Xuất xứ thương hiệu</th>\r\n								<td>Hàn Quốc</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Sản xuất tại</th>\r\n								<td>Viêt Nam</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Kích thước</th>\r\n								<td>24 cm</td>\r\n							</tr>\r\n\r\n						</tbody>\r\n					</table>', 390000, 390000, '0000-00-00', 5, 2, b'0', 0, 'Tạm thời hết hàng'),
+('LBU1285', 'Chảo nhôm sâu lòng chống dính BAUM Marble 28cm, 1 tay cầm, nắp thủy tinh, hiệu L&L', 'http://www.locknlock.vn/data/base/goods/big/201834536587472.jpg', '<table class=\"detail_gosi\">\r\n						<tbody>\r\n\r\n							<tr>\r\n								<th>Thương hiệu</th>\r\n								<td>Lock&amp;Lock</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Xuất xứ thương hiệu</th>\r\n								<td>Hàn Quốc</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Sản xuất tại</th>\r\n								<td>Viêt Nam</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Kích thước</th>\r\n								<td>28 cm</td>\r\n							</tr>\r\n\r\n						</tbody>\r\n					</table>', 669000, 669000, '0000-00-00', 5, 2, b'0', 0, 'Tạm thời hết hàng'),
+('LBU1305', 'Chảo nhôm sâu lòng chống dính BAUM Marble 30cm, 1 tay cầm, nắp thủy tinh, hiệu L&L', 'http://www.locknlock.vn/data/base/goods/big/201834536587801.jpg', '<table class=\"detail_gosi\">\r\n						<tbody>\r\n\r\n							<tr>\r\n								<th>Thương hiệu</th>\r\n								<td>Lock&amp;Lock</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Xuất xứ thương hiệu</th>\r\n								<td>Hàn Quốc</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Sản xuất tại</th>\r\n								<td>Viêt Nam</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Kích thước</th>\r\n								<td>30 cm</td>\r\n							</tr>\r\n\r\n						</tbody>\r\n					</table>', 759000, 759000, '0000-00-00', 5, 2, b'0', 6, 'Tạm thời hết hàng'),
+('LHB2303OK-IH', 'Chảo Cookplus Hard&Light 30cm, W/Coating inside Okitsumo (Có thể sử dụng bếp từ)', 'http://www.locknlock.vn/data/base/goods/big/201825359631992.jpg', '<table class=\"detail_gosi\">\r\n						<tbody>\r\n\r\n							<tr>\r\n								<th>hương hiệu</th>\r\n								<td>Lock&amp;Lock</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Xuất xứ thương hiệu</th>\r\n								<td>Hàn Quốc</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Sản xuất tại</th>\r\n								<td>Việt Nam</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Màu/Mẫu</th>\r\n								<td>Đen</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Chất liệu</th>\r\n								<td>Nhôm, lớp chống dính</td>\r\n							</tr>\r\n\r\n						</tbody>\r\n					</table>', 550000, 550000, '0000-00-00', 5, 2, b'0', 0, 'Tạm thời hết hàng'),
+('LHC1448PIK', 'LHC1448PIK - Bình nước giữ nhiệt Lock&Lock City Vacuum Bottle (Olympic) Montreal 700ml - Màu hồng', 'http://www.locknlock.vn/data/base/goods/big/201900755110529.jpg', '<table class=\"detail_gosi\">\r\n						<tbody>\r\n\r\n							<tr>\r\n								<th>Thương hiệu</th>\r\n								<td>Lock&amp;Lock</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Nơi sản xuất</th>\r\n								<td>Trung Quốc</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Chất liệu</th>\r\n								<td>Thân bình bằng thép không gỉ; nắp bằng nhựa PP, Gioăng Silicone</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Dung tích</th>\r\n								<td>700ml</td>\r\n							</tr>\r\n\r\n						</tbody>\r\n					</table>', 482000, 482000, '0000-00-00', 25, 5, b'0', 0, 'Còn hàng'),
+('LHC4131', 'Bình giữ nhiệt Lock&Lock Feather Light 450ml', 'http://www.locknlock.vn/data/base/goods/big/201822947765599.jpg', '<table class=\"detail_gosi\">\r\n						<tbody>\r\n\r\n							<tr>\r\n								<th>Thương hiệu</th>\r\n								<td>Lock&amp;Lock</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Sản xuất tại</th>\r\n								<td>Trung Quốc</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Chất liệu</th>\r\n								<td>Thép không gỉ</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Dung tích</th>\r\n								<td>500ml</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Màu</th>\r\n								<td>Trắng nắp đỏ, Trắng nắp xanh , Đen nắp đỏ, Đen nắp xanh</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Hướng dẫn bảo quản</th>\r\n								<td>Bảo quản nơi khô ráo, thoáng mát</td>\r\n							</tr>\r\n\r\n						</tbody>\r\n					</table>', 470000, 470000, '0000-00-00', 25, 5, b'0', 0, 'Còn hàng'),
+('LHC4153', 'Bình giữ nhiệt bằng thép không gỉ Lock&Lock Loop Tumbler 530ml', 'http://www.locknlock.vn/data/base/goods/big/202006239387361.jpg', '<table class=\"detail_gosi\">\r\n						<tbody>\r\n\r\n							<tr>\r\n								<th>Thương hiệu</th>\r\n								<td>Lock&amp;Lock</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Sản xuất tại</th>\r\n								<td>Trung Quốc</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Chất liệu</th>\r\n								<td>Thép không gỉ</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Dung tích</th>\r\n								<td>530ml</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Màu</th>\r\n								<td>Hồng, Xanh Mint</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Hướng dẫn bảo quản</th>\r\n								<td>Bảo quản nơi khô ráo, thoáng mát</td>\r\n							</tr>\r\n\r\n						</tbody>\r\n					</table>', 430000, 430000, '0000-00-00', 25, 5, b'0', 0, 'Còn hàng'),
+('LHC4169BLU', 'LHC4169BLU- Bình giữ nhiệt i.d Tumbler bằng thép không gỉ Lock & Lock 450ml, màu xanh da trời', 'http://www.locknlock.vn/data/base/goods/big/201913555591084.jpg', '<table class=\"detail_gosi\">\r\n						<tbody>\r\n\r\n							<tr>\r\n								<th>Thương hiệu</th>\r\n								<td>Lock&amp;Lock</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Nơi sản xuất</th>\r\n								<td>Trung Quốc</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Chất liệu</th>\r\n								<td>Thân: thép không gỉ (phủ sứ)<br />- Nắp: nhựa PP, Gioăng: silicone</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Dung tích</th>\r\n								<td>450ml</td>\r\n							</tr>\r\n\r\n						</tbody>\r\n					</table>', 440000, 440000, '0000-00-00', 25, 5, b'0', 0, 'Tạm thời hết hàng'),
+('LHC561', 'LHC561-Bình giữ nhiệt nóng và lạnh Hot&Cool Mini 300ml - Màu đen', 'http://www.locknlock.vn/data/base/goods/big/201900760946430.jpg', '<table class=\"detail_gosi\">\r\n						<tbody>\r\n\r\n							<tr>\r\n								<th>THÔNG TIN SẢN PHẨM</th>\r\n								<td>-Thương hiệu:	Lock&amp;Lock<br />-Xuất xứ thương hiệu:Hàn Quốc<br />-Sản xuất tại:Trung Quốc<br />-Model:LHC561<br />-Dung tích:300ml<br />-Chất liệu	:Inox 304-Nhựa PP-Vòng silicone<br />-Hướng dẫn sử dụng:	Đựng thức uống nóng, lạnh<br />-Hướng dẫn bảo quản:Bảo quản nơi khô ráo, thoáng mát</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Màu</th>\r\n								<td>- Đỏ<br />- Đen</td>\r\n							</tr>\r\n\r\n						</tbody>\r\n					</table>', 385000, 385000, '0000-00-00', 25, 5, b'0', 11, 'Còn hàng'),
+('LHC8029', 'LHC8029- Hộp cơm giữ nhiệt thương hiệu Lock & Lock, 500ml (Màu đỏ, xanh, đen)', 'http://www.locknlock.vn/data/base/goods/big/201913559744948.jpg', '<table class=\"detail_gosi\">\r\n						<tbody>\r\n\r\n							<tr>\r\n								<th>Thương hiệu</th>\r\n								<td>Lock&amp;Lock</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Nơi sản xuất</th>\r\n								<td>Trung Quốc</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Dung tích</th>\r\n								<td>500ml</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Chất liệu</th>\r\n								<td>- Thân: thép không rỉ 304<br />- Nắp đậy bên trong: nhựa Polypropylene(PP)<br />- Gioăng: silicone</td>\r\n							</tr>\r\n\r\n						</tbody>\r\n					</table>', 515000, 515000, '0000-00-00', 25, 5, b'0', 12, 'Còn hàng'),
+('lhc803slv', 'LHC8031SLV-OCH - Bộ hộp cơm giữ nhiệt L&L bằng thép không gỉ -460ml*1, 420ml*1, 280ml*1, đũa*1, túi', 'http://www.locknlock.vn/data/base/goods/big/201914957458521.jpg', '<table class=\"detail_gosi\">\r\n						<tbody>\r\n\r\n							<tr>\r\n								<th>Thương hiệu</th>\r\n								<td>Lock&amp;Lock</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Nơi sản xuất</th>\r\n								<td>Trung Quốc</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Chất liệu</th>\r\n								<td>- Thân, đũa: thép không gỉ<br />- Nắp: nhựa PP</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Dung tích</th>\r\n								<td>* 460ml : 1 hộp<br />* 420ml : 1 hộp<br />* 280ml : 1 hộp</td>\r\n							</tr>\r\n\r\n						</tbody>\r\n					</table>', 1100000, 1100000, '0000-00-00', 20, 4, b'0', 0, 'Còn hàng'),
+('LKT643W', 'Bình nước bằng nhựa Hello Kitty_Wonderful - 700 ml', 'http://www.locknlock.vn/data/base/goods/big/201828937687732.jpg', '<table class=\"detail_gosi\">\r\n						<tbody>\r\n\r\n							<tr>\r\n								<th>Thương hiệu</th>\r\n								<td>Lock&amp;Lock</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Xuất xứ thương hiệu</th>\r\n								<td>Hàn Quốc</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Sản xuất tại</th>\r\n								<td>Việt Nam</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Dung tích</th>\r\n								<td>700ml</td>\r\n							</tr>\r\n\r\n						</tbody>\r\n					</table>', 122000, 122000, '0000-00-00', 13, 3, b'0', 0, 'Còn hàng'),
+('LLG224S3', 'Bộ 3 hộp thủy tinh L&L Euro (LLG214*2, LLG224*1)', 'http://www.locknlock.vn/data/base/goods/big/201900833453671.jpg\r\n', '<table class=\"detail_gosi\">\r\n						<tbody>\r\n\r\n							<tr>\r\n								<th>Thương hiệu</th>\r\n								<td>Lock&amp;Lock<br /></td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Nơi sản xuất</th>\r\n								<td>Việt Nam</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Chất liệu</th>\r\n								<td>Borosilicate</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Dung tích</th>\r\n								<td>500ml*2; 750ml*1</td>\r\n							</tr>\r\n\r\n						</tbody>\r\n					</table>', 570000, 570000, '0000-00-00', 1, 1, b'0', 0, 'còn hàng'),
+('LLG422WN3', 'Bộ túi hộp cơm thủy tinh L&L 4EA (LLG422*3, HWB801WN-B-0*1) - Màu Wine', 'http://www.locknlock.vn/data/base/goods/big/201829053857496.jpg', '<table class=\"detail_gosi\">\r\n						<tbody>\r\n\r\n							<tr>\r\n								<th>Thương Hiệu</th>\r\n								<td>Lock&amp;Lock</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Sản xuất tại</th>\r\n								<td>Việt Nam</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Chất liệu</th>\r\n								<td>Thủy tinh Chịu nhiệt</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Màu</th>\r\n								<td>Wine</td>\r\n							</tr>\r\n\r\n						</tbody>\r\n					</table>', 620000, 620000, '0000-00-00', 20, 4, b'0', 0, 'Còn hàng'),
+('LLG424BTZ3', 'Bộ hộp cơm thủy tinh chịu nhiệt L&L 4EA (LLG424*3,LLG424BLU(TZ)-0*1) - Màu xanh TZ', 'http://www.locknlock.vn/data/base/goods/big/201829053857447.jpg', '<table class=\"detail_gosi\">\r\n						<tbody>\r\n\r\n							<tr>\r\n								<th>Thương Hiệu</th>\r\n								<td>Lock&amp;Lock</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Sản xuất tại</th>\r\n								<td>Việt Nam</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Chất liệu</th>\r\n								<td>Thủy tinh Chịu nhiệt</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Màu</th>\r\n								<td>Xanh TZ</td>\r\n							</tr>\r\n\r\n						</tbody>\r\n					</table>', 550000, 550000, '0000-00-00', 20, 4, b'0', 0, 'Còn hàng'),
+('LLG428M2', 'Bộ túi hộp cơm thủy tinh L&L 3EA (LLG429D*1,LLG428*1,HWB398GF*1) - Màu xanh Mint', 'http://www.locknlock.vn/data/base/goods/big/201829053857346.jpg', '<table class=\"detail_gosi\">\r\n						<tbody>\r\n\r\n							<tr>\r\n								<th>Thương Hiệu</th>\r\n								<td>Lock&amp;Lock</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Sản xuất tại</th>\r\n								<td>Việt Nam</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Chất liệu</th>\r\n								<td>Thủy tinh Chịu nhiệt</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Màu</th>\r\n								<td>Xanh Mint</td>\r\n							</tr>\r\n\r\n						</tbody>\r\n					</table>', 600000, 600000, '0000-00-00', 20, 4, b'0', 9, 'Còn hàng'),
+('LLG430GN3', 'Bộ túi hộp cơm thủy tinh L&L 4EA (LLG424*1, LLG430*2, HWB801GN-B-0*1) - Màu xanh lá', 'http://www.locknlock.vn/data/base/goods/big/201829053858890.jpg', '<table class=\"detail_gosi\">\r\n						<tbody>\r\n\r\n							<tr>\r\n								<th>Thương Hiệu</th>\r\n								<td>Lock&amp;Lock</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Sản xuất tại</th>\r\n								<td>Việt Nam</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Chất liệu</th>\r\n								<td>Thủy tinh Chịu nhiệt</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Màu</th>\r\n								<td>Xanh lá</td>\r\n							</tr>\r\n\r\n						</tbody>\r\n					</table>', 620000, 620000, '0000-00-00', 20, 4, b'0', 10, 'Còn hàng'),
+('LLS213R', 'Hộp nhựa L&L Twist Two way 330ml+150ml - Nắp màu đỏ', 'http://www.locknlock.vn/data/base/goods/big/201836251332093.jpeg\r\n', '<table class=\"detail_gosi\">\r\n						<tbody>\r\n\r\n							<tr>\r\n								<th>Thương hiệu</th>\r\n								<td>Lock&amp;Lock</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Sản xuất tại</th>\r\n								<td>Viêt Nam</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Chất liệu</th>\r\n								<td>Nhựa PP</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Dung tích</th>\r\n								<td>330ml + 150ml</td>\r\n							</tr>\r\n\r\n						</tbody>\r\n					</table>', 75000, 75000, '0000-00-00', 2, 1, b'0', 0, 'còn hàng'),
+('LLS221R', 'Hộp nhựa L&L Twist Two way 360ml+310ml - Nắp màu đỏ', 'http://www.locknlock.vn/data/base/goods/big/201835450014217.jpg', '<table class=\"detail_gosi\">\r\n						<tbody>\r\n\r\n							<tr>\r\n								<th>Thương hiệu</th>\r\n								<td>Lock&amp;Lock</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Nơi sản xuất</th>\r\n								<td>Việt Nam</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Chất liệu</th>\r\n								<td>Nhựa PP</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Dung tích</th>\r\n								<td>360ml+310ml</td>\r\n							</tr>\r\n\r\n						</tbody>\r\n					</table>', 85000, 85000, '0000-00-00', 1, 1, b'0', 0, 'còn hàng'),
+('LLS222R', 'Hộp nhựa L&L Twist Two way 560ml+310ml - Nắp màu đỏ', 'http://www.locknlock.vn/data/base/goods/big/201836251332109.jpg\r\n', '<table class=\"detail_gosi\">\r\n						<tbody>\r\n\r\n							<tr>\r\n								<th>Thương hiệu</th>\r\n								<td>Lock&amp;Lock</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Sản xuất tại</th>\r\n								<td>Viêt Nam</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Chất liệu</th>\r\n								<td>Nhựa PP</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Dung tích</th>\r\n								<td>560ml + 310ml</td>\r\n							</tr>\r\n\r\n						</tbody>\r\n					</table>', 95000, 95000, '0000-00-00', 2, 1, b'0', 0, 'còn hàng'),
+('LLS223R\r\n', 'Hộp nhựa L&L Twist Two way 760ml+310ml - Nắp màu đỏ', 'http://www.locknlock.vn/data/base/goods/big/201836251332237.jpg\r\n', '<table class=\"detail_gosi\">\r\n						<tbody>\r\n\r\n							<tr>\r\n								<th>Thương hiệu</th>\r\n								<td>Lock&amp;Lock</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Sản xuất tại</th>\r\n								<td>Viêt Nam</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Chất liệu</th>\r\n								<td>Nhựa PP</td>\r\n							</tr>\r\n\r\n							<tr>\r\n								<th>Dung tích</th>\r\n								<td>760ml + 310ml</td>\r\n							</tr>\r\n\r\n						</tbody>\r\n					</table>', 99000, 99000, '0000-00-00', 2, 1, b'0', 0, 'Tạm thời hết hàng');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `sukien`
+-- Table structure for table `sukien`
 --
 
 CREATE TABLE `sukien` (
@@ -363,7 +366,7 @@ CREATE TABLE `sukien` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `user`
+-- Table structure for table `user`
 --
 
 CREATE TABLE `user` (
@@ -378,126 +381,126 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `user`
+-- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`ID`, `Firstname`, `Lastname`, `Gender`, `Email`, `Password`, `Phone`, `Address`) VALUES
-(13, 'nguyen', 'van b', 'Male', 'b@gmail', '$2y$10$IYovXK2kTPPhw4QEdOX3duyQPNSofkEVKPhLPwciw7KWYJyfv0l4O', '31245', '202 tphcm');
+(13, 'nguyen', 'b', 'Male', 'b@gmail', '$2y$10$IYovXK2kTPPhw4QEdOX3duyQPNSofkEVKPhLPwciw7KWYJyfv0l4O', '123', '202 tphcm');
 
 --
--- Chỉ mục cho các bảng đã đổ
+-- Indexes for dumped tables
 --
 
 --
--- Chỉ mục cho bảng `admin`
+-- Indexes for table `admin`
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`adminID`);
 
 --
--- Chỉ mục cho bảng `donhang`
+-- Indexes for table `donhang`
 --
 ALTER TABLE `donhang`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `images`
+-- Indexes for table `images`
 --
 ALTER TABLE `images`
   ADD PRIMARY KEY (`id`),
   ADD KEY `MaSP_FK` (`MaSP_FK`);
 
 --
--- Chỉ mục cho bảng `lienhe`
+-- Indexes for table `lienhe`
 --
 ALTER TABLE `lienhe`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `menucha`
+-- Indexes for table `menucha`
 --
 ALTER TABLE `menucha`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `menucon`
+-- Indexes for table `menucon`
 --
 ALTER TABLE `menucon`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id_Cha_FK` (`id_Cha_FK`);
 
 --
--- Chỉ mục cho bảng `sanpham`
+-- Indexes for table `sanpham`
 --
 ALTER TABLE `sanpham`
   ADD PRIMARY KEY (`MaSP`),
   ADD KEY `id_Con_FK` (`id_Con_FK`);
 
 --
--- Chỉ mục cho bảng `sukien`
+-- Indexes for table `sukien`
 --
 ALTER TABLE `sukien`
   ADD PRIMARY KEY (`MaSuKien`),
   ADD KEY `MaSP_FK` (`MaSP_FK`);
 
 --
--- Chỉ mục cho bảng `user`
+-- Indexes for table `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`ID`);
 
 --
--- AUTO_INCREMENT cho các bảng đã đổ
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT cho bảng `admin`
+-- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
   MODIFY `adminID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `donhang`
+-- AUTO_INCREMENT for table `donhang`
 --
 ALTER TABLE `donhang`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
--- AUTO_INCREMENT cho bảng `images`
+-- AUTO_INCREMENT for table `images`
 --
 ALTER TABLE `images`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
 
 --
--- AUTO_INCREMENT cho bảng `user`
+-- AUTO_INCREMENT for table `menucha`
+--
+ALTER TABLE `menucha`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
+-- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
--- Các ràng buộc cho các bảng đã đổ
+-- Constraints for dumped tables
 --
 
 --
--- Các ràng buộc cho bảng `images`
+-- Constraints for table `images`
 --
 ALTER TABLE `images`
   ADD CONSTRAINT `images_ibfk_1` FOREIGN KEY (`MaSP_FK`) REFERENCES `sanpham` (`MaSP`);
 
 --
--- Các ràng buộc cho bảng `menucon`
---
-ALTER TABLE `menucon`
-  ADD CONSTRAINT `menucon_ibfk_1` FOREIGN KEY (`id_Cha_FK`) REFERENCES `menucha` (`id`);
-
---
--- Các ràng buộc cho bảng `sanpham`
+-- Constraints for table `sanpham`
 --
 ALTER TABLE `sanpham`
   ADD CONSTRAINT `sanpham_ibfk_1` FOREIGN KEY (`id_Con_FK`) REFERENCES `menucon` (`id`);
 
 --
--- Các ràng buộc cho bảng `sukien`
+-- Constraints for table `sukien`
 --
 ALTER TABLE `sukien`
   ADD CONSTRAINT `sukien_ibfk_1` FOREIGN KEY (`MaSP_FK`) REFERENCES `sanpham` (`MaSP`);

@@ -345,6 +345,21 @@ li{
   font-size: 22px;
   color: #222;
 }
+.detail_gosi{
+  width: 100%;
+  margin: 20px 0px;
+  border: 1px solid burlywood;
+}
+.detail_gosi th{
+  width: 35%;
+  padding: 10px;
+  border: 1px solid burlywood;
+  background: whitesmoke;
+}
+.detail_gosi td{
+  text-align: center;
+  border-bottom: 1px solid burlywood;
+}
 
 /* Gio Hang*/
 .nav_GioHang{

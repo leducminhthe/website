@@ -98,9 +98,14 @@
     </form>
   </div>
 </div>
+
+<div>
+  <h4>Thông Tin Sản Phẩm</h4>
+  <?php echo $row_detail['ThongTinChiTiet'] ?>
+</div>
 <?php } ?>
 
-<!-- <div class="fb-comments" data-href="<?php echo $actual_link ?>" data-numposts="20" data-width=""></div> -->
+<div class="fb-comments" data-href="<?php echo $actual_link ?>" data-numposts="20" data-width=""></div> 
 
 <div id="danhsach"></div>
   <div id="xemthem">
