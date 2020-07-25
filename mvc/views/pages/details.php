@@ -104,19 +104,27 @@
 
 <div id="danhsach"></div>
   <div id="xemthem">
-    <center><button>xem thêm sản phẩm liên quan</button></center>
+    xem thêm sản phẩm liên quan
   </div>
 
 <script>
-  var sotrang = 0
+  var sotin1trang = 1;
+  var from = 0;
   $(document).ready(function(){
-    $("#xemthem").click(function(){
-      sotrang = sotrang + 1;
-      $.get("text", {trang:sotrang,spId:'<?php echo $b ?>',danhmuc:<?php echo $a ?>} , function(data){
+    getData();
+  })
+
+  $(window).scroll(function(){
+      if($(window).scrollTop() == $(document).height() - $(window).height())
+        getData();
+  })
+
+  function getData(){
+      $.get("text", {spId:'<?php echo $b ?>',danhmuc:<?php echo $a ?>,sotin1trang:sotin1trang,from:from} , function(data){
+        from += sotin1trang;
         $("#danhsach").append(data);
       })
-    })
-  })
+  }
 
   const thumbs=document.querySelector(".thumb-img").children;
 

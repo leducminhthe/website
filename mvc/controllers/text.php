@@ -8,21 +8,13 @@ class text extends Controller{
 
         $menu = $this->model("MenuModel");
 
-        $sotin1trang = 3;
+        $sotin1trang = $_GET['sotin1trang'];
 
         $danhmuc = $_GET['danhmuc'];
 
         $spId = $_GET['spId'];
-
-        if( isset($_GET["trang"]) ){
-			$trang = $_GET["trang"];
-			settype($trang, "int");
-		}else{
-			$trang = 1;	
-		};
-
         
-		$from = ($trang - 1 ) * $sotin1trang;
+		$from = $_GET['from'];
 
         //view
         $this->view("textlayout", [
