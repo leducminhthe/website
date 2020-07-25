@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 25, 2020 at 02:38 PM
+-- Generation Time: Jul 25, 2020 at 03:23 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.7
 
@@ -385,7 +385,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`ID`, `Firstname`, `Lastname`, `Gender`, `Email`, `Password`, `Phone`, `Address`) VALUES
-(13, 'nguyen', 'b', 'Male', 'b@gmail', '$2y$10$IYovXK2kTPPhw4QEdOX3duyQPNSofkEVKPhLPwciw7KWYJyfv0l4O', '123', '202 tphcm');
+(13, 'nguyen', 'b', 'Male', 'b@gmail', '$2y$10$IYovXK2kTPPhw4QEdOX3duyQPNSofkEVKPhLPwciw7KWYJyfv0l4O', '123', '202 tphcm'),
+(15, 'le', 'the', 'Male', 'the@gmail', '$2y$10$uq8DkpJeqgb/H8J/zf45buzjU584KefbfLND0Qz3Up1BvCWILIxCK', '12345', '202 tphcm');
 
 --
 -- Indexes for dumped tables
@@ -481,7 +482,7 @@ ALTER TABLE `menucha`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- Constraints for dumped tables
