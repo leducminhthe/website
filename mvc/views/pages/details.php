@@ -128,6 +128,7 @@
       $.get("text", {spId:'<?php echo $b ?>',danhmuc:<?php echo $a ?>,sotin1trang:sotin1trang,from:from} , function(data){
         from += sotin1trang;
         $("#danhsach").append(data);
+        $(".dropdown-toggle").dropdown();
       })
   }
 

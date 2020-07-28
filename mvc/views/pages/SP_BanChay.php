@@ -1,15 +1,13 @@
-
-
-		<div class="danhmuc_detail">
-			<h4>Sản Phẩm Bán Chạy</h4>
-		</div>
+<div class="danhmuc_detail">
+	<h4>Sản Phẩm Bán Chạy</h4>
+</div>
 
 <ul class="row">
 	<?php
 		while($row = mysqli_fetch_array($data['SP'])){ ?>
 
 	    <li class="col-4 col-md-4 col-lg-4">
-		    <a href="/website/DetailsController?spId=<?=$row['MaSP'] ?>">
+		    <a href="<?php echo link ?>DetailsController?spId=<?=$row['MaSP'] ?>">
 		      <figure>
 		        <p class="mainProduct_listImg" ><img src="<?= $row['AnhSP'] ?>" alt=""></p>
 		        <figcaption>

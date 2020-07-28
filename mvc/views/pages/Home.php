@@ -72,7 +72,7 @@
               while($row = mysqli_fetch_array($data['SP_Best'])) { ?>
 
               <div class="item">
-                <a href="DetailsController?spId=<?php echo $row['MaSP'] ?>">
+                <a href="<?php echo link ?>DetailsController?spId=<?php echo $row['MaSP'] ?>">
                   <figure>
                     <p class="mainProduct_listImg"><img src="<?php echo $row['AnhSP'] ?>" alt=""></p>
                     <figcaption>
@@ -119,7 +119,7 @@
                       while($row = mysqli_fetch_array($data['BinhNuoc'])) { ?>
 
                       <li class="col-4 col-md-4 col-lg-4">
-                        <a href="DetailsController?spId=<?=$row['MaSP'] ?>">
+                        <a href="<?php echo link ?>DetailsController?spId=<?=$row['MaSP'] ?>">
                           <figure>
                             <p class="mainProduct_listImg"><img src="<?=$row['AnhSP'] ?>" alt=""></p>
                             <figcaption>
@@ -160,7 +160,7 @@
                       while($row = mysqli_fetch_array($data['DungCuNauAn'])) { ?>
 
                       <li class="col-4 col-md-4 col-lg-4">
-                        <a href="DetailsController?spId=<?=$row['MaSP'] ?>">
+                        <a href="<?php echo link ?>DetailsController?spId=<?=$row['MaSP'] ?>">
                           <figure>
                             <p class="mainProduct_listImg"><img src="<?=$row['AnhSP'] ?>" alt=""></p>
                             <figcaption>
@@ -201,7 +201,7 @@
                       while($row = mysqli_fetch_array($data['HangGiaDung'])) { ?>
 
                       <li class="col-4 col-md-4 col-lg-4">
-                        <a href="DetailsController?spId=<?=$row['MaSP'] ?>">
+                        <a href="<?php echo link ?>DetailsController?spId=<?=$row['MaSP'] ?>">
                           <figure>
                             <p class="mainProduct_listImg"><img src="<?=$row['AnhSP'] ?>" alt=""></p>
                             <figcaption>
@@ -242,7 +242,7 @@
                       while($row = mysqli_fetch_array($data['HopBaoQuan'])) { ?>
 
                       <li class="col-4 col-md-4 col-lg-4">
-                        <a href="DetailsController?spId=<?=$row['MaSP'] ?>">
+                        <a href="<?php echo link ?>DetailsController?spId=<?=$row['MaSP'] ?>">
                           <figure>
                             <p class="mainProduct_listImg"><img src="<?=$row['AnhSP'] ?>" alt=""></p>
                             <figcaption>
@@ -283,7 +283,7 @@
                       while($row = mysqli_fetch_array($data['BinhGiuNhiet'])) { ?>
 
                       <li class="col-4 col-md-4 col-lg-4">
-                        <a href="DetailsController?spId=<?=$row['MaSP'] ?>">
+                        <a href="<?php echo link ?>DetailsController?spId=<?=$row['MaSP'] ?>">
                           <figure>
                             <p class="mainProduct_listImg"><img src="<?=$row['AnhSP'] ?>" alt=""></p>
                             <figcaption>
@@ -324,7 +324,7 @@
                       while($row = mysqli_fetch_array($data['HopCom'])) { ?>
 
                       <li class="col-4 col-md-4 col-lg-4">
-                        <a href="DetailsController?spId=<?=$row['MaSP'] ?>">
+                        <a href="<?php echo link ?>DetailsController?spId=<?=$row['MaSP'] ?>">
                           <figure>
                             <p class="mainProduct_listImg"><img src="<?=$row['AnhSP'] ?>" alt=""></p>
                             <figcaption>

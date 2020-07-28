@@ -25,7 +25,6 @@
 
 <?php  
 	$subtotal = 0;
-	// $cart = count($_SESSION['cart']);
 	if (isset($_SESSION['cart'])) {
 		if (count($_SESSION['cart']) > 0 ) {
 

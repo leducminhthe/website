@@ -101,7 +101,7 @@
 					</tr>
 				</tbody>
 			</table>
-			<button class="update_profile" type=""><a href="/website/UpdateProfileController" title="">Update Profile</a></button>
+			<button class="update_profile" type=""><a href="<?php echo link ?>UpdateProfileController" title="">Update Profile</a></button>
 			<?php  
 			}else{
 			?>
