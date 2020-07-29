@@ -51,8 +51,8 @@
 		}
 
 		public function MenuCha($menucha){
-			$qr = "SELECT * FROM menucha WHERE menucha.id = '$menucha'";
-	        $rows = mysqli_query($this->con, $qr);
+			$qr = "SELECT * FROM table_category_1 WHERE table_category_1.id = '$menucha'";
+	        $rows = mysqli_query($this->con2, $qr);
 			return $rows;
 		}
 

@@ -6,7 +6,7 @@
   while($row = mysqli_fetch_array($data['DanhMucCha'])) { ?>
 
   <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $row['TenMenuCha'] ?></a>
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $row['ten'] ?></a>
     <div class="dropdown-menu">
 
       <?php  while($row = mysqli_fetch_array($data['ListMenuCha'])) { ?>
