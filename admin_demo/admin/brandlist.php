@@ -43,7 +43,7 @@
 						?>
 						<tr class="odd gradeX">
 							<td><?php echo $i; ?></td>
-							<td><?php echo $result['TenMenuCon']; ?></td>
+							<td><?php echo $result['ten']; ?></td>
 							<td>
                                 <?php 
                                 $cat = new category();
@@ -52,9 +52,9 @@
                                     while ($result_id_cha = $catlist->fetch_assoc()){
                                 ?>
                                     <?php 
-                                        if($result_id_cha['id'] == $result['id_Cha_FK']){
+                                        if($result_id_cha['id'] == $result['cat1_id']){
                                     ?>    
-                                            <?php echo $result_id_cha['TenMenuCha'] ?>
+                                            <?php echo $result_id_cha['ten'] ?>
                                     <?php  
                                 		}
                                     }

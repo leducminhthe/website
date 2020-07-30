@@ -19,13 +19,12 @@
         				echo "<script>alert('Thông tin khách hàng emty')</script>";
         				echo "<script>window.location= '/website/CheckoutController'</script>";
     				}else{
-    					mysqli_query($this->con, $qr);
+    					mysqli_query($this->con2, $qr);
     					unset($_SESSION['cart']);
 						echo "<script>alert('Cảm ơn bạn đã mua hàng của chúng tôi')</script>";
 						echo "<script>window.location= '/website/CheckOrderController'</script>";
         			}
 				}
-				
 			}else{
 				echo "false";
 			}

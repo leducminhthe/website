@@ -6,9 +6,9 @@
               <?php 
               foreach ($data['Menu'] as $value) { ?>
 
-              <li><a href="<?php echo link ?>DanhMucChaController?menucha=<?php echo $value['id_cha'] ?>"><?php echo $value['tenMenuCha'] ?></a>
+              <li><a href="<?php echo link ?>DanhMucChaController?menucha=<?php echo $value['id_cha'] ?>"><?php echo $value['tenmenucha'] ?></a>
                 <ul class="sub-menu">
-                  <h4><?php echo $value['tenMenuCha'] ?></h4>
+                  <h4><?php echo $value['tenmenucha'] ?></h4>
 
                   <?php 
                     foreach ($value['listMenuCon'] as $menucon) { ?>
@@ -72,14 +72,14 @@
               while($row = mysqli_fetch_array($data['SP_Best'])) { ?>
 
               <div class="item">
-                <a href="<?php echo link ?>DetailsController?spId=<?php echo $row['MaSP'] ?>">
+                <a href="<?php echo link ?>DetailsController?spId=<?php echo $row['id'] ?>">
                   <figure>
-                    <p class="mainProduct_listImg"><img src="<?php echo $row['AnhSP'] ?>" alt=""></p>
+                    <p class="mainProduct_listImg"><img src="<?php echo $row['photo'] ?>" alt=""></p>
                     <figcaption>
                       <p class="ranking best_1">BEST <span><?php echo $row['SP_Best'] ?></span></p>
-                      <p class="mainProduct_listTit"><?php echo $row['TenSP'] ?></p>
+                      <p class="mainProduct_listTit"><?php echo $row['ten'] ?></p>
                       <p class="mainProduct_listPrice"> 
-                        <span><?php echo number_format($row['GIA_BD']) ?>₫</span>
+                        <span><?php echo number_format($row['gia']) ?>₫</span>
                       </p>
                     </figcaption>
                   </figure>
@@ -119,13 +119,13 @@
                       while($row = mysqli_fetch_array($data['BinhNuoc'])) { ?>
 
                       <li class="col-4 col-md-4 col-lg-4">
-                        <a href="<?php echo link ?>DetailsController?spId=<?=$row['MaSP'] ?>">
+                        <a href="<?php echo link ?>DetailsController?spId=<?=$row['id'] ?>">
                           <figure>
-                            <p class="mainProduct_listImg"><img src="<?=$row['AnhSP'] ?>" alt=""></p>
+                            <p class="mainProduct_listImg"><img src="<?=$row['photo'] ?>" alt=""></p>
                             <figcaption>
-                              <p class="mainProduct_listTit"><?=$row['TenSP']?></p>
+                              <p class="mainProduct_listTit"><?=$row['ten']?></p>
                               <p class="mainProduct_listPrice">
-                                <span><?=number_format($row['GIA_BD'])?></span>₫</p>
+                                <span><?=number_format($row['gia'])?></span>₫</p>
                             </figcaption>
                           </figure>
                         </a>
@@ -160,13 +160,13 @@
                       while($row = mysqli_fetch_array($data['DungCuNauAn'])) { ?>
 
                       <li class="col-4 col-md-4 col-lg-4">
-                        <a href="<?php echo link ?>DetailsController?spId=<?=$row['MaSP'] ?>">
+                        <a href="<?php echo link ?>DetailsController?spId=<?=$row['id'] ?>">
                           <figure>
-                            <p class="mainProduct_listImg"><img src="<?=$row['AnhSP'] ?>" alt=""></p>
+                            <p class="mainProduct_listImg"><img src="<?=$row['photo'] ?>" alt=""></p>
                             <figcaption>
-                              <p class="mainProduct_listTit"><?=$row['TenSP']?></p>
+                              <p class="mainProduct_listTit"><?=$row['ten']?></p>
                               <p class="mainProduct_listPrice">
-                                <span><?=number_format($row['GIA_BD'])?></span>₫</p>
+                                <span><?=number_format($row['gia'])?></span>₫</p>
                             </figcaption>
                           </figure>
                         </a>
@@ -201,13 +201,13 @@
                       while($row = mysqli_fetch_array($data['HangGiaDung'])) { ?>
 
                       <li class="col-4 col-md-4 col-lg-4">
-                        <a href="<?php echo link ?>DetailsController?spId=<?=$row['MaSP'] ?>">
+                        <a href="<?php echo link ?>DetailsController?spId=<?=$row['id'] ?>">
                           <figure>
-                            <p class="mainProduct_listImg"><img src="<?=$row['AnhSP'] ?>" alt=""></p>
+                            <p class="mainProduct_listImg"><img src="<?=$row['photo'] ?>" alt=""></p>
                             <figcaption>
-                              <p class="mainProduct_listTit"><?=$row['TenSP']?></p>
+                              <p class="mainProduct_listTit"><?=$row['ten']?></p>
                               <p class="mainProduct_listPrice">
-                                <span><?=number_format($row['GIA_BD'])?></span>₫</p>
+                                <span><?=number_format($row['gia'])?></span>₫</p>
                             </figcaption>
                           </figure>
                         </a>
@@ -242,13 +242,13 @@
                       while($row = mysqli_fetch_array($data['HopBaoQuan'])) { ?>
 
                       <li class="col-4 col-md-4 col-lg-4">
-                        <a href="<?php echo link ?>DetailsController?spId=<?=$row['MaSP'] ?>">
+                        <a href="<?php echo link ?>DetailsController?spId=<?=$row['id'] ?>">
                           <figure>
-                            <p class="mainProduct_listImg"><img src="<?=$row['AnhSP'] ?>" alt=""></p>
+                            <p class="mainProduct_listImg"><img src="<?=$row['photo'] ?>" alt=""></p>
                             <figcaption>
-                              <p class="mainProduct_listTit"><?=$row['TenSP']?></p>
+                              <p class="mainProduct_listTit"><?=$row['ten']?></p>
                               <p class="mainProduct_listPrice">
-                                <span><?=number_format($row['GIA_BD'])?></span>₫</p>
+                                <span><?=number_format($row['gia'])?></span>₫</p>
                             </figcaption>
                           </figure>
                         </a>
@@ -283,13 +283,13 @@
                       while($row = mysqli_fetch_array($data['BinhGiuNhiet'])) { ?>
 
                       <li class="col-4 col-md-4 col-lg-4">
-                        <a href="<?php echo link ?>DetailsController?spId=<?=$row['MaSP'] ?>">
+                        <a href="<?php echo link ?>DetailsController?spId=<?=$row['id'] ?>">
                           <figure>
-                            <p class="mainProduct_listImg"><img src="<?=$row['AnhSP'] ?>" alt=""></p>
+                            <p class="mainProduct_listImg"><img src="<?=$row['photo'] ?>" alt=""></p>
                             <figcaption>
-                              <p class="mainProduct_listTit"><?=$row['TenSP']?></p>
+                              <p class="mainProduct_listTit"><?=$row['ten']?></p>
                               <p class="mainProduct_listPrice">
-                                <span><?=number_format($row['GIA_BD'])?></span>₫</p>
+                                <span><?=number_format($row['gia'])?></span>₫</p>
                             </figcaption>
                           </figure>
                         </a>
@@ -324,13 +324,13 @@
                       while($row = mysqli_fetch_array($data['HopCom'])) { ?>
 
                       <li class="col-4 col-md-4 col-lg-4">
-                        <a href="<?php echo link ?>DetailsController?spId=<?=$row['MaSP'] ?>">
+                        <a href="<?php echo link ?>DetailsController?spId=<?=$row['id'] ?>">
                           <figure>
-                            <p class="mainProduct_listImg"><img src="<?=$row['AnhSP'] ?>" alt=""></p>
+                            <p class="mainProduct_listImg"><img src="<?=$row['photo'] ?>" alt=""></p>
                             <figcaption>
-                              <p class="mainProduct_listTit"><?=$row['TenSP']?></p>
+                              <p class="mainProduct_listTit"><?=$row['ten']?></p>
                               <p class="mainProduct_listPrice">
-                                <span><?=number_format($row['GIA_BD'])?></span>₫</p>
+                                <span><?=number_format($row['gia'])?></span>₫</p>
                             </figcaption>
                           </figure>
                         </a>

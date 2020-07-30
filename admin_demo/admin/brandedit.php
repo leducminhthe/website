@@ -39,7 +39,7 @@
                     <table class="form">					
                         <tr>
                             <td>
-                                <input type="text" value="<?php echo $result['TenMenuCon']; ?>" name="brandName" placeholder="Sửa thương hiệu sản phẩm..." class="medium" />
+                                <input type="text" value="<?php echo $result['ten']; ?>" name="brandName" placeholder="Sửa thương hiệu sản phẩm..." class="medium" />
                             </td>
                         </tr>
                         <tr>
@@ -59,10 +59,10 @@
                                     ?>
                                         <option 
                                         <?php 
-                                            if($result_id_cha['id'] == $result['id_Cha_FK'])
+                                            if($result_id_cha['id'] == $result['cat1_id'])
                                                 { echo 'selected'; }
                                         ?>    
-                                                value=" <?php echo $result_id_cha['id'] ?> "> <?php echo $result_id_cha['TenMenuCha'] ?></option>
+                                                value=" <?php echo $result_id_cha['id'] ?> "> <?php echo $result_id_cha['ten'] ?></option>
                             
                                         <?php  
                                         }

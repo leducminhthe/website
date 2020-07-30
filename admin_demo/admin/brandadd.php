@@ -45,7 +45,7 @@
                                         while ($result = $catlist->fetch_assoc()){
                                     
                                      ?>
-                                    <option value=" <?php echo $result['id'] ?> "> <?php echo $result['TenMenuCha'] ?> </option>
+                                    <option value=" <?php echo $result['id'] ?> "> <?php echo $result['ten'] ?> </option>
                                     
                                     <?php 
                                     }

@@ -77,6 +77,7 @@
         <div class="grid_12">
             <ul class="nav main">
                 <li class="ic-dashboard"><a href="index.php"><span>Dashboard</span></a> </li>
+                <li class="ic-dashboard"><a href="donhang.php"><span>Đơn hàng</span></a> </li>
             </ul>
         </div>
         <div class="clear">

@@ -7,7 +7,7 @@
 
 			$result = false;
 
-			if( mysqli_query($this->con, $qr)){
+			if( mysqli_query($this->con2, $qr)){
 				$result = true;
 			}
 

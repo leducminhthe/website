@@ -1,12 +1,10 @@
 <?php
 
-class text extends Controller{
+class sp_lienquan extends Controller{
 
     function Trangchu(){
         //model
-        $sp = $this->model("textModel");
-
-        $menu = $this->model("MenuModel");
+        $sp = $this->model("Ajax_model");
 
         $sotin1trang = $_GET['sotin1trang'];
 
@@ -19,7 +17,6 @@ class text extends Controller{
         //view
         $this->view("textlayout", [
             "Page"=>"text",
-            "MenuCha"=>$menu->get_menus(),
             "SP" => $sp->SP($sotin1trang,$from,$danhmuc,$spId),
         ]);
     }

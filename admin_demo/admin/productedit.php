@@ -43,7 +43,7 @@
                         <label>Name</label>
                     </td>
                     <td>
-                        <input name="productName" value="<?php echo $result_product['TenSP'] ?>" type="text" class="medium" />
+                        <input name="productName" value="<?php echo $result_product['ten'] ?>" type="text" class="medium" />
                     </td>
                 </tr>
                   <tr>
@@ -51,7 +51,7 @@
                         <label>MaSP</label>
                     </td>
                     <td>
-                        <input name="product_MaSP" value="<?php echo $result_product['MaSP'] ?>" type="text" class="medium" />
+                        <input name="product_MaSP" value="<?php echo $result_product['masp'] ?>" type="text" class="medium" />
                     </td>
                 </tr>
                 <tr>
@@ -60,14 +60,6 @@
                     </td>
                     <td>
                         <input name="product_SPBest" type="text" value="<?php echo $result_product['SP_Best'] ?>" class="medium" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label>SP_KM</label>
-                    </td>
-                    <td>
-                        <input name="product_SPKM" type="text" value="<?php echo $result_product['SP_KM'] ?>" class="medium" />
                     </td>
                 </tr>
                 <tr>
@@ -86,10 +78,10 @@
                              ?>
                             <option 
                             <?php 
-                            if($result['id'] == $result_product['id_Cha_FK'])
+                            if($result['id'] == $result_product['cat1_id'])
                                 { echo 'selected'; }
                              ?>    
-                            value=" <?php echo $result['id'] ?> "> <?php echo $result['TenMenuCha'] ?></option>
+                            value=" <?php echo $result['id'] ?> "> <?php echo $result['ten'] ?></option>
                             
                             <?php 
                             }
@@ -114,10 +106,10 @@
                              ?>
                             <option
                             <?php 
-                            if($result['id'] == $result_product['id_Con_FK'])
+                            if($result['id'] == $result_product['cat2_id'])
                                 { echo 'selected'; }
                             ?> 
-                            value=" <?php echo $result['id'] ?> "> <?php echo $result['TenMenuCon'] ?> </option>
+                            value=" <?php echo $result['id'] ?> "> <?php echo $result['ten'] ?> </option>
                             
                             <?php 
                             }
@@ -132,23 +124,15 @@
                         <label>Description</label>
                     </td>
                     <td>
-                        <textarea name="product_desc" class="tinymce"><?php echo $result_product['ThongTinChiTiet'] ?></textarea>
+                        <textarea name="product_desc" class="tinymce"><?php echo $result_product['chitietsanpham'] ?></textarea>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <label>Price_BD</label>
+                        <label>Price</label>
                     </td>
                     <td>
-                        <input name="price_BD" type="text" value="<?php echo $result_product['GIA_BD'] ?>" class="medium" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label>Price_HT</label>
-                    </td>
-                    <td>
-                        <input name="price_HT" type="text" value="<?php echo $result_product['GIA_HT'] ?>" class="medium" />
+                        <input name="price" type="text" value="<?php echo $result_product['gia'] ?>" class="medium" />
                     </td>
                 </tr>
             
@@ -157,8 +141,8 @@
                         <label>Upload Image</label>
                     </td>
                     <td>
-                        <img src="<?php echo $result_product['AnhSP'] ?>" width="100"><br>
-                        <input name="image_link" type="text" class="medium" value="<?php echo $result_product['AnhSP']?>" />
+                        <img src="<?php echo $result_product['photo'] ?>" width="100"><br>
+                        <input name="image_link" type="text" class="medium" value="<?php echo $result_product['photo']?>" />
                     </td>
                 </tr>
                 
@@ -170,15 +154,15 @@
                         <select id="select" name="active">
                             <option>Select Active</option>
                             <?php 
-                            if ($result_product['Active'] == 'Còn hàng') {
+                            if ($result_product['online'] == '1') {
                              ?>
-                            <option selected value="Còn hàng">Còn hàng</option>
-                            <option value="Tạm thời hết hàng">Tạm thời hết hàng</option>
+                            <option selected value="1">Còn hàng</option>
+                            <option value="0">Tạm thời hết hàng</option>
                             <?php 
                                 }else{
                             ?>
-                            <option value="Còn hàng">Còn hàng</option>
-                            <option selected value="Tạm thời hết hàng">Tạm thời hết hàng</option>    
+                            <option value="1">Còn hàng</option>
+                            <option selected value="0">Tạm thời hết hàng</option>    
                             <?php 
                         }
                              ?>

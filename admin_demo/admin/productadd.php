@@ -50,14 +50,6 @@
                 </tr>
                 <tr>
                     <td>
-                        <label>SP_KM</label>
-                    </td>
-                    <td>
-                        <input name="product_SPKM" type="text" placeholder="Nhập hoặc ko.." class="medium" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
                         <label>Danh mục sản phẩm</label>
                     </td>
                     <td>
@@ -70,7 +62,7 @@
                                 while ($result = $catlist->fetch_assoc()){
                             
                              ?>
-                            <option value=" <?php echo $result['id'] ?> "> <?php echo $result['TenMenuCha'] ?> </option>
+                            <option value=" <?php echo $result['id'] ?> "> <?php echo $result['ten'] ?> </option>
                             
                             <?php 
                             }
@@ -93,7 +85,7 @@
                                 while ($result = $brandlist->fetch_assoc()){
                             
                              ?>
-                            <option value=" <?php echo $result['id'] ?> "> <?php echo $result['TenMenuCon'] ?> </option>
+                            <option value=" <?php echo $result['id'] ?> "> <?php echo $result['ten'] ?> </option>
                             
                             <?php 
                             }
@@ -105,7 +97,7 @@
                 
                  <tr>
                     <td style="vertical-align: top; padding-top: 9px;">
-                        <label>Thông tin chi tiết</label>
+                        <label>Chi tiết sản phẩm</label>
                     </td>
                     <td>
                         <textarea name="product_desc" class="tinymce"></textarea>
@@ -113,18 +105,10 @@
                 </tr>
                 <tr>
                     <td>
-                        <label>Giá_BD</label>
+                        <label>Giá</label>
                     </td>
                     <td>
-                        <input name="price_BD" type="text" placeholder="Nhập giá..." class="medium" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label>Giá_HT</label>
-                    </td>
-                    <td>
-                        <input name="price_HT" type="text" placeholder="Nhập hoặc ko.." class="medium" />
+                        <input name="price" type="text" placeholder="Nhập giá..." class="medium" />
                     </td>
                 </tr>
             
@@ -152,8 +136,8 @@
                     <td>
                         <select id="select" name="active">
                             <option>Chọn</option>
-                            <option value="Còn hàng">Còn hàng</option>
-                            <option value="Tạm thời hết hàng">Tạm thời hết hàng</option>
+                            <option value="1">Còn hàng</option>
+                            <option value="0">Tạm thời hết hàng</option>
                         </select>
                     </td>
                 </tr>

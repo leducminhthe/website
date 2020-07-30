@@ -31,7 +31,7 @@
 				$alert = "<span class='error'>Brand must be not empty</span>";
 				return $alert;
 			}else{
-				$query = "INSERT INTO menucon(TenMenuCon, id_Cha_FK) VALUES('$brandName', '$category') ";
+				$query = "INSERT INTO table_category_2(ten, cat1_id) VALUES('$brandName', '$category') ";
 				$result = $this->db->insert($query);
 				if($result){
 					$alert = "<span class='success'>Insert brand Successfully</span>";
@@ -44,14 +44,14 @@
 		}
 		public function show_brand()
 		{
-			$query = "SELECT * FROM menucon order by id asc ";
+			$query = "SELECT * FROM table_category_2 order by id asc ";
 			$result = $this->db->select($query);
 			return $result;
 		}
 
 		public function getbrandbyId($id)
 		{
-			$query = "SELECT * FROM menucon where id = '$id' ";
+			$query = "SELECT * FROM table_category_2 where id = '$id' ";
 			$result = $this->db->select($query);
 			return $result;
 		}
@@ -68,7 +68,7 @@
 				$alert = "<span class='error'>Brand must be not empty</span>";
 				return $alert;
 			}else{
-				$query = "UPDATE menucon SET TenMenuCon = '$brandName', id_Cha_FK = '$category' WHERE id = '$id' ";
+				$query = "UPDATE table_category_2 SET ten = '$brandName', cat1_id = '$category' WHERE id = '$id' ";
 				$result = $this->db->update($query);
 				if($result){
 					$alert = "<span class='success'>Brand Update Successfully</span>";
@@ -82,7 +82,7 @@
 		}
 		public function del_brand($id)
 		{
-			$query = "DELETE FROM menucon where id = '$id' ";
+			$query = "DELETE FROM table_category_2 where id = '$id' ";
 			$result = $this->db->delete($query);
 			if($result){
 				$alert = "<span class='success'>Brand Deleted Successfully</span>";

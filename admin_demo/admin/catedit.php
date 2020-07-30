@@ -37,7 +37,7 @@
                     <table class="form">					
                         <tr>
                             <td>
-                                <input type="text" value="<?php echo $result['TenMenuCha']; ?>" name="catName" placeholder="Sửa danh mục sản phẩm..." class="medium" />
+                                <input type="text" value="<?php echo $result['ten']; ?>" name="catName" placeholder="Sửa danh mục sản phẩm..." class="medium" />
                             </td>
                         </tr>
 						<tr> 

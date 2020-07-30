@@ -4,7 +4,7 @@
 
 		public function LoginUser ($email, $pwd){
 			$sql = "SELECT * FROM user WHERE Email='$email'";
-			$result = mysqli_query($this->con, $sql);
+			$result = mysqli_query($this->con2, $sql);
 			if(mysqli_num_rows($result) > 0)
 			{
 				while($row = mysqli_fetch_assoc($result))

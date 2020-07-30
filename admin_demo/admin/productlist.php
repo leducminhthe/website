@@ -1,4 +1,4 @@
-﻿<?php include 'inc/header.php';?>
+<?php include 'inc/header.php';?>
 <?php include 'inc/sidebar.php';?>
 <?php include '../classes/category.php';  ?>
 <?php include '../classes/brand.php';  ?> 
@@ -17,7 +17,7 @@
  ?>
 <div class="grid_10">
     <div class="box round first grid">
-        <h2>Tất cả sản phẩm</h2>
+        <h2>Tất cả sản phẩm </h2>
         <div class="block">  
             <table class="data display datatable" id="example">
 			<thead>
@@ -49,18 +49,18 @@
 				 ?>
 				<tr class="odd gradeX">
 					<td><?php echo $i ?></td>
-					<td><?php echo $result['MaSP'] ?></td>
-					<td><?php echo $fm->textShorten($result['TenSP'], 50) ?></td>
-					<td><?php echo $result['GIA_BD'] ?></td>
-					<td><img src="<?php echo $result['AnhSP'] ?>" width="80"></td>
-					<td><?php echo $result['TenMenuCha'] ?></td>
-					<td><?php echo $result['TenMenuCon'] ?></td>
+					<td><?php echo $result['masp'] ?></td>
+					<td><?php echo $fm->textShorten($result['ten'], 50) ?></td>
+					<td><?php echo $result['giatext'] ?></td>
+					<td><img src="<?php echo $result['photo'] ?>" width="80"></td>
+					<td><?php echo $result['tenmenucha'] ?></td>
+					<td><?php echo $result['tenmenucon'] ?></td>
 					
 					<td><?php 
-						echo $result['Active'];
+						echo $result['online'];
 					?></td>
 					
-					<td><a href="productedit.php?productid=<?php echo $result['MaSP'] ?>">Edit</a> || <a href="?productid=<?php echo $result['MaSP'] ?>">Delete</a></td>
+					<td><a href="productedit.php?productid=<?php echo $result['masp'] ?>">Edit</a> || <a href="?productid=<?php echo $result['masp'] ?>">Delete</a></td>
 				</tr>
 				<?php
 							

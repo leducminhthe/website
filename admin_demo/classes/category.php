@@ -28,7 +28,7 @@
 				$alert = "<span class='error'>Category must be not empty</span>";
 				return $alert;
 			}else{
-				$query = "INSERT INTO menucha(TenMenuCha) VALUES('$catName') ";
+				$query = "INSERT INTO table_category_1(ten) VALUES('$catName') ";
 				$result = $this->db->insert($query);
 				if($result){
 					$alert = "<span class='success'>Insert Category Successfully</span>";
@@ -41,7 +41,7 @@
 		}
 		public function show_category()
 		{
-			$query = "SELECT * FROM menucha order by id asc ";
+			$query = "SELECT * FROM table_category_1 order by id asc ";
 			$result = $this->db->select($query);
 			return $result;
 		}
@@ -54,7 +54,7 @@
 				$alert = "<span class='error'>Category must be not empty</span>";
 				return $alert;
 			}else{
-				$query = "UPDATE menucha SET TenMenuCha= '$catName' WHERE id = '$id' ";
+				$query = "UPDATE table_category_1 SET ten= '$catName' WHERE id = '$id' ";
 				$result = $this->db->update($query);
 				if($result){
 					$alert = "<span class='success'>Category Update Successfully</span>";
@@ -67,7 +67,7 @@
 		}
 		public function del_category($id)
 		{
-			$query = "DELETE FROM menucha where id = '$id' ";
+			$query = "DELETE FROM table_category_1 where id = '$id' ";
 			$result = $this->db->delete($query);
 			if($result){
 				$alert = "<span class='success'>Category Deleted Successfully</span>";
@@ -79,7 +79,7 @@
 		}
 		public function getcatbyId($id)
 		{
-			$query = "SELECT * FROM menucha where id = '$id' ";
+			$query = "SELECT * FROM table_category_1 where id = '$id' ";
 			$result = $this->db->select($query);
 			return $result;
 		}

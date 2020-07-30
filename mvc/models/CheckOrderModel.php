@@ -6,7 +6,7 @@
 			if (isset($_SESSION['user'])) {
 				$Email = $_SESSION['user']['Email'];
 				$qr = "SELECT * FROM donhang WHERE Email = '$Email'";
-	        	$rows = mysqli_query($this->con, $qr);
+	        	$rows = mysqli_query($this->con2, $qr);
 				return $rows;
 			}else{
 				echo "<script>alert('Bạn chưa đăng nhập')</script>";

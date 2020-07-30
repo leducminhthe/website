@@ -10,24 +10,25 @@
     <div class="dropdown-menu">
 
       <?php  while($row = mysqli_fetch_array($data['ListMenuCha'])) { ?>
-      <a class="dropdown-item" href="<?php echo link ?>/DanhMucChaController?menucha=<?php echo $row['id'] ?>"><?php echo $row['TenMenuCha'] ?></a>
+      <a class="dropdown-item" href="<?php echo link ?>/DanhMucChaController?menucha=<?php echo $row['id'] ?>"><?php echo $row['ten'] ?></a>
       <?php } ?>
 
     </div>
   </li>
 <?php } ?>
 </ul>
+
   <?php 
   foreach ($data['DanhMucMenuCha'] as $value) { ?>
     <div class="danhmuc_detail">
-      <h4><?php echo $value['tenMenuCha'] ?></h4>
+      <h4><?php echo $value['tenmenucha'] ?></h4>
     </div>
-    <ul class="row">
+    <ul class="muc_con row">
       <?php 
         foreach ($value['listMenuCon'] as $menucon) { ?>
 
-          <li class="col-3 col-lg-3 col-md-3">
-            <a href="GetSPController?danhmuc=<?php echo $menucon['id'] ?>"><?php echo $menucon['menucon'] ?>
+          <li  style="padding: 10px;" class="col-3 col-lg-3 col-md-3">
+            <a  style="color: black" href="GetSPController?danhmuc=<?php echo $menucon['id'] ?>"><?php echo $menucon['menucon'] ?>
             </a>
           </li>
 

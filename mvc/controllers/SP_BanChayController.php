@@ -11,8 +11,7 @@ class SP_BanChayController extends Controller{
         $sotin1trang = 5;
         
         if( isset($_GET["trang"]) ){
-			$trang = $_GET["trang"];
-			settype($trang, "int");
+			$trang = (int)$_GET["trang"];
 		}else{
 			$trang = 1;	
 		};

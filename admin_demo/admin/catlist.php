@@ -41,7 +41,7 @@
 						?>
 						<tr class="odd gradeX">
 							<td><?php echo $i; ?></td>
-							<td><?php echo $result['TenMenuCha']; ?></td>
+							<td><?php echo $result['ten']; ?></td>
 							<td><a href="catedit.php?catid=<?php echo $result['id']; ?>">Edit</a> || <a onclick = "return confirm('Are you want to delete???')" href="?delid=<?php echo $result['id'] ?>">Delete</a></td>
 						</tr>
 						<?php 

@@ -3,27 +3,27 @@
 	class DetailsModel extends DB{
 
 		public function DanhMucCha($spId){
-			$query = "SELECT sanpham.*, menucha.TenMenuCha, menucon.TenMenuCon
+			$query = "SELECT table_product.*, table_category_1.ten as tenmenucha, table_category_2.ten
 
-			FROM sanpham INNER JOIN menucha ON sanpham.id_Cha_FK = menucha.id
+			FROM table_product INNER JOIN table_category_1 ON table_product.cat1_id = table_category_1.id
 
-			INNER JOIN menucon ON sanpham.id_Con_FK = menucon.id
+			INNER JOIN table_category_2 ON table_product.cat2_id = table_category_2.id
 
-			WHERE sanpham.MaSP = '$spId' ";
+			WHERE table_product.id = '$spId' ";
 
-	        $rows = mysqli_query($this->con, $query);
+	        $rows = mysqli_query($this->con2, $query);
 	        return $rows;
 		}
 
 		public function SPDetail($spId){
-			$qr = "SELECT * FROM sanpham WHERE MaSP = '$spId'";
-	        $rows = mysqli_query($this->con, $qr);
+			$qr = "SELECT * FROM table_product WHERE id = '$spId'";
+	        $rows = mysqli_query($this->con2, $qr);
 			return $rows;
 		}
 
 		public function Images_SP($spId){
-			$query = "SELECT * FROM images WHERE MaSP_FK = '$spId'";
-			$rows = mysqli_query($this->con, $query);
+			$query = "SELECT * FROM table_product_image WHERE product_id = '$spId'";
+			$rows = mysqli_query($this->con2, $query);
 			return $rows;
 		}
 
