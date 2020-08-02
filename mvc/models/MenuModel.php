@@ -61,19 +61,19 @@
 			return $rows;
 		}
 
-		public function DanhMucMenuCon($danhmuc){
-			$qr = "SELECT * FROM table_category_2 WHERE id = '$danhmuc' ";
+		public function DanhMucMenuCon($menucon){
+			$qr = "SELECT * FROM table_category_2 WHERE id = '$menucon' ";
 	        $rows = mysqli_query($this->con2, $qr);
 	       
 			return $rows;
 		}
 
-		public function muc_cha($danhmuc){
+		public function DanhMucCha($menucon){
 			$qr = "SELECT table_category_1.ten
 
 			FROM table_category_1 INNER JOIN table_category_2 ON table_category_1.id = table_category_2.cat1_id
 
-			WHERE table_category_2.id = '$danhmuc' ";
+			WHERE table_category_2.id = '$menucon' ";
 			$rows = mysqli_query($this->con2, $qr);
 	       
 			return $rows;

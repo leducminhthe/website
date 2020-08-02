@@ -120,7 +120,7 @@
                               <?php 
                                 foreach ($value['listMenuCon'] as $menucon) { ?>
 
-                                  <a class="dropdown-item" href="GetSPController?danhmuc=<?php echo $menucon['id'] ?>"><?php echo $menucon['menucon'] ?></a>
+                                  <a class="dropdown-item" href="GetSPController?menucon=<?php echo $menucon['id'] ?>"><?php echo $menucon['menucon'] ?></a>
 
                               <?php } ?>
 

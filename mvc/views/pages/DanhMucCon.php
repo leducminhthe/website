@@ -10,7 +10,7 @@
     <div class="dropdown-menu">
 
       <?php  while($row = mysqli_fetch_array($data['ListMenuCha'])) { ?>
-      <a class="dropdown-item" href="<?php echo link ?>/DanhMucChaController?menucha=<?php echo $row['id'] ?>"><?php echo $row['ten'] ?></a>
+      <a class="dropdown-item" href="<?php echo link ?>DanhMucChaController?menucha=<?php echo $row['id'] ?>"><?php echo $row['ten'] ?></a>
       <?php } ?>
 
     </div>
@@ -19,7 +19,7 @@
 </ul>
 
 <?php 
-	$menucon = $_GET['danhmuc'];
+	$menucon = $_GET['menucon'];
 	while($row_menucon = mysqli_fetch_array($data['DanhMucMenuCon'])){ ?> 
 		<div class="danhmuc_detail">
 			<h4><?php echo $row_menucon['ten'] ?></h4>
@@ -29,7 +29,7 @@
 
 <div class="danhsach row"></div>
   <div id="xemthem">
-    xem thêm sản phẩm liên quan
+    
   </div>
 
 <script>

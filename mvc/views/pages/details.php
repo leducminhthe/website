@@ -122,7 +122,7 @@
 
 <div class="danhsach row"></div>
   <div id="xemthem">
-    xem thêm sản phẩm liên quan
+    
   </div>
 
 <script>

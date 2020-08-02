@@ -10,7 +10,7 @@
     <div class="dropdown-menu">
 
       <?php  while($row = mysqli_fetch_array($data['ListMenuCha'])) { ?>
-      <a class="dropdown-item" href="<?php echo link ?>/DanhMucChaController?menucha=<?php echo $row['id'] ?>"><?php echo $row['ten'] ?></a>
+      <a class="dropdown-item" href="<?php echo link ?>DanhMucChaController?menucha=<?php echo $row['id'] ?>"><?php echo $row['ten'] ?></a>
       <?php } ?>
 
     </div>
@@ -28,7 +28,7 @@
         foreach ($value['listMenuCon'] as $menucon) { ?>
 
           <li  style="padding: 10px;" class="col-3 col-lg-3 col-md-3">
-            <a  style="color: black" href="GetSPController?danhmuc=<?php echo $menucon['id'] ?>"><?php echo $menucon['menucon'] ?>
+            <a  style="color: black" href="<?php echo link ?>GetSPController?menucon=<?php echo $menucon['id'] ?>"><?php echo $menucon['menucon'] ?>
             </a>
           </li>
 

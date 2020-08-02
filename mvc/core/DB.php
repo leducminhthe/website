@@ -2,7 +2,6 @@
 
 class DB{
 
-    public $con;
     public $con2;
     protected $servername = "localhost";
     protected $username = "root";

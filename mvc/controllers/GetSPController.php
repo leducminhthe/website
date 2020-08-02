@@ -4,18 +4,17 @@ class GetSPController extends Controller{
 
     function Trangchu(){
         //model
-        $sp = $this->model("SanPhamModel");
 
         $menu = $this->model("MenuModel");
         
-        $danhmuc = $_GET['danhmuc'];
+        $menucon = $_GET['menucon'];
 
         //view
         $this->view("layout2", [
-            "Page"=>"danhmuc",
+            "Page"=>"DanhMucCon",
             "Menu"=>$menu->get_menus(),
-            "DanhMucCha"=>$menu->muc_cha($danhmuc),
-            "DanhMucMenuCon" => $menu->DanhMucMenuCon($danhmuc),
+            "DanhMucCha"=>$menu->DanhMucCha($menucon),
+            "DanhMucMenuCon" => $menu->DanhMucMenuCon($menucon),
             "ListMenuCha"=>$menu->ListMenuCha(),
         ]);
     }

@@ -9,7 +9,7 @@ class DanhMucChaController extends Controller{
         $menucha = $_GET['menucha'];
 
         $this->view("layout2", [
-            "Page"=>"MenuCha",
+            "Page"=>"DanhMucCha",
             "Menu"=>$menu->get_menus(),
             "DanhMucMenuCha"=>$menu->DanhMucMenuCha($menucha),
             "DanhMucCha"=>$menu->MenuCha($menucha),
