@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href='<?php echo file ?>/css/owl.carousel.min.css'>
     <link rel="stylesheet" type="text/css" href='<?php echo file ?>/css/website_css.css'>
     <link rel="stylesheet" type="text/css" href='<?php echo file ?>/css/slide.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <title>Hello, world!</title>
   </head>
@@ -176,7 +177,7 @@
             <a class="nav-link" href="#">Sơ đồ</a>
           </li>
           <li class="nav-item_top">
-            <img src="http://www.locknlock.vn/data/base/imgs/global/btnTop.png">
+            <button  id="totop"><img src="http://www.locknlock.vn/data/base/imgs/global/btnTop.png"></button>
           </li>
           </ul>
         </div>  
@@ -204,6 +205,41 @@
       </div>
 
     </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <button onclick="scrollWin()" id="todown" style="position:fixed;">Down</button>
+
+  <script>
+    $('#totop').click(function(){ 
+      $('html,body').animate({ scrollTop: 0 }, 400);
+      return false; 
+    });
+    //Get the button
+    var mybutton = document.getElementById("myBtn");
+    var buttondown = document.getElementById("todown");
+
+    // When the user scrolls down 400px from the top of the document, show the button
+    window.onscroll = function() {
+      scrollFunction()
+    };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+        mybutton.style.display = "block";
+        buttondown.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+        buttondown.style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.documentElement.scrollTop = 0;
+    }
+    function scrollWin() {
+      $('html,body').animate({scrollTop: document.body.scrollHeight},"fast");
+    }
+  </script>
 
     <script src='<?php echo file ?>/js/jquery.min.js'></script>
     <script src='<?php echo file ?>/js/owl.carousel.min.js'></script>
