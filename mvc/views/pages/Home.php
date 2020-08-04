@@ -13,7 +13,7 @@
                   <?php 
                     foreach ($value['listMenuCon'] as $menucon) { ?>
 
-                      <li><a href="GetSPController?danhmuc=<?php echo $menucon['id'] ?>"><?php echo $menucon['menucon'] ?></a></li>
+                      <li><a href="GetSPController?menucon=<?php echo $menucon['id'] ?>"><?php echo $menucon['menucon'] ?></a></li>
 
                   <?php } ?>
 
