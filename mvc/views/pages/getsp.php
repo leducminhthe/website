@@ -11,7 +11,7 @@
 	      <figure>
 	        <p class="mainProduct_listImg" ><img src="<?= $row['photo'] ?>" alt=""></p>
 	        <figcaption>
-	          <p class="mainProduct_listTit"><?=$row['tensp']?></p>
+	          <p class="mainProduct_listTit"><?=$row['ten']?></p>
 	          <p class="mainProduct_listPrice">
 	            <span><?=number_format($row['gia'])?></span>₫</p>
 	        </figcaption>
