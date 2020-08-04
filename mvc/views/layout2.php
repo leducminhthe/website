@@ -203,8 +203,12 @@
 
     </div>
 
-    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-    <button onclick="scrollWin()" id="todown" style="position:fixed;">Down</button>
+    <button onclick="topFunction()" id="myBtn">
+      <img src="<?php echo file ?>/images/upload.png" alt="">
+    </button>
+    <button onclick="scrollWin()" id="todown" style="position:fixed;">
+      <img src="<?php echo file ?>/images/dow.png" alt="">
+    </button>
 
   <script>
     $('#totop').click(function(){ 

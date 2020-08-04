@@ -451,7 +451,7 @@ li{
 }
 
 /*Button go to top*/
-#myBtn {
+#todown {
   position: fixed;
   bottom: 20px;
   right: 30px;
@@ -470,7 +470,7 @@ li{
   background-color: #555;
 }
 
-#todown {
+#myBtn{
   position: fixed;
   bottom: 77px;
   right: 30px;
@@ -482,4 +482,5 @@ li{
   cursor: pointer;
   padding: 15px;
   border-radius: 4px;
+  width: 77px;
 }
