@@ -15,13 +15,12 @@
 
     		$LienHe = $this->model('LienHeModel');
 
-   			if (isset($_POST['submit'])) {
-   				$HoTen = $_POST['HoTen'];
-				$email = $_POST['email'];
-				$Phone = $_POST['Phone'];
-				$message = $_POST['message'];
-   			}
-   				$this->phpMailer();
+			$HoTen = $_POST['HoTen'];
+			$email = $_POST['email'];
+			$Phone = $_POST['Phone'];
+			$message = $_POST['message'];
+
+   			$this->phpMailer();
 
 			$kq = $LienHe->InsertLienHe($HoTen, $email, $Phone, $message);
 
