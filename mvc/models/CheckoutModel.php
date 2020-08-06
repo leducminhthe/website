@@ -22,7 +22,7 @@
     					mysqli_query($this->con2, $qr);
     					unset($_SESSION['cart']);
 						echo "<script>alert('Cảm ơn bạn đã mua hàng của chúng tôi')</script>";
-						echo "<script>window.location= '/website/CheckOrderController'</script>";
+						echo "<script>window.location= '/website/HomeController'</script>";
         			}
 				}
 			}else{
