@@ -16,7 +16,7 @@
   <div class="form-group">
     <label class="control-label col-sm-2" for="lastname">Gender:</label>
     <div class="col-sm-6">
-      <label class="radio-inline"><input type="radio" name="gender" value="Male">Male</label>
+      <label class="radio-inline"><input type="radio" name="gender" checked value="Male">Male</label>
 	  <label class="radio-inline"><input type="radio" name="gender" value="Female">Female</label>
     </div>
   </div>
@@ -26,8 +26,6 @@
       <input type="email" name="email" class="form-control" id="email" placeholder="Enter email">
     </div>
   </div>
-
-  <div class="loi"></div>
 
   <div class="form-group">
     <label class="control-label col-sm-2" for="pwd">Password:</label>
@@ -53,5 +51,4 @@
     </div>
   </div>
 </form>
-
 

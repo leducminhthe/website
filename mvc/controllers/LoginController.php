@@ -19,7 +19,12 @@
       $email = trim($_POST['email']);
       $pwd = trim($_POST['password']);
 
-      $kq = $login->LoginUser($email, $pwd);
+      if ($email=="" || $pwd=="") {
+        echo "<script> alert('login false') </script>";
+        echo "<script>window.location= '/website/LoginController'</script>";
+      } else {
+        $kq = $login->LoginUser($email, $pwd);
+      }
 
       $this->view("layout2", [
           "Page"=>"Home",
