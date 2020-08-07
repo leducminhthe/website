@@ -61,6 +61,10 @@
 			$subtotal += $total;
 		}?>
 
+		<button type="">
+			<a href="<?php echo link ?>DeleteSPController/deleteAll" title="">Delete All</a>
+		</button>
+
 		<table class="sub_total" width="40%">
 			<tr>
 				<th>Giá Tiền: </th>

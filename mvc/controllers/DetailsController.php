@@ -10,11 +10,8 @@ class DetailsController extends Controller{
 
         if( isset($_GET["spId"]) ){
             $spId = $_GET["spId"];
-        }else{
-            echo "false";
-        };
-
-       
+        }
+ 
         //view
         $this->view("layout2", [
             "Page"=>"details",

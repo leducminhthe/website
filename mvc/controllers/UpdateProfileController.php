@@ -6,10 +6,14 @@ class UpdateProfileController extends Controller{
 
         $menu = $this->model("MenuModel");
 
-        $this->view("layout2", [
-            "Page"=>"Profile",
-            "Menu"=>$menu->get_menus(),
-        ]);
+        if (isset($_SESSION['user'])) {
+            $this->view("layout2", [
+                "Page"=>"Profile",
+                "Menu"=>$menu->get_menus(),
+            ]);
+        } else {
+            header('location:'.link.'LoginController');
+        }
     }
 
     public function Update(){

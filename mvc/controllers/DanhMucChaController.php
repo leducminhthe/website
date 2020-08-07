@@ -6,7 +6,11 @@ class DanhMucChaController extends Controller{
 
         $menu = $this->model("MenuModel");
 
-        $menucha = $_GET['menucha'];
+        if (isset($_GET['menucha'])) {
+            $menucha = $_GET['menucha'];
+        } else {
+            $menucha = 1;
+        }
 
         $this->view("layout2", [
             "Page"=>"DanhMucCha",

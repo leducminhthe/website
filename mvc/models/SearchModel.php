@@ -6,7 +6,11 @@
 
 	        $qr = "SELECT * FROM table_product WHERE ten LIKE '%$search%' OR masp = '$search' LIMIT $from,$sotin1trang";
 	        $rows = mysqli_query($this->con2, $qr);
-	        return $rows;
+	        if ( mysqli_num_rows ( $rows ) ) {
+        		return $rows;
+    		} else {
+        		header('location:'.link.'ErrorController');
+    		}
 		}
 
 		public function trang_SP( $sotin1trang,$search){

@@ -6,11 +6,17 @@ class Ajax_danhmuc extends Controller{
         //model
         $sp = $this->model("Ajax_model");
 
-        $sotin1trang = $_GET['sotin1trang'];
 
-        $danhmuc = $_GET['danhmuc'];
-        
-		$from = $_GET['from'];
+
+        if ($_GET['sotin1trang'] || $_GET['danhmuc'] || $_GET['from']) {
+            $sotin1trang = $_GET['sotin1trang'];
+
+            $danhmuc = $_GET['danhmuc'];
+            
+            $from = $_GET['from'];
+        } else {
+            header('location: /website/ErrorController');
+        }
 
         //view
         $this->view("textlayout", [

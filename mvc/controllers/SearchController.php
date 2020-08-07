@@ -8,8 +8,10 @@ class SearchController extends Controller{
 
         $menu = $this->model("MenuModel");
 
-        if (isset($_GET['search']) !== '') {
+        if (isset($_GET['search'])) {
             $search = $_GET['search'];
+        } else {
+            header('location:'.link.'ErrorController');
         }
 
         $sotin1trang = 3;
@@ -24,7 +26,7 @@ class SearchController extends Controller{
        
         //view
         $this->view("layout2", [
-            "Page"=>"getsp",
+            "Page"=>"search",
             "Menu"=>$menu->get_menus(),
             "SP"=>$sp->SP($sotin1trang,$from,$search),
             "trang_SP"=>$sp->trang_SP($sotin1trang,$search),

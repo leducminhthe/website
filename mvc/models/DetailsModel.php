@@ -18,7 +18,11 @@
 		public function SPDetail($spId){
 			$qr = "SELECT * FROM table_product WHERE id = '$spId'";
 	        $rows = mysqli_query($this->con2, $qr);
-			return $rows;
+			if ( mysqli_num_rows ( $rows ) ) {
+        		return $rows;
+    		} else {
+        		header('location:'.link.'ErrorController');
+    		}
 		}
 
 		public function Images_SP($spId){

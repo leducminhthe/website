@@ -6,10 +6,16 @@ class CheckoutController extends Controller{
 
         $menu = $this->model("MenuModel");
 
-        $this->view("layout2", [
-            "Page"=>"Checkout",
-            "Menu"=>$menu->get_menus(),
-        ]);
+        if (isset($_SESSION['cart'])) {
+            if (count($_SESSION['cart']) > 0 ) {
+                $this->view("layout2", [
+                    "Page"=>"Checkout",
+                    "Menu"=>$menu->get_menus(),
+                ]);
+            } else {
+                header('location:'.link.'GioHangController');
+            }  
+        }   
     }
 
     public function thanhtoan(){

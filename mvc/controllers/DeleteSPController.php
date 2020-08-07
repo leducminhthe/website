@@ -20,5 +20,10 @@ class DeleteSPController extends Controller{
             "Page"=>"giohang",
         ]);
     }
+
+    function deleteAll(){
+        unset($_SESSION['cart']);
+        header('location:'.link.'GioHangController');
+    }
 }
 ?>

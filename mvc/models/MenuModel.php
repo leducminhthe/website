@@ -45,8 +45,10 @@
 						'menucon' => $row['ten'],
 					];	
 				}
+				return $menus;
+			} else {
+				header('location:'.link.'HomeController');
 			}
-			return $menus;
 		}
 
 		public function MenuCha($menucha){
@@ -76,7 +78,11 @@
 			WHERE table_category_2.id = '$menucon' ";
 			$rows = mysqli_query($this->con2, $qr);
 	       
-			return $rows;
+			if ( mysqli_num_rows ( $rows ) ) {
+        		return $rows;
+    		} else {
+        		header('location:'.link.'HomeController');
+    		}
 		}
 	}
 ?>
