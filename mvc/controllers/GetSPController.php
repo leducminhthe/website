@@ -7,10 +7,10 @@ class GetSPController extends Controller{
 
         $menu = $this->model("MenuModel");
         
+        
         if (isset($_GET['menucon'])) {
             $menucon = $_GET['menucon'];
         }
-
         //view
         $this->view("layout2", [
             "Page"=>"DanhMucCon",

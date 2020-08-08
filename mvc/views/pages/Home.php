@@ -27,33 +27,52 @@
         </div>
 
         <div class="main_right col-9 col-lg-9 col-md-9"> 
-          <div class="galleryContainer">
-              <div class="slideShowContainer">
-                  <div onclick="plusSlides(-1)" class="nextPrevBtn leftArrow"><span class="arrow arrowLeft"></span></div>
-                  <div onclick="plusSlides(1)" class="nextPrevBtn rightArrow"><span class="arrow arrowRight"></span></div>
-                  <div class="captionTextHolder"><p class="captionText slideTextFromTop"></p></div>
-                  <div class="imageHolder">
-                      <img src="<?php echo file ?>/images/900x350.jpg">
-                      <p class="captionText">Ngày Hội Lock&Lock</p>
-                  </div>
-                  <div class="imageHolder">
-                      <img src="<?php echo file ?>/images/binh-giu-nhiet-colorful-banner.jpg">
-                      <p class="captionText">Sản Phẩm Mới</p>
-                  </div>
-                  <div class="imageHolder">
-                      <img src="<?php echo file ?>/images/member.jpg">
-                      <p class="captionText">ƯU ĐÃI THÀNH VIÊN</p>
-                  </div>
-                  <div class="imageHolder">
-                      <img src="<?php echo file ?>/images/mayeptraicay.jpg">
-                      <p class="captionText">Sản phẩm bán chạy</p>
-                  </div>
-                  <div class="imageHolder">
-                      <img src="<?php echo file ?>/images/Untitled-1.jpg">
-                      <p class="captionText">Giảm Giá</p>
-                  </div>
+          <div id="demo" class="carousel slide" data-ride="carousel">
+            <ul class="carousel-indicators">
+              <li data-target="#demo" data-slide-to="0" class="active"></li>
+              <li data-target="#demo" data-slide-to="1"></li>
+              <li data-target="#demo" data-slide-to="2"></li>
+              <li data-target="#demo" data-slide-to="3"></li>
+              <li data-target="#demo" data-slide-to="4"></li>
+            </ul>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="<?php echo file ?>/images/binh-giu-nhiet-colorful-banner.jpg" alt="Los Angeles" width="1100" height="500">
+                <div class="carousel-caption">
+                  <h3 style="color: black;">Sản Phẩm Mới</h3>
+                </div>   
               </div>
-              <div id="dotsContainer"></div>
+              <div class="carousel-item">
+                <img src="<?php echo file ?>/images/900x350.jpg" alt="Chicago" width="1100" height="500">
+                <div class="carousel-caption">
+                  <h3 style="color: black;">Ngày Hội Lock&Lock</h3>
+                </div>   
+              </div>
+              <div class="carousel-item">
+                <img src="<?php echo file ?>/images/member.jpg" alt="New York" width="1100" height="500">
+                <div class="carousel-caption">
+                  <h3 style="color: black;">ƯU ĐÃI THÀNH VIÊN</h3>
+                </div>   
+              </div>
+              <div class="carousel-item">
+                <img src="<?php echo file ?>/images/mayeptraicay.jpg" alt="New York" width="1100" height="500">
+                <div class="carousel-caption">
+                  <h3 style="color: black;">Sản phẩm bán chạy</h3>
+                </div>   
+              </div>
+              <div class="carousel-item">
+                <img src="<?php echo file ?>/images/Untitled-1.jpg" alt="New York" width="1100" height="500">
+                <div class="carousel-caption">
+                  <h3 style="color: black;">Giảm Giá</h3>
+                </div>   
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </a>
           </div>
         </div>
       </div>
