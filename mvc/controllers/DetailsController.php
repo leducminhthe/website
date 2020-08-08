@@ -17,7 +17,8 @@ class DetailsController extends Controller{
             "Page"=>"details",
             "Menu"=>$menu->get_menus(),
             "DanhMucCha" => $sp->DanhMucCha($spId),
-            "listMenuCha" =>$menu->ListMenuCha(),
+            "DanhMucCon"=> $sp->DanhMucCha($spId),
+            "ListMenuCha" =>$menu->ListMenuCha(),
             "SPDetail"=> $sp->SPDetail($spId),
             "Image" => $sp->Images_SP($spId)
         ]);

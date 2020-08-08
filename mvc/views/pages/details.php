@@ -13,9 +13,20 @@
     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $row['tenmenucha'] ?></a>
     <div class="dropdown-menu">
 
-      <?php  while($row = mysqli_fetch_array($data['listMenuCha'])) { ?>
+      <?php  while($row = mysqli_fetch_array($data['ListMenuCha'])) { ?>
       <a class="dropdown-item" href="<?php echo link ?>/DanhMucChaController?menucha=<?php echo $row['id'] ?>"><?php echo $row['ten'] ?></a>
       <?php } ?>
+
+    </div>
+  </li>
+<?php } ?>
+
+<?php while($row_con = mysqli_fetch_array($data['DanhMucCon'])) { ?> 
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $row_con['ten'] ?></a>
+    <div class="dropdown-menu">
+
+      <a class="dropdown-item" href="">1</a>
 
     </div>
   </li>

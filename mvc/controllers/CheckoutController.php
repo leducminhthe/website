@@ -15,7 +15,9 @@ class CheckoutController extends Controller{
             } else {
                 header('location:'.link.'GioHangController');
             }  
-        }   
+        } else {
+             header('location:'.link.'GioHangController');
+        }  
     }
 
     public function thanhtoan(){
