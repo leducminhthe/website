@@ -43,7 +43,7 @@
                         <label>Name</label>
                     </td>
                     <td>
-                        <input name="productName" value="<?php echo $result_product['ten'] ?>" type="text" class="medium" />
+                        <input name="productName" value="<?php echo $result_product['ten'] ?>" type="text" class="medium" required/>
                     </td>
                 </tr>
                   <tr>
@@ -51,7 +51,7 @@
                         <label>MaSP</label>
                     </td>
                     <td>
-                        <input name="product_MaSP" value="<?php echo $result_product['masp'] ?>" type="text" class="medium" />
+                        <input name="product_MaSP" value="<?php echo $result_product['masp'] ?>" type="text" class="medium" required/>
                     </td>
                 </tr>
                 <tr>
@@ -132,7 +132,7 @@
                         <label>Price</label>
                     </td>
                     <td>
-                        <input name="price" type="text" value="<?php echo $result_product['gia'] ?>" class="medium" />
+                        <input name="price" type="text" value="<?php echo $result_product['gia'] ?>" class="medium" required/>
                     </td>
                 </tr>
             
@@ -142,7 +142,7 @@
                     </td>
                     <td>
                         <img src="<?php echo $result_product['photo'] ?>" width="100"><br>
-                        <input name="image_link" type="text" class="medium" value="<?php echo $result_product['photo']?>" />
+                        <input name="image_link" type="text" class="medium" value="<?php echo $result_product['photo']?>" required/>
                     </td>
                 </tr>
                 

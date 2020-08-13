@@ -29,7 +29,7 @@
                         <label>Tên sản phẩm</label>
                     </td>
                     <td>
-                        <input name="productName" type="text" placeholder="Nhập tên sản phẩm..." class="medium" />
+                        <input name="productName" type="text" placeholder="Nhập tên sản phẩm..." class="medium" required/>
                     </td>
                 </tr>
                 <tr>
@@ -37,7 +37,7 @@
                         <label>Mã sản phẩm</label>
                     </td>
                     <td>
-                        <input name="product_MaSP" type="text" placeholder="Nhập mã sản phẩm..." class="medium" />
+                        <input name="product_MaSP" type="text" placeholder="Nhập mã sản phẩm..." class="medium" required/>
                     </td>
                 </tr>
                 <tr>
@@ -108,7 +108,7 @@
                         <label>Giá</label>
                     </td>
                     <td>
-                        <input name="price" type="text" placeholder="Nhập giá..." class="medium" />
+                        <input name="price" type="text" placeholder="Nhập giá..." class="medium" required/>
                     </td>
                 </tr>
             
@@ -125,7 +125,7 @@
                         <label>Ảnh SP link</label>
                     </td>
                     <td>
-                        <input name="image_link" type="text" class="medium" />
+                        <input name="image_link" type="text" class="medium" required/>
                     </td>
                 </tr>
                 

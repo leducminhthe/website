@@ -14,7 +14,7 @@ class SearchController extends Controller{
             header('location:'.link.'ErrorController');
         }
 
-        $sotin1trang = 3;
+        $sotin1trang = 5;
         
         if( isset($_GET["trang"]) ){
             $trang = (int)$_GET["trang"];

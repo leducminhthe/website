@@ -11,6 +11,7 @@
 	*/
 	class product
 	{
+		public $sotin1trang = 20;
 		private $db;
 		private $fm;
 		public function __construct()
@@ -44,7 +45,7 @@
 			// $unique_image = substr(md5(time()), 0,10).'.'.$file_ext;
 			// $uploaded_image = "uploads/".$unique_image;
 
-			if($productName == "" || $product_MaSP == "" || $category == "" || $brand == "" || $product_desc == "" || $price == "" || $active == "" || $image_link == ""){
+			if($category == "" || $brand == "" || $active == ""){
 				$alert = "<span class='error'>Fiedls must be not empty</span>";
 				return $alert;
 			}else{
@@ -65,14 +66,47 @@
 
 		public function show_product()
 		{
+			if( isset($_GET["trang"]) ){
+            	$trang = (int)$_GET["trang"];
+        	}else{
+            	$trang = 1; 
+        	};
+
+       		 $from = ($trang - 1 ) * $this->sotin1trang;
+
 			$query = 
 			"SELECT table_product.*, table_category_1.ten as tenmenucha, table_category_2.ten as tenmenucon
 
 			FROM table_product INNER JOIN table_category_1 ON table_product.cat1_id = table_category_1.id
-			INNER JOIN table_category_2 ON table_product.cat2_id = table_category_2.id";
+			INNER JOIN table_category_2 ON table_product.cat2_id = table_category_2.id LIMIT $from,$this->sotin1trang";
 			$result = $this->db->select($query);
 			return $result;
 		}
+
+		public function search_product($search)
+		{
+			if( isset($_GET["trang"]) ){
+            	$trang = (int)$_GET["trang"];
+        	}else{
+            	$trang = 1; 
+        	};
+
+       		 $from = ($trang - 1 ) * $this->sotin1trang;
+
+			$query = 
+			"SELECT table_product.*, table_category_1.ten as tenmenucha, table_category_2.ten as tenmenucon
+
+			FROM table_product INNER JOIN table_category_1 ON table_product.cat1_id = table_category_1.id
+			INNER JOIN table_category_2 ON table_product.cat2_id = table_category_2.id 
+			WHERE table_product.ten LIKE '%$search%' 
+			OR table_category_1.ten = '%$search%'
+			OR table_category_2.ten = '%$search%'
+			OR masp = '$search'
+			LIMIT $from,$this->sotin1trang";
+			$result = $this->db->select($query);
+			return $result;
+		}
+
 
 		public function update_product($date,$id){
 	
@@ -101,7 +135,7 @@
 			// $uploaded_image = "uploads/".$unique_image;
 
 
-			if($productName == "" || $product_MaSP == "" || $category == "" || $brand == "" || $product_desc == "" || $price == "" || $active == "" || $image_link == ""){
+			if($category == "" || $brand == "" || $active == ""){
 				$alert = "<span class='error'>Fiedls must be not empty</span>";
 				return $alert; 
 			}else{
@@ -178,6 +212,24 @@
 			$result = $this->db->select($query);
 			return $result;
 		}		
+
+		public function trang_SP(){
+			$qr = "SELECT count(masp) as tongsotin FROM table_product";
+	        $result = $this->db->select($qr);
+	        $tongsotin = mysqli_fetch_array($result);
+	        $sotrang = ceil($tongsotin['tongsotin'] / $this->sotin1trang);
+	       
+			return $sotrang;
+		}
+
+		public function trang_search_SP($search){
+			$qr = "SELECT count(masp) as tongsotin FROM table_product WHERE ten LIKE '%$search%' OR masp = '$search'";
+	        $result = $this->db->select($qr);
+	        $tongsotin = mysqli_fetch_array($result);
+	        $sotrang = ceil($tongsotin['tongsotin'] / $this->sotin1trang);
+	       
+			return $sotrang;
+		}
 		//Kết thúc Backend
 
 	}

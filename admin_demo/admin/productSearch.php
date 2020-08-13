@@ -14,16 +14,12 @@
         $id = $_GET['productid']; // Lấy catid trên host
         $delProduct = $pd -> del_product($id); // hàm check delete Name khi submit lên
     }
-
-    if (isset($_GET["btnSearch"])) {
-    	$search = $_GET["txtSearch"];
-    }
  ?>
 <div class="grid_10">
     <div class="box round first grid">
         <h2>Tất cả sản phẩm </h2>
         <div class="search">
-        	<form action="productSearch.php" method="get" accept-charset="utf-8">
+        	<form action="" method="get" accept-charset="utf-8">
         		Search: <input type="text" name="txtSearch">
         		<input type="submit" name="btnSearch" value="submit">
         	</form>
@@ -45,8 +41,9 @@
 				</thead>
 				<tbody>
 					<?php 
-					
-					$pdlist = $pd->show_product();
+
+					$search = $_GET["txtSearch"];
+					$pdlist = $pd->search_product($search);
 					$i = 0;
 					
 					
@@ -86,10 +83,10 @@
        </div>
        <div class="phantrang">
 		<?php 
-			$pagination = $pd->trang_SP();
+			$pagination = $pd->trang_search_SP($search);
 			for ($i=1; $i <= $pagination ; $i++) { ?>
 
-				<button><a href='productlist.php?trang=<?php echo $i ?>'>Trang <?php echo $i ?></a></button>
+				<button><a href='productSearch.php?trang=<?php echo $i ?>&txtSearch=<?php echo $_GET['txtSearch'] ?>'>Trang <?php echo $i ?></a></button>
 
 			<?php } ?>
 		</div>
