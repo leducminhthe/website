@@ -128,6 +128,14 @@
                     </td>
                 </tr>
                 <tr>
+                    <td style="vertical-align: top; padding-top: 9px;">
+                        <label>Description</label>
+                    </td>
+                    <td>
+                        <textarea name="product_infor" class="tinymce"><?php echo $result_product['thongtinsanpham'] ?></textarea>
+                    </td>
+                </tr>
+                <tr>
                     <td>
                         <label>Price</label>
                     </td>

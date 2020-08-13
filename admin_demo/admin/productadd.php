@@ -95,12 +95,20 @@
                     </td>
                 </tr>
                 
-                 <tr>
+                <tr>
                     <td style="vertical-align: top; padding-top: 9px;">
                         <label>Chi tiết sản phẩm</label>
                     </td>
                     <td>
                         <textarea name="product_desc" class="tinymce"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top; padding-top: 9px;">
+                        <label>Thông tin sản phẩm</label>
+                    </td>
+                    <td>
+                        <textarea name="product_infor" class="tinymce"></textarea>
                     </td>
                 </tr>
                 <tr>

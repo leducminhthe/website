@@ -29,6 +29,7 @@
 			$category = mysqli_real_escape_string($this->db->link, $date['category']);
 			$brand = mysqli_real_escape_string($this->db->link, $date['brand']);
 			$product_desc = mysqli_real_escape_string($this->db->link, $date['product_desc']);
+			$product_infor = mysqli_real_escape_string($this->db->link, $date['product_infor']);
 			$price = mysqli_real_escape_string($this->db->link, $date['price']);
 			$active = mysqli_real_escape_string($this->db->link, $date['active']);
 			$image_link = mysqli_real_escape_string($this->db->link, $date['image_link']);
@@ -51,8 +52,8 @@
 			}else{
 				// move_uploaded_file($file_temp, $uploaded_image);
 
-				$query = "INSERT INTO table_product(ten, masp, cat1_id, cat2_id, chitietsanpham, gia, online, photo, SP_Best) 
-				VALUES('$productName','$product_MaSP','$category','$brand','$product_desc','$price','$active','$image_link', '$SP_Best') ";
+				$query = "INSERT INTO table_product(ten, masp, cat1_id, cat2_id, chitietsanpham,thongtinsanpham , gia, online, photo, SP_Best) 
+				VALUES('$productName','$product_MaSP','$category','$brand','$product_desc','$product_infor','$price','$active','$image_link', '$SP_Best') ";
 				$result = $this->db->insert($query);
 				if($result){
 					$alert = "<span class='success'>Insert Product Successfully</span>";
