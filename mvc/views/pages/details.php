@@ -67,23 +67,21 @@
 
 <div class="detailBox row">
 
-  <div class="another_image col-2 col-lg-2 col-md-2">
+  <div class="another_image col-7 col-lg-7 col-md-7">
 
-  <?php 
-    while ($row_images = mysqli_fetch_array($data['Image'])) { ?>
+    <ul id="vertical">
+      <?php 
+        while ($row_images = mysqli_fetch_array($data['Image'])) { ?>
 
-    <ul class="thumb-img">
-      <li onclick="changeImage(this)">
-          <img src="<?php echo $row_images['photo'] ?>" alt=""> 
-      </li>
+          <li data-thumb="<?php echo $row_images['photo'] ?>">
+            <img style="width: 70%" src="<?php echo $row_images['photo'] ?>" alt=""> 
+          </li>
+
+      <?php } ?>
     </ul>
-  <?php } ?>
 
   </div>
 
-  <div class="image_view col-5 col-lg-5 col-md-5">
-   <img src="<?php echo $row_detail['photo'] ?>" alt="" class="pro-img">
-  </div>
   <div class="DetailSP col-5 col-lg-5 col-md-5">
     <form action="./GioHangController/BuySP" method="POST">
       <ul class="thongbao">
@@ -140,6 +138,17 @@
   var sotin1trang = 3;
   var from = 0;
   $(document).ready(function(){
+    $('#vertical').lightSlider({
+        gallery:true,
+        item:1,
+        slideMargin: 0,
+        vertical:true,
+        verticalHeight:400,
+        vThumbWidth:150,
+        thumbItem:4,
+        thumbMargin:10,
+
+      });  
     getData();
   })
 
@@ -159,16 +168,6 @@
       })
   }
 
-  const thumbs=document.querySelector(".thumb-img").children;
-
-     function changeImage(event){
-        document.querySelector(".pro-img").src=event.children[0].src
-        
-        for(let i=0; i<thumbs.length;i++){
-          thumbs[i].classList.remove("active");
-        }
-        event.classList.add("active");
-     }
 </script>
 
 
