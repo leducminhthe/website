@@ -20,6 +20,12 @@
                         <li><a href="productlist.php">Liệt kê sản phẩm</a> </li>
                     </ul>
                 </li>
+                <li><a class="menuitem">User</a>
+                    <ul class="submenu">
+                        <li><a href="useradd.php">Thêm User</a> </li>
+                        <li><a href="userlist.php">Liệt kê User</a> </li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>

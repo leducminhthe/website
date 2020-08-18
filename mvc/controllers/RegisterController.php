@@ -26,7 +26,7 @@
 			$email = $_POST['email'];
 			$address = $_POST['address'];
 			$pwd = $_POST['password'];
-			$password = password_hash($pwd, PASSWORD_DEFAULT);
+			$password = password_hash($pwd, PASSWORD_BCRYPT);
 			$phone = $_POST["phonenumber"];
 
 			$kq = $this->UserModel->InsertUser($fname,$lname,$gender,$email,$address,$password,$phone);

@@ -27,32 +27,27 @@
 
 			$adminUser = mysqli_real_escape_string($this->db->link, $adminUser);
 			$adminPass = mysqli_real_escape_string($this->db->link, $adminPass); //mysqli gọi 2 biến. (adminUser and link) biến link -> gọi conect db từ file db
-			
-			if(empty($adminUser) || empty($adminPass)){
-				$alert = "User and Pass không nhập rỗng";
-				return $alert;
-			}else{
-				$query = "SELECT * FROM admin WHERE adminUser = '$adminUser' AND adminPass = '$adminPass' LIMIT 1 ";
-				$result = $this->db->select($query);
 
-				if($result != false){
-					//session_start();
-					// $_SESSION['login'] = 1;
-					//$_SESSION['user'] = $user;
-					$value = $result->fetch_assoc();
+			$query = "SELECT * FROM admin WHERE adminName = '$adminUser' AND level = '1' ";
+			$result = $this->db->select($query);
+
+			if($result->num_rows > 0){
+				$value = $result->fetch_array();
+				if (password_verify($adminPass, $value['adminPass'])) {
 					Session::set('adminlogin', true); // set adminlogin đã tồn tại
 					// gọi function Checklogin để kiểm tra true.
 					Session::set('adminId', $value['adminId']);
 					Session::set('adminUser', $value['adminUser']);
 					Session::set('adminName', $value['adminName']);
 					header("Location:index.php");
-				}else {
+				}else{
 					$alert = "User and Pass not match";
 					return $alert;
-				}
+				}				
+			}else{
+				echo "<script>alert('Đăng nhập thất bại')</script>";
+				echo "<script>window.location= 'http://localhost/website/admin_demo/admin/login.php'</script>";
 			}
-
-
 		}
 	}
  ?>

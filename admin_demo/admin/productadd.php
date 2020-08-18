@@ -53,7 +53,7 @@
                         <label>Danh mục sản phẩm</label>
                     </td>
                     <td>
-                        <select id="select" name="category">
+                        <select id="select_cat1" name="category">
                             <option>Chọn chuyên mục</option>
                             <?php 
                             $cat = new category();
@@ -76,7 +76,7 @@
                         <label>Thương hiệu</label>
                     </td>
                     <td>
-                        <select id="select" name="brand">
+                        <select id="select_cat2" name="brand">
                             <option>Chọn thương hiệu</option>
                             <?php 
                             $brand = new brand();
@@ -170,6 +170,18 @@
         $('input[type="checkbox"]').fancybutton();
         $('input[type="radio"]').fancybutton();
     });
+
+    $('#select_cat1').change(function(){
+        var id_cat1 = $(this).val();
+        $.ajax({
+        type: "GET",
+        url: "http://localhost/website/admin_demo/admin/ajax.php?id_cat1=" + id_cat1,
+        success: function (data) {
+            $('#select_cat2').html(data);
+        }
+        });
+    });
+
 </script>
 <!-- Load TinyMCE -->
 <?php include 'inc/footer.php';?>

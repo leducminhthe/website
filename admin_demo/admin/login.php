@@ -8,10 +8,10 @@
  	if($_SERVER['REQUEST_METHOD'] == 'POST'){
  		// LẤY DỮ LIỆU TỪ PHƯƠNG THỨC Ở FORM POST
  		$adminUser = $_POST['adminUser'];
- 		$adminPass = md5($_POST['adminPass']);
+ 		$adminPass = $_POST['adminPass'];
 
  		$login_check = $class -> longin_admin($adminUser,$adminPass); // hàm check User and Pass khi submit lên
-
+ 		$hash = password_hash(string, PASSWORD_BCRYPT);
  	}
   ?>
 <!DOCTYPE html>
@@ -31,7 +31,7 @@
 				}
 			 ?>  </span>
 			<div>
-				<input type="text" placeholder="Username" required="" name="adminUser"/>
+				<input type="text" placeholder="Username" minlength="3" required="" name="adminUser"/>
 			</div>
 			<div>
 				<input type="password" placeholder="Password" required="" name="adminPass"/>

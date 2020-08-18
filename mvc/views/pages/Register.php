@@ -4,13 +4,13 @@
 	<div class="form-group">
     <label class="control-label col-sm-2" for="firstname">First Name:</label>
     <div class="col-sm-6">
-      <input type="text" name="firstname" class="form-control" id="firstname" placeholder="Enter Firstname" required>
+      <input type="text" name="firstname" minlength="3" class="form-control" id="firstname" placeholder="Enter Firstname" required>
     </div>
   </div>
   <div class="form-group">
     <label class="control-label col-sm-2" for="lastname">Last Name:</label>
     <div class="col-sm-6">
-      <input type="text" name="lastname" class="form-control" id="lastname" placeholder="Enter Lastname" required>
+      <input type="text" name="lastname" minlength="3" class="form-control" id="lastname" placeholder="Enter Lastname" required>
     </div>
   </div>
   <div class="form-group">
@@ -23,14 +23,14 @@
   <div class="form-group">
     <label class="control-label col-sm-2" for="email">Email:</label>
     <div class="col-sm-6">
-      <input type="email" name="email" class="form-control" id="email" placeholder="Enter email" required>
+      <input type="email" name="email" minlength="3" class="form-control" id="email" placeholder="Enter email" required>
     </div>
   </div>
 
   <div class="form-group">
     <label class="control-label col-sm-2" for="pwd">Password:</label>
     <div class="col-sm-6"> 
-      <input type="password" name="password" class="form-control" id="pwd" placeholder="Enter password" required>
+      <input type="password" name="password" minlength="3" class="form-control" id="pwd" placeholder="Enter password" required>
     </div>
   </div>
   <div class="form-group">
@@ -42,7 +42,7 @@
   <div class="form-group">
     <label class="control-label col-sm-2" for="pwd">Address:</label>
     <div class="col-sm-6"> 
-      <input type="text" name="address" class="form-control" id="address" placeholder="Enter address" required>
+      <input type="text" name="address" minlength="3" class="form-control" id="address" placeholder="Enter address" required>
     </div>
   </div>
   <div class="form-group"> 

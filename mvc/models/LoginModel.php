@@ -7,27 +7,30 @@
 			$result = mysqli_query($this->con2, $sql);
 			if(mysqli_num_rows($result) > 0)
 			{
-				while($row = mysqli_fetch_assoc($result))
-				{
-					password_verify($pwd, $row['Password']);
+				$row = $result->fetch_array();
+				if(password_verify($pwd, $row['Password'])){
 					$id = $row["ID"];
 					$email = $row["Email"];
 					$name = $row['Firstname'] . ' ' . $row['Lastname'];
 
 					$user = array(
-                    'Id' =>  $row["ID"],
-                    'FirstName' =>$row['Firstname'],
-                    'LastName' => $row['Lastname'],
-                    'Name' => $name,
-                    'Email' => $email,
-                    'Phone' => $row['Phone'],
-                    'Address'=> $row['Address']
-                    );
-                    $_SESSION['user'] = $user;
+	                'Id' =>  $row["ID"],
+	                'FirstName' =>$row['Firstname'],
+	                'LastName' => $row['Lastname'],
+	                'Name' => $name,
+	                'Email' => $email,
+	                'Phone' => $row['Phone'],
+	                'Address'=> $row['Address']
+	                );
+	                $_SESSION['user'] = $user;
+					echo "<script>window.location= '/website/HomeController'</script>";
+				}else{
+					echo "<script>alert('Đăng nhập thất bại')</script>";
+					echo "<script>window.location= '/website/LoginController'</script>";
 				}
-				echo "<script>window.location= '/website/HomeController'</script>";
 			}else{
-				echo "<script>Đăng nhập thất bại</script>";
+				echo "<script>alert('Đăng nhập thất bại')</script>";
+				echo "<script>window.location= '/website/LoginController'</script>";
 			}
 		}
 	}

@@ -78,7 +78,6 @@
 					return $alert;
 				}
 			}
-
 		}
 		public function del_brand($id)
 		{
