@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th7 30, 2020 lúc 09:18 AM
+-- Thời gian đã tạo: Th8 18, 2020 lúc 09:28 AM
 -- Phiên bản máy phục vụ: 10.4.11-MariaDB
 -- Phiên bản PHP: 7.4.5
 
@@ -31,7 +31,7 @@ CREATE TABLE `admin` (
   `adminID` int(11) NOT NULL,
   `adminName` varchar(255) NOT NULL,
   `adminEmail` varchar(255) NOT NULL,
-  `adminUser` varchar(255) NOT NULL,
+  `Phone` varchar(100) NOT NULL,
   `adminPass` varchar(255) NOT NULL,
   `level` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -40,8 +40,10 @@ CREATE TABLE `admin` (
 -- Đang đổ dữ liệu cho bảng `admin`
 --
 
-INSERT INTO `admin` (`adminID`, `adminName`, `adminEmail`, `adminUser`, `adminPass`, `level`) VALUES
-(1, 'admin', 'admin@gmail', 'admin', '827ccb0eea8a706c4c34a16891f84e7b', 0);
+INSERT INTO `admin` (`adminID`, `adminName`, `adminEmail`, `Phone`, `adminPass`, `level`) VALUES
+(1, 'admin', 'admin@gmail', '123456', '$2y$10$eFyOpPv2Wte2ZiJKKGwz6e59C41PNplGlzUAXF9m4zE.Dg4nBdkA6', 1),
+(2, 'LeThe', 'the@gmail', '12345', '$2y$10$Djl.iOTs3nYqi8m04N9NDOpTyszkAP/ziN2mtfqua62/J6VUHB/p2', 1),
+(5, 'b', 'a@gmail', '12345', '$2y$10$k3bye/s2dKDllJjZI7nIr.ivLU6oa2h.tr9DAiuk7HGkadY1MnuXC', 0);
 
 -- --------------------------------------------------------
 
@@ -64,19 +66,6 @@ CREATE TABLE `donhang` (
   `Phuongthuc` varchar(255) NOT NULL,
   `date_order` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Đang đổ dữ liệu cho bảng `donhang`
---
-
-INSERT INTO `donhang` (`id`, `Name`, `Address`, `Email`, `Phone`, `Message`, `Grandtotal`, `TenSP`, `MaSP`, `SL`, `Subtotal`, `Phuongthuc`, `date_order`) VALUES
-(20, 'nguyen van b', '202 tphcm', 'b@gmail', '31245', '', '231000', 'Bình trà di động L&L có lớp chặn lá trà 600ml', 'HPL938', '3', '210000', 'Thanh toán khi nhận hàng', '2020-07-14 06:14:11'),
-(21, 'nguyen van b', '202 tphcm', 'b@gmail', '31245', 'giao hàng', '3295600', 'Nồi nhôm chống dính BAUM Marble 24cm, 2 tay cầm, nắp thủy tinh, hiệu L&L', 'LBU1242', '4', '2996000', 'Chuyển khoản ngân hàng', '2020-07-18 11:31:29'),
-(22, 'nguyen van b', '202 tphcm', 'b@gmail', '31245', 'giao hàng', '5935600', 'Máy Xay Trộn Đa Năng Lock&Lock ELHB-220 (420W)', 'ELHB-220', '1', '5396000', 'Chuyển khoản ngân hàng', '2020-07-18 11:31:29'),
-(23, 'lethe', '12345', 'the1@gmail', '12345', 'thanh toán', '823900', 'Nồi nhôm chống dính BAUM Marble 24cm, 2 tay cầm, nắp thủy tinh, hiệu L&L', 'LBU1242', '1', '749000', 'Chuyển khoản ngân hàng', '2020-07-21 11:36:50'),
-(24, 'lethe', '12345', 'the1@gmail', '12345', 'thanh toán', '6103900', 'Máy Xay Trộn Đa Năng Lock&Lock ELHB-220 (420W)', 'ELHB-220', '2', '5549000', 'Chuyển khoản ngân hàng', '2020-07-21 11:36:50'),
-(25, 'Lê Đức Minh Thế', '202 tphcm', 'the1@gmail', '12345', 'asvb', '511500', 'Tô Salad 1.6L W/Khay&Khay nước sốt', 'HSM8450T', '3', '465000', 'VTC pay', '2020-07-23 12:48:01'),
-(26, 'lethe', '12345', 'a@gmail', '12345', '11111', '1358500', 'Nồi Lẩu Điện Đa Năng Mini Lock&Lock EJP111IVY (1.1L)', 'EJP111IVY', '1', '1235000', 'Chuyển khoản ngân hàng', '2020-07-30 06:32:30');
 
 -- --------------------------------------------------------
 
@@ -390,7 +379,7 @@ INSERT INTO `table_product` (`id`, `cat1_id`, `cat2_id`, `ten`, `tenkhongdau`, `
 (90, 1, 2, 'Hộp bảo quản Classic 1.6L', 'hop-bao-quan-classic-16l', 127000, '127,000₫', 'HPL824', 0, 'http://www.locknlock.vn/data/base/goods/small/201822850732240.jpg', '', '\r\n						<table class=\"detail_gosi\">\n<caption>Thông tin Sản phẩm </caption>\r\n						<colgroup>\n<col width=\"25%\">\n<col width=\"\">\n</colgroup>\n<tbody>\n<tr>\n<th>Thương hiệu</th>\r\n								<td>Lock&amp;Lock</td>\r\n							</tr>\n<tr>\n<th>Sản xuất tại</th>\r\n								<td>Việt Nam</td>\r\n							</tr>\n<tr>\n<th>Chất liệu</th>\r\n								<td>PP</td>\r\n							</tr>\n<tr>\n<th>Dung tích</th>\r\n								<td>1.6L</td>\r\n							</tr>\n<tr>\n<th>Hướng dẫn bảo quản</th>\r\n								<td>Bảo quản nơi khô ráo, thoáng mát</td>\r\n							</tr>\n</tbody>\n</table>', 0, 1, 1, 0, 'http://locknlock.vn/goods/detail.asp?gno=42737&cate=653', 1, 1595786214),
 (91, 1, 2, 'Hộp bảo quản Classic 870ml', 'hop-bao-quan-classic-870ml', 109000, '109,000₫', 'HPL823C', 0, 'http://www.locknlock.vn/data/base/goods/small/201822850732798.jpg', '', '\r\n						<table class=\"detail_gosi\">\n<caption>Thông tin Sản phẩm </caption>\r\n						<colgroup>\n<col width=\"25%\">\n<col width=\"\">\n</colgroup>\n<tbody>\n<tr>\n<th>Thương hiệu</th>\r\n								<td>Lock&amp;Lock</td>\r\n							</tr>\n<tr>\n<th>Sản xuất tại</th>\r\n								<td>Việt Nam</td>\r\n							</tr>\n<tr>\n<th>Chất liệu</th>\r\n								<td>PP</td>\r\n							</tr>\n<tr>\n<th>Dung tích</th>\r\n								<td>870ml</td>\r\n							</tr>\n<tr>\n<th>Hướng dẫn bảo quản</th>\r\n								<td>Bảo quản nơi khô ráo, thoáng mát</td>\r\n							</tr>\n</tbody>\n</table>', 0, 1, 1, 0, 'http://locknlock.vn/goods/detail.asp?gno=42736&cate=653', 1, 1595786214),
 (92, 1, 2, 'Hộp bảo quản Classic 870ml', 'hop-bao-quan-classic-870ml', 77000, '77,000₫', 'HPL823', 0, 'http://www.locknlock.vn/data/base/goods/small/201822850732263.jpg', '', '\r\n						<table class=\"detail_gosi\">\n<caption>Thông tin Sản phẩm </caption>\r\n						<colgroup>\n<col width=\"25%\">\n<col width=\"\">\n</colgroup>\n<tbody>\n<tr>\n<th>Thương hiệu</th>\r\n								<td>Lock&amp;Lock</td>\r\n							</tr>\n<tr>\n<th>Sản xuất tại</th>\r\n								<td>Việt Nam</td>\r\n							</tr>\n<tr>\n<th>Chất liệu</th>\r\n								<td>PP</td>\r\n							</tr>\n<tr>\n<th>Dung tích</th>\r\n								<td>870ml</td>\r\n							</tr>\n<tr>\n<th>Hướng dẫn bảo quản</th>\r\n								<td>Bảo quản nơi khô ráo, thoáng mát</td>\r\n							</tr>\n</tbody>\n</table>', 0, 1, 1, 0, 'http://locknlock.vn/goods/detail.asp?gno=42735&cate=653', 1, 1595786214),
-(93, 1, 2, 'Hộp bảo quản Classic 1.2L', 'hop-bao-quan-classic-12l', 89000, '89,000₫', 'HPL822D', 0, 'http://www.locknlock.vn/data/base/goods/small/201822850732776.jpg', '', '\r\n						<table class=\"detail_gosi\">\n<caption>Thông tin Sản phẩm </caption>\r\n						<colgroup>\n<col width=\"25%\">\n<col width=\"\">\n</colgroup>\n<tbody>\n<tr>\n<th>Thương hiệu</th>\r\n								<td>Lock&amp;Lock</td>\r\n							</tr>\n<tr>\n<th>Sản xuất tại</th>\r\n								<td>Việt Nam</td>\r\n							</tr>\n<tr>\n<th>Chất liệu</th>\r\n								<td>PP</td>\r\n							</tr>\n<tr>\n<th>Dung tích</th>\r\n								<td>1.2L</td>\r\n							</tr>\n<tr>\n<th>Hướng dẫn bảo quản</th>\r\n								<td>Bảo quản nơi khô ráo, thoáng mát</td>\r\n							</tr>\n</tbody>\n</table>', 0, 1, 1, 0, 'http://locknlock.vn/goods/detail.asp?gno=42734&cate=653', 1, 1595786214),
+(93, 1, 2, 'Hộp bảo quản Classic 1.2L', 'hop-bao-quan-classic-12l', 89000, '89,000₫', 'HPL822D', 0, 'http://www.locknlock.vn/data/base/goods/small/201822850732776.jpg', '', '\r\n						<table class=\"detail_gosi\">\n<caption>Thông tin Sản phẩm </caption>\r\n						<colgroup>\n<col width=\"25%\">\n<col width=\"\">\n</colgroup>\n<tbody>\n<tr>\n<th>Thương hiệu</th>\r\n								<td>Lock&amp;Lock</td>\r\n							</tr>\n<tr>\n<th>Sản xuất tại</th>\r\n								<td>Việt Nam</td>\r\n							</tr>\n<tr>\n<th>Chất liệu</th>\r\n								<td>PP</td>\r\n							</tr>\n<tr>\n<th>Dung tích</th>\r\n								<td>1.2L</td>\r\n							</tr>\n<tr>\n<th>Hướng dẫn bảo quản</th>\r\n								<td>Bảo quản nơi khô ráo, thoáng mát</td>\r\n							</tr>\n</tbody>\n</table>', 0, 1, 1, 1, 'http://locknlock.vn/goods/detail.asp?gno=42734&cate=653', 1, 1595786214),
 (94, 1, 2, 'Hộp bảo quản Classic 600ml', 'hop-bao-quan-classic-600ml', 70000, '70,000₫', 'HPL822', 0, 'http://www.locknlock.vn/data/base/goods/small/201822850732295.jpg', '', '\r\n						<table class=\"detail_gosi\">\n<caption>Thông tin Sản phẩm </caption>\r\n						<colgroup>\n<col width=\"25%\">\n<col width=\"\">\n</colgroup>\n<tbody>\n<tr>\n<th>Thương hiệu</th>\r\n								<td>Lock&amp;Lock</td>\r\n							</tr>\n<tr>\n<th>Sản xuất tại</th>\r\n								<td>Việt Nam</td>\r\n							</tr>\n<tr>\n<th>Chất liệu</th>\r\n								<td>PP</td>\r\n							</tr>\n<tr>\n<th>Dung tích</th>\r\n								<td>600ml</td>\r\n							</tr>\n<tr>\n<th>Hướng dẫn bảo quản</th>\r\n								<td>Bảo quản nơi khô ráo, thoáng mát</td>\r\n							</tr>\n</tbody>\n</table>', 0, 1, 1, 0, 'http://locknlock.vn/goods/detail.asp?gno=42733&cate=653', 1, 1595786214),
 (95, 1, 2, 'Hộp bảo quản Classic 2.0L', 'hop-bao-quan-classic-20l', 119000, '119,000₫', 'HPL819', 0, 'http://www.locknlock.vn/data/base/goods/small/201822850732386.jpg', '', '\r\n						<table class=\"detail_gosi\">\n<caption>Thông tin Sản phẩm </caption>\r\n						<colgroup>\n<col width=\"25%\">\n<col width=\"\">\n</colgroup>\n<tbody>\n<tr>\n<th>Thương hiệu</th>\r\n								<td>Lock&amp;Lock</td>\r\n							</tr>\n<tr>\n<th>Sản xuất tại</th>\r\n								<td>Việt Nam</td>\r\n							</tr>\n<tr>\n<th>Chất liệu</th>\r\n								<td>PP</td>\r\n							</tr>\n<tr>\n<th>Dung tích</th>\r\n								<td>2.0L</td>\r\n							</tr>\n<tr>\n<th>Hướng dẫn bảo quản</th>\r\n								<td>Bảo quản nơi khô ráo, thoáng mát</td>\r\n							</tr>\n</tbody>\n</table>', 0, 1, 1, 0, 'http://locknlock.vn/goods/detail.asp?gno=42732&cate=653', 1, 1595786214),
 (96, 1, 2, 'Hộp bảo quản Classic 1.9L', 'hop-bao-quan-classic-19l', 112000, '112,000₫', 'HPL818', 0, 'http://www.locknlock.vn/data/base/goods/small/201822850732461.jpg', '', '\r\n						<table class=\"detail_gosi\">\n<caption>Thông tin Sản phẩm </caption>\r\n						<colgroup>\n<col width=\"25%\">\n<col width=\"\">\n</colgroup>\n<tbody>\n<tr>\n<th>Thương hiệu</th>\r\n								<td>Lock&amp;Lock</td>\r\n							</tr>\n<tr>\n<th>Sản xuất tại</th>\r\n								<td>Việt Nam</td>\r\n							</tr>\n<tr>\n<th>Chất liệu</th>\r\n								<td>PP</td>\r\n							</tr>\n<tr>\n<th>Dung tích</th>\r\n								<td>1.9L</td>\r\n							</tr>\n<tr>\n<th>Hướng dẫn bảo quản</th>\r\n								<td>Bảo quản nơi khô ráo, thoáng mát</td>\r\n							</tr>\n</tbody>\n</table>', 0, 1, 1, 0, 'http://locknlock.vn/goods/detail.asp?gno=42731&cate=653', 1, 1595786214),
@@ -1874,13 +1863,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT cho bảng `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `adminID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `adminID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT cho bảng `donhang`
 --
 ALTER TABLE `donhang`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT cho bảng `table_category_1`
