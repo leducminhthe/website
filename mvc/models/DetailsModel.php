@@ -3,7 +3,7 @@
 	class DetailsModel extends DB{
 
 		public function DanhMucCha($spId){
-			$query = "SELECT table_product.*, table_category_1.ten as tenmenucha, table_category_2.ten
+			$query = "SELECT table_product.*, table_category_1.ten as tenmenucha, table_category_2.ten, table_category_2.id as id_cat2
 
 			FROM table_product INNER JOIN table_category_1 ON table_product.cat1_id = table_category_1.id
 

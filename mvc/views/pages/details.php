@@ -23,12 +23,8 @@
 
 <?php while($row_con = mysqli_fetch_array($data['DanhMucCon'])) { ?> 
   <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $row_con['ten'] ?></a>
-    <div class="dropdown-menu">
+    <a class="nav-link" href="GetSPController?menucon=<?php echo $row_con['id_cat2'] ?>"><?php echo $row_con['ten'] ?></a>
 
-      <a class="dropdown-item" href="">1</a>
-
-    </div>
   </li>
 <?php } ?>
 </ul>

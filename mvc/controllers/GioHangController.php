@@ -21,7 +21,16 @@ class GioHangController extends Controller{
                 $item_array_id = array_column($_SESSION['cart'], "MaSP");
 
                 if(in_array($_POST['spId'], $item_array_id)){
-                    echo "<script>alert('Product is already added in the cart..!')</script>";
+
+                    $quantity = $_POST['quantity'];
+                    $MaSP = $_POST['spId'];
+                    foreach ($_SESSION["cart"] as &$val)
+                    {
+                        if ($val["MaSP"] == $_POST['spId']) {
+                            $val["SL"] +=  $quantity;
+                            header('location: /website/GioHangController');
+                        }
+                    }
                 }else{
                     $count = count($_SESSION['cart']);
                     $item_array = array(
