@@ -1,0 +1,14 @@
+@media (min-width: 350px) and (max-width: 991.98px) { 
+	.cart_left, .cart_right, .main_left, .list_box_left{
+		display: none;
+	}
+	.mainProduct_listImg img{
+		width: 50%;
+	}
+	figure figcaption{
+		text-align: center;
+	}
+	.mainService{
+		text-align: center;
+	}
+}

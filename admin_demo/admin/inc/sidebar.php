@@ -26,6 +26,11 @@
                         <li><a href="userlist.php">Liệt kê User</a> </li>
                     </ul>
                 </li>
+                <li><a class="menuitem">Công ty</a>
+                    <ul class="submenu">
+                        <li><a href="gioithieucty.php">Giới thiệu công ty</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>

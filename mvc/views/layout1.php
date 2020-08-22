@@ -8,7 +8,9 @@
     <link rel="stylesheet" type="text/css" href='<?php echo file ?>/css/owl.theme.default.min.css'>
     <link rel="stylesheet" type="text/css" href='<?php echo file ?>/css/owl.carousel.min.css'>
     <link rel="stylesheet" type="text/css" href='<?php echo file ?>/css/website_css.css'>
+    <link rel="stylesheet" type="text/css" href='<?php echo file ?>/css/reponsive.css'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src='<?php echo file ?>/js/owl.carousel.min.js'></script>
 
     <title>Hello, world!</title>
   </head>
@@ -65,7 +67,7 @@
             </li>
           </ul>
 
-          <h1 class="logo col-4 col-md-4 col-lg-4">
+          <h1 class="logo col-12 col-md-12 col-lg-4">
             <a href="<?php echo link ?>HomeController" >
               <img src="http://www.locknlock.vn/data/base/banner/hd2_logo_4.gif">       
             </a>
@@ -100,7 +102,7 @@
           <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-              </button>
+            </button>
             <div class="collapse navbar-collapse" id="navbar">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item dropdown menu-area">
@@ -141,7 +143,7 @@
                 </li>
                 
               </ul>
-             <form class="form-inline my-2 my-lg-0" action="<?php echo link ?>SearchController" method="get">
+              <form class="form-inline my-2 my-lg-0" action="<?php echo link ?>SearchController" method="get">
                 <input class="form-control" type="search" placeholder="Search" aria-label="Search" name="search">
                 <button class="btn btn-secondary my-2 my-sm-0" name="submit" type="submit">
                   <img src="<?php echo file ?>/images/search.png" >
@@ -152,10 +154,11 @@
         </div>
       </div>
 
-    <?php require_once "./mvc/views/pages/".$data["Page"].".php" ?>
+      <?php require_once "./mvc/views/pages/".$data["Page"].".php" ?>
 
-      <div class="footer">
-        <div class="footer_top">
+      <div class="footer row">
+        <div class="col-12 col-md-12 col-lg-12">
+          <div class="footer_top">
           <ul class="nav">
           <li class="nav-item">
             <a class="nav-link" href="#">Giới thiệu về công ty</a>
@@ -179,7 +182,8 @@
             <button  id="totop"><img src="http://www.locknlock.vn/data/base/imgs/global/btnTop.png"></button>
           </li>
           </ul>
-        </div>  
+          </div> 
+        </div> 
         <div class="footer_bottom row">
           <div class="footer_img col-2 col-md-2 col-lg-2" >
             <a href=""><img src="http://www.locknlock.vn/data/base/banner/footerLogo.png" style=""></a>
@@ -204,6 +208,7 @@
       </div>
 
     </div>
+
     <button onclick="topFunction()" id="myBtn">
       <img src="<?php echo file ?>/images/upload.png" alt="">
     </button>
@@ -242,11 +247,29 @@
     function scrollWin() {
       $('html,body').animate({scrollTop: document.body.scrollHeight},"fast");
     }
-  </script>
 
-<!--     <script src='<?php echo file ?>/js/jquery.min.js'></script> -->
-    <script src='<?php echo file ?>/js/owl.carousel.min.js'></script>
-    <script src='<?php echo file ?>/js/website_js.js'></script>
+    $('.owl-carousel').owlCarousel({
+      loop:true,
+      margin:10,
+      nav:true,
+      autoplay:1000,
+      responsive:{
+          300:{
+              items:3
+          },
+          600:{
+              items:3
+          },
+          900:{
+              items:3
+          },
+          1000:{
+              items:5
+          }
+      }
+    })
+
+  </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

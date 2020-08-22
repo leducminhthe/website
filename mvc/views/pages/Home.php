@@ -26,7 +26,7 @@
           </div>
         </div>
 
-        <div class="main_right col-9 col-lg-9 col-md-9"> 
+        <div class="main_right col-12 col-lg-9 col-md-12"> 
           <div id="demo" class="carousel slide" data-ride="carousel">
             <ul class="carousel-indicators">
               <li data-target="#demo" data-slide-to="0" class="active"></li>
@@ -132,12 +132,12 @@
                     </a>
                   </div>
 
-                  <div class="list_box_right col-8 col-md-8 col-lg-8">
+                  <div class="list_box_right col-12 col-md-12 col-lg-8">
                     <ul class="row">
                     <?php
                       while($row = mysqli_fetch_array($data['BinhNuoc'])) { ?>
 
-                      <li class="col-4 col-md-4 col-lg-4">
+                      <li class="col-12 col-md-12 col-lg-4">
                         <a href="<?php echo link ?>DetailsController?spId=<?=$row['id'] ?>">
                           <figure>
                             <p class="mainProduct_listImg"><img src="<?=$row['photo'] ?>" alt=""></p>
@@ -172,13 +172,13 @@
                       <img src="<?php echo file ?>/images/CA_cookware_2.png" class="img_Box">
                     </a>
                   </div>
-                  <div class="list_box_right col-8 col-md-8 col-lg-8">
+                  <div class="list_box_right col-12 col-md-12 col-lg-8">
                     <ul class="row">
 
                       <?php
                       while($row = mysqli_fetch_array($data['DungCuNauAn'])) { ?>
 
-                      <li class="col-4 col-md-4 col-lg-4">
+                      <li class="col-12 col-md-12 col-lg-4">
                         <a href="<?php echo link ?>DetailsController?spId=<?=$row['id'] ?>">
                           <figure>
                             <p class="mainProduct_listImg"><img src="<?=$row['photo'] ?>" alt=""></p>
@@ -213,13 +213,13 @@
                       <img src="<?php echo file ?>/images/CA_appliances_1.png" class="img_Box">
                     </a>
                   </div>
-                  <div class="list_box_right col-8 col-md-8 col-lg-8">
+                  <div class="list_box_right col-12 col-md-12 col-lg-8">
                     <ul class="row">
 
                       <?php
                       while($row = mysqli_fetch_array($data['HangGiaDung'])) { ?>
 
-                      <li class="col-4 col-md-4 col-lg-4">
+                      <li class="col-12 col-md-12 col-lg-4">
                         <a href="<?php echo link ?>DetailsController?spId=<?=$row['id'] ?>">
                           <figure>
                             <p class="mainProduct_listImg"><img src="<?=$row['photo'] ?>" alt=""></p>
@@ -254,13 +254,13 @@
                       <img src="<?php echo file ?>/images/CA_food_storage.png" class="img_Box">
                     </a>
                   </div>
-                  <div class="list_box_right col-8 col-md-8 col-lg-8">
+                  <div class="list_box_right col-12 col-md-12 col-lg-8">
                     <ul class="row">
 
                       <?php
                       while($row = mysqli_fetch_array($data['HopBaoQuan'])) { ?>
 
-                      <li class="col-4 col-md-4 col-lg-4">
+                      <li class="col-12 col-md-12 col-lg-4">
                         <a href="<?php echo link ?>DetailsController?spId=<?=$row['id'] ?>">
                           <figure>
                             <p class="mainProduct_listImg"><img src="<?=$row['photo'] ?>" alt=""></p>
@@ -295,13 +295,13 @@
                       <img src="<?php echo file ?>/images/CA_vacuum_flask.png" class="img_Box">
                     </a>
                   </div>
-                  <div class="list_box_right col-8 col-md-8 col-lg-8">
+                  <div class="list_box_right col-12 col-md-12 col-lg-8">
                     <ul class="row">
 
                       <?php
                       while($row = mysqli_fetch_array($data['BinhGiuNhiet'])) { ?>
 
-                      <li class="col-4 col-md-4 col-lg-4">
+                      <li class="col-12 col-md-12 col-lg-4">
                         <a href="<?php echo link ?>DetailsController?spId=<?=$row['id'] ?>">
                           <figure>
                             <p class="mainProduct_listImg"><img src="<?=$row['photo'] ?>" alt=""></p>
@@ -336,13 +336,13 @@
                       <img src="<?php echo file ?>/images/CA_lunch_box.png" class="img_Box">
                     </a>
                   </div>
-                  <div class="list_box_right col-8 col-md-8 col-lg-8">
+                  <div class="list_box_right col-12 col-md-12 col-lg-8">
                     <ul class="row">
 
                       <?php
                       while($row = mysqli_fetch_array($data['HopCom'])) { ?>
 
-                      <li class="col-4 col-md-4 col-lg-4">
+                      <li class="col-12 col-md-12 col-lg-4">
                         <a href="<?php echo link ?>DetailsController?spId=<?=$row['id'] ?>">
                           <figure>
                             <p class="mainProduct_listImg"><img src="<?=$row['photo'] ?>" alt=""></p>
@@ -366,7 +366,7 @@
       </div>
       
       <div class="mainService row">
-        <div class="mainService_left col-4 col-md-4 col-lg-4">
+        <div class="mainService_left col-12 col-md-12 col-lg-4">
           <article class="customer">
             <h4 style="margin-bottom: 0px;">Chăm sóc khách hàng</h4>
             <p class="sdt">028-5413 5756 (488)</p>
@@ -380,7 +380,7 @@
           <p><img src="http://www.locknlock.vn/data/base/imgs/main/mainService_lSide_banner02.jpg" alt=""></p>
         </div>
 
-        <div class="mainService_center col-4 col-md-4 col-lg-4">
+        <div class="mainService_center col-12 col-md-12 col-lg-4">
           <img src="http://www.locknlock.vn/html/images/main/mainService_rSide_middle.jpg">
           <article style="margin: 20px;">
             <h4><img src="http://www.locknlock.vn/data/base/imgs/main/mainService_rSide_bottomBottom_tit.png"></h4>
@@ -392,7 +392,7 @@
           </article>
         </div>
 
-        <div class="mainService_right col-4 col-md-4 col-lg-4">
+        <div class="mainService_right col-12 col-md-12 col-lg-4">
           <a href="">
             <img src="http://www.locknlock.vn/data/base/banner/untitled_1.png" width="100%" height="120">
           </a>
