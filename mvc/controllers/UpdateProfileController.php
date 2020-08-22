@@ -23,14 +23,22 @@ class UpdateProfileController extends Controller{
         if (isset($_POST['Edit'])) {
             $firstname = $_POST['firstname'];
             $lastname = $_POST['lastname'];
-            $email = $_POST['email'];
             $address = $_POST['address'];
             $phone = $_POST["phone"];
+
+            if (isset($_POST['check'])) {
+                $check = $_POST['check'];
+                $pwd = $_POST['Password'];
+            }else{
+                $check = "";
+                $pwd = "";
+            }
         }
+        echo $check;
 
         $this->view("layout2", [
             "Page"=>"Profile",
-            "Edit"=>$UserModel->Edit( $firstname,$lastname,$email,$address,$phone),
+            "Edit"=>$UserModel->Edit( $firstname,$lastname,$address,$phone,$check,$pwd),
             "Update"=>$UserModel->Update(),
         ]);
     }

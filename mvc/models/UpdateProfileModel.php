@@ -1,9 +1,27 @@
 <?php
 	class UpdateProfileModel extends DB{
 
-		public function Edit($firstname,$lastname,$email,$address,$phone){
+		public function Edit($firstname,$lastname,$address,$phone,$check,$pwd){
 			$id = $_SESSION['user']['Id'];
-			$qr = "UPDATE user SET Firstname = '$firstname', Lastname = '$lastname', Email = '$email', Address = '$address', Phone = '$phone' WHERE ID = '$id' ";
+
+			if ( $check  == "on" ) {
+				$password = password_hash($pwd, PASSWORD_BCRYPT);
+
+				$qr = "UPDATE user SET 
+				Firstname = '$firstname', 
+				Lastname = '$lastname', 
+				Address = '$address', 
+				Phone = '$phone', 
+				Password = '$password'
+				WHERE ID = '$id' ";
+			}else{
+				$qr = "UPDATE user SET 
+				Firstname = '$firstname', 
+				Lastname = '$lastname', 
+				Address = '$address', 
+				Phone = '$phone' 
+				WHERE ID = '$id' ";
+			}
 
 			if( mysqli_query($this->con2, $qr)){
 				echo "<script>alert('Update success')</script>";
