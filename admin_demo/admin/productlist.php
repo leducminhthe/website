@@ -27,6 +27,11 @@
         		Search: <input type="text" name="txtSearch">
         		<input type="submit" name="btnSearch" value="submit">
         	</form>
+        	<?php 
+            if(isset($delProduct)){
+                echo $delProduct;
+            }
+         ?>
         </div>
         <div class="block">  
             <table class="data_table" id="example" style="width: 100%;">
@@ -61,7 +66,7 @@
 						<td><?php echo $i ?></td>
 						<td><?php echo $result['masp'] ?></td>
 						<td><?php echo $fm->textShorten($result['ten'], 50) ?></td>
-						<td><?php echo $result['giatext'] ?></td>
+						<td><?php echo number_format($result['gia'],0) . 'VNĐ' ?></td>
 						<td><img src="<?php echo $result['photo'] ?>" width="80"></td>
 						<td><?php echo $result['tenmenucha'] ?></td>
 						<td><?php echo $result['tenmenucon'] ?></td>
@@ -73,7 +78,7 @@
 							<td>Còn hàng</td>
 						<?php } ?>
 						
-						<td><a href="productedit.php?productid=<?php echo $result['masp'] ?>">Edit</a> || <a href="?productid=<?php echo $result['masp'] ?>">Delete</a></td>
+						<td><a href="productedit.php?productid=<?php echo $result['id'] ?>">Edit</a> || <a onclick = "return confirm('Are you want to delete???')" href="?productid=<?php echo $result['id'] ?>">Delete</a></td>
 					</tr>
 					<?php
 								

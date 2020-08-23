@@ -70,7 +70,7 @@
 							<td>Còn hàng</td>
 						<?php } ?>
 						
-						<td><a href="productedit.php?productid=<?php echo $result['masp'] ?>">Edit</a> || <a href="?productid=<?php echo $result['masp'] ?>">Delete</a></td>
+						<td><a href="productedit.php?productid=<?php echo $result['id'] ?>">Edit</a> || <a href="?productid=<?php echo $result['id'] ?>">Delete</a></td>
 					</tr>
 					<?php
 								

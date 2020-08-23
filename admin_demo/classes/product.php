@@ -33,7 +33,7 @@
 			$price = mysqli_real_escape_string($this->db->link, $date['price']);
 			$active = mysqli_real_escape_string($this->db->link, $date['active']);
 			$image_link = mysqli_real_escape_string($this->db->link, $date['image_link']);
-			$more_image = mysqli_real_escape_string($this->db->link, $date['more_image']);
+			$more_image = $date['more_image'];
 			 //mysqli gọi 2 biến. (catName and link) biến link -> gọi conect db từ file db
 			
 			// kiểm tra hình ảnh và lấy hình ảnh cho vào folder upload
@@ -52,15 +52,21 @@
 				return $alert;
 			}else{
 				// move_uploaded_file($file_temp, $uploaded_image);
-				$qr = "INSERT INTO table_product_image(photo) VALUES ('$more_image')
-				FROM table_product INNER JOIN table_product_image 
-				WHERE table_product.id = table_product_image.product_id";
 
 				$query = "INSERT INTO table_product(ten, masp, cat1_id, cat2_id, chitietsanpham,thongtinsanpham , gia, online, photo, SP_Best) 
 				VALUES('$productName','$product_MaSP','$category','$brand','$product_desc','$product_infor','$price','$active','$image_link', '$SP_Best') ";
 				$result = $this->db->insert($query);
-				$result_img = $this->db->insert($qr);
+				
 				if($result){
+					$get_id = "SELECT last_insert_id()";
+					$product_id = $this->db->select($get_id);
+					$id = mysqli_fetch_array($product_id);
+
+					foreach ($more_image as $key => $value) {
+						$qr = "INSERT INTO table_product_image(photo, product_id) VALUES ('$value', '$id[0]')";
+						$result_img = $this->db->insert($qr);
+					}
+					
 					$alert = "<span class='success'>Insert Product Successfully</span>";
 					return $alert;
 				}else {
@@ -185,7 +191,7 @@
 					SP_Best = '$SP_Best',
 					chitietsanpham = '$product_desc'
 
-					WHERE masp = '$id'";
+					WHERE id = '$id'";
 					
 				// }
 				$result = $this->db->update($query);
@@ -202,9 +208,11 @@
 
 		public function del_product($id)
 		{
-			$query = "DELETE FROM table_product where masp = '$id' ";
+			$query = "DELETE FROM table_product where id = '$id' ";
 			$result = $this->db->delete($query);
-			if($result){
+			$qr = "DELETE FROM table_product_image where product_id = '$id' ";
+			$result_img = $this->db->delete($qr);
+			if($result_img){
 				$alert = "<span class='success'>Product Deleted Successfully</span>";
 				return $alert;
 			}else {
@@ -214,7 +222,7 @@
 		}
 		public function getproductbyId($id)
 		{
-			$query = "SELECT * FROM table_product where masp = '$id' ";
+			$query = "SELECT * FROM table_product where id = '$id' ";
 			$result = $this->db->select($query);
 			return $result;
 		}		
@@ -235,6 +243,12 @@
 	        $sotrang = ceil($tongsotin['tongsotin'] / $this->sotin1trang);
 	       
 			return $sotrang;
+		}
+
+		public function product_image($id){
+			$query = "SELECT table_product_image.photo FROM table_product_image where product_id = '$id' ";
+			$result = $this->db->select($query);
+			return $result;
 		}
 		//Kết thúc Backend
 

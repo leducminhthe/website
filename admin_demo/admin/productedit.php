@@ -30,7 +30,6 @@
          $get_product_by_id = $pd->getproductbyId($id);
          if($get_product_by_id){
             while ($result_product = $get_product_by_id->fetch_assoc()) {
-                # code...
             
           ?>   
         <div class="block">
@@ -152,8 +151,26 @@
                         <img src="<?php echo $result_product['photo'] ?>" width="100"><br>
                         <input name="image_link" type="text" class="medium" value="<?php echo $result_product['photo']?>" required/>
                     </td>
+                    
                 </tr>
-                
+
+                <?php $more_img= $pd -> product_image($id);
+                    if($more_img){
+                    while ($result_img = $more_img->fetch_assoc()) {
+                ?> 
+
+                <tr>
+                    <td>
+                        <label>More Image</label>
+                    </td>
+                    <td>
+                        <img src="<?php echo $result_img['photo'] ?>" width="100"><br>
+                        <input name="image_link" type="text" class="medium" value="<?php echo $result_img['photo']?>" required/>
+                    </td>
+                </tr>
+
+                <?php } }?>
+
                 <tr>
                     <td>
                         <label>Product Active</label>

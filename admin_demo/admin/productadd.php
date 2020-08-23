@@ -141,7 +141,7 @@
                         <label id="more_image" style="border: 1px solid black; cursor: pointer;"> Thêm Ảnh SP link </label>
                     </td>
                     <td id="more_image_link">
-                        <input style="margin: 5px 0px" name="more_image" type="text" class="medium" required/>
+                        <input style="margin: 5px 0px" name="more_image[]" type="text" class="medium" required/>
                     </td>
                 </tr>
                 
@@ -191,7 +191,7 @@
     });
 
     $("#more_image").click(function(){
-        $("#more_image_link").append('<br/><input style="margin: 5px 0px" name="more_image_link" type="text" class="medium" required/>'); 
+        $("#more_image_link").append('<br/><input style="margin: 5px 0px" name="more_image[]" type="text" class="medium" required/>'); 
     }); 
 
 </script>
