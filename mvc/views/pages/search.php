@@ -1,6 +1,6 @@
 <nav class="nav nav_GioHang">
   <a class="nav-link" href="<?php echo link ?>HomeController"><img src="<?php echo file ?>/images/home.png" alt=""></a>
-  <a class="nav-link" href="#">Kết quả kiểm tra</a>
+  <a class="nav-link" href="#">Kết quả tìm kiếm: <?php echo $_GET['search'] ?></a>
 </nav>
 
 	<ul class="row">

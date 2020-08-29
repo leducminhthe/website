@@ -161,7 +161,7 @@
           <div class="footer_top">
           <ul class="nav">
           <li class="nav-item">
-            <a class="nav-link" href="#">Giới thiệu về công ty</a>
+            <a class="nav-link" href="<?php link ?>CompanyController">Giới thiệu về công ty</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Điều khoản</a>

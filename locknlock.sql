@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th8 18, 2020 lúc 09:28 AM
+-- Thời gian đã tạo: Th8 29, 2020 lúc 10:24 AM
 -- Phiên bản máy phục vụ: 10.4.11-MariaDB
 -- Phiên bản PHP: 7.4.5
 
@@ -43,7 +43,7 @@ CREATE TABLE `admin` (
 INSERT INTO `admin` (`adminID`, `adminName`, `adminEmail`, `Phone`, `adminPass`, `level`) VALUES
 (1, 'admin', 'admin@gmail', '123456', '$2y$10$eFyOpPv2Wte2ZiJKKGwz6e59C41PNplGlzUAXF9m4zE.Dg4nBdkA6', 1),
 (2, 'LeThe', 'the@gmail', '12345', '$2y$10$Djl.iOTs3nYqi8m04N9NDOpTyszkAP/ziN2mtfqua62/J6VUHB/p2', 1),
-(5, 'b', 'a@gmail', '12345', '$2y$10$k3bye/s2dKDllJjZI7nIr.ivLU6oa2h.tr9DAiuk7HGkadY1MnuXC', 0);
+(5, 'nguyenvanb', 'a@gmail', '12345', '$2y$10$k3bye/s2dKDllJjZI7nIr.ivLU6oa2h.tr9DAiuk7HGkadY1MnuXC', 0);
 
 -- --------------------------------------------------------
 
@@ -66,6 +66,14 @@ CREATE TABLE `donhang` (
   `Phuongthuc` varchar(255) NOT NULL,
   `date_order` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `donhang`
+--
+
+INSERT INTO `donhang` (`id`, `Name`, `Address`, `Email`, `Phone`, `Message`, `Grandtotal`, `TenSP`, `MaSP`, `SL`, `Subtotal`, `Phuongthuc`, `date_order`) VALUES
+(28, 'nguyen van toan b ', '202 tphcm', 'b@gmail', '1234', '', '2801700', 'Bộ Cây Lau Nhà 360 Độ Mini Twister Màu xanh+ xám + 2 Bông lau- HPP345S2', 'HPP345S2', '3', '2547000', 'Thanh toán khi nhận hàng', '2020-08-29 07:53:32'),
+(29, 'nguyen van toan b ', '202 tphcm', 'b@gmail', '1234', '', '6860700', 'Nồi cơm điện thương hiệu Lock&Lock 220V, 700W, 50/60Hz, 1.8L(5L) - Màu đen', 'EJR356', '2', '6237000', 'Thanh toán khi nhận hàng', '2020-08-29 07:53:32');
 
 -- --------------------------------------------------------
 
@@ -209,21 +217,15 @@ INSERT INTO `table_category_2` (`id`, `cat1_id`, `ten`, `tenkhongdau`, `cate`, `
 
 CREATE TABLE `table_congty` (
   `id` int(11) NOT NULL,
-  `tencongty` varchar(255) NOT NULL,
-  `dienthoai` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `diachi` varchar(255) NOT NULL,
-  `facebook` varchar(255) NOT NULL,
-  `google` varchar(255) NOT NULL,
-  `twitter` varchar(255) NOT NULL,
-  `skype` varchar(255) NOT NULL,
-  `youtube` varchar(255) NOT NULL,
-  `favicon` varchar(255) NOT NULL,
-  `title` varchar(255) NOT NULL,
-  `keywords` varchar(255) NOT NULL,
-  `description` varchar(1024) NOT NULL,
-  `toado` varchar(255) NOT NULL
+  `company_desc` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Đang đổ dữ liệu cho bảng `table_congty`
+--
+
+INSERT INTO `table_congty` (`id`, `company_desc`) VALUES
+(0, '<h1 id=\"firstHeading\" class=\"firstHeading\" style=\"text-align: center;\" lang=\"vi\">Lock &amp; Lock</h1>\r\n<p><strong>Lock &amp; Lock</strong>&nbsp;l&agrave; một c&ocirc;ng ty sản phẩm gia dụng c&oacute; trụ sở tại&nbsp;<a title=\"Seoul\" href=\"https://vi.wikipedia.org/wiki/Seoul\">Seoul, H&agrave;n Quốc</a>. Kể từ khi th&agrave;nh lập v&agrave;o năm 1978, Lock &amp; Lock đ&atilde; xuất khẩu sản phẩm tới 119 quốc gia tr&ecirc;n to&agrave;n thế giới</p>\r\n<p>C&ocirc;ng ty c&oacute; một loạt c&aacute;c loại sản phẩm cho hộp đựng thực phẩm, dụng cụ nấu ăn, cốc v&agrave; b&igrave;nh đựng nước</p>\r\n<p>Ngo&agrave;i ra, c&ocirc;ng ty c&oacute; 11 đơn vị b&aacute;n h&agrave;ng ở nước ngo&agrave;i bao gồm&nbsp;<a title=\"Trung Quốc\" href=\"https://vi.wikipedia.org/wiki/Trung_Qu%E1%BB%91c\">Trung Quốc</a>,&nbsp;<a title=\"Đức\" href=\"https://vi.wikipedia.org/wiki/%C4%90%E1%BB%A9c\">Đức</a>,&nbsp;<a title=\"Hoa Kỳ\" href=\"https://vi.wikipedia.org/wiki/Hoa_K%E1%BB%B3\">Mỹ</a>,&nbsp;<a title=\"Việt Nam\" href=\"https://vi.wikipedia.org/wiki/Vi%E1%BB%87t_Nam\">Việt Nam</a>&nbsp;v&agrave; 87 cửa h&agrave;ng trực tiếp hoạt động ở nước ngo&agrave;i tr&ecirc;n thế giới.</p>\r\n<ul>\r\n<li>1978: Th&agrave;nh lập c&ocirc;ng ty ph&acirc;n phối Kukjin</li>\r\n<li>1998: Ra mắt hộp đựng thực phẩm kh&oacute;a bốn mặt Lock &amp; Lock</li>\r\n<li>2003: Thay đổi t&ecirc;n c&ocirc;ng ty th&agrave;nh Lock &amp; Lock Co., Ltd</li>\r\n<li>2004: Th&agrave;nh lập đơn vị b&aacute;n h&agrave;ng ở nước ngo&agrave;i đầu ti&ecirc;n tại Trung Quốc</li>\r\n<li>2008 ~ 2009: Th&agrave;nh lập đơn vị b&aacute;n h&agrave;ng ở nước ngo&agrave;i tại Việt Nam, Indonesia, Th&aacute;i Lan</li>\r\n<li>2010: ni&ecirc;m yết tr&ecirc;n thị trường KOSPI</li>\r\n<li>2010: Th&agrave;nh lập đơn vị b&aacute;n h&agrave;ng ở nước ngo&agrave;i tại Đức</li>\r\n<li>2011 ~ 2012: Ho&agrave;n th&agrave;nh nh&agrave; m&aacute;y sản xuất thủy tinh v&agrave; dụng cụ nấu ăn tại Việt Nam</li>\r\n<li>2016: Th&agrave;nh lập đơn vị b&aacute;n h&agrave;ng ở nước ngo&agrave;i tại Hoa Kỳ</li>\r\n</ul>\r\n<div>\r\n<h2>1. T&iacute;nh biểu tượng&nbsp;</h2>\r\n<p><span>Lock&amp;Lock</span>&nbsp;l&agrave; một trong những thương hiệu mang t&iacute;nh biểu tượng h&agrave;ng đầu H&agrave;n Quốc trong lĩnh vưc đồ gia dụng. Bước v&agrave;o thị trường năm 1978, khi nhu cầu bảo quản thực phẩm dần tăng cao, thương hiệu&nbsp;<span>Lock&amp;Lock</span>&nbsp;chỉ tập trung sản xuất những sản phẩm nh&agrave; bếp đơn thuần như: hộp nhựa đi k&egrave;m nắp nhựa, chỉ c&oacute; chức năng đựng thực phẩm, kh&ocirc;ng c&oacute; chức năng bảo quản trong m&ocirc;i trường lạnh hay nước. Nhưng với mục ti&ecirc;u ph&aacute;t triển sản phẩm gắn liền với nhu cầu v&agrave; bản sắc văn h&oacute;a,&nbsp;<span>Lock&amp;Lock</span>&nbsp;đ&atilde; ph&aacute;t minh ra d&ograve;ng sản phẩm mang phong c&aacute;ch sống tinh tế, đơn giản nhưng tỉ mỉ v&agrave; th&ocirc;ng minh của H&agrave;n Quốc.</p>\r\n<h2><img class=\"aligncenter wp-image-27049\" title=\"\" src=\"https://i2.wp.com/styleguide.leflair.vn/wp-content/uploads/2018/07/2.jpg?resize=500%2C250&amp;ssl=1\" alt=\"\" width=\"500\" height=\"250\" data-attachment-id=\"27049\" data-permalink=\"https://styleguide.leflair.vn/thuong-hieu-locklock/2-10/\" data-orig-file=\"https://i2.wp.com/styleguide.leflair.vn/wp-content/uploads/2018/07/2.jpg?fit=640%2C320&amp;ssl=1\" data-orig-size=\"640,320\" data-comments-opened=\"0\" data-image-meta=\"{\" data-image-title=\"2\" data-image-description=\"\" data-medium-file=\"https://i2.wp.com/styleguide.leflair.vn/wp-content/uploads/2018/07/2.jpg?fit=300%2C150&amp;ssl=1\" data-large-file=\"https://i2.wp.com/styleguide.leflair.vn/wp-content/uploads/2018/07/2.jpg?fit=640%2C320&amp;ssl=1\" /></h2>\r\n<p>Sản phẩm của&nbsp;<span>Lock&amp;Lock</span>&nbsp;giữ vững phong độ chất lượng v&agrave; kiểu d&aacute;ng bắt mắt, tinh tế, hợp thời, điều n&agrave;y đ&atilde; khẳng định một lần nữa t&iacute;nh thẩm mỹ g&oacute;p phần đưa những sản phẩm&nbsp;<span>Lock&amp;Lock</span>&nbsp;vượt ra khỏi căn bếp v&agrave; đến gần với giới trẻ năng động.</p>\r\n<p>&nbsp;</p>\r\n<h2>2. Lịch sử thương hiệu</h2>\r\n<p>Tuy ra đời từ 1978 tại Seoul &ndash; H&agrave;n Quốc, nhưng thương hiệu&nbsp;<span>Lock&amp;Lock</span>&nbsp;chỉ chập chững với những sản phẩm nhựa đơn giản để chứa đựng v&agrave; bảo quản tạm thời thực phẩm. Trải qua bước chuyển m&igrave;nh với mong muốn vượt bậc c&aacute;c sản phẩm nhựa c&ugrave;ng thời điểm, năm 2001&nbsp;<span>Lock&amp;Lock</span>&nbsp;ti&ecirc;n phong trong việc ph&aacute;t minh ra d&ograve;ng sản phẩm nhiều t&iacute;nh năng, chất lượng cao v&agrave; th&acirc;n thiện với m&ocirc;i trường. L&uacute;c bấy giờ thương hiệu<span>&nbsp;Lock&amp;Lock</span>&nbsp;mới xuất khẩu ra nước ngo&agrave;i, m&agrave; thị trường đầu ti&ecirc;n l&agrave; Mỹ.</p>\r\n<h2><img class=\"size-full wp-image-27051\" title=\"\" src=\"https://i2.wp.com/styleguide.leflair.vn/wp-content/uploads/2018/07/4.jpg?resize=500%2C500&amp;ssl=1\" alt=\"Sản phẩm hộp giữ nhiệt Lock&amp;Lock mang t&iacute;nh tiện dụng, bảo đảm an to&agrave;n cho sức khỏe\" width=\"500\" height=\"500\" data-attachment-id=\"27051\" data-permalink=\"https://styleguide.leflair.vn/thuong-hieu-locklock/4-23/\" data-orig-file=\"https://i2.wp.com/styleguide.leflair.vn/wp-content/uploads/2018/07/4.jpg?fit=500%2C500&amp;ssl=1\" data-orig-size=\"500,500\" data-comments-opened=\"0\" data-image-meta=\"{\" data-image-title=\"4\" data-image-description=\"\" /></h2>\r\n<h2>Sản phẩm hộp giữ nhiệt Lock&amp;Lock mang t&iacute;nh tiện dụng, bảo đảm an to&agrave;n cho sức khỏe&nbsp;</h2>\r\n<p>Đầu ti&ecirc;n, sản phẩm của thương hiệu&nbsp;<span>Lock&amp;Lock</span>&nbsp;đ&aacute;nh v&agrave;o t&acirc;m l&yacute; xem trọng sức khỏe v&agrave; sự an to&agrave;n của người ti&ecirc;u d&ugrave;ng. Từ đ&oacute;, h&atilde;ng lần lượt tung ra thị trường những sản phẩm &ldquo;xanh&rdquo;, như hộp bảo quản thực phẩm, với ưu thế giữ thực phẩm tươi l&acirc;u, ngăn ngừa sự tho&aacute;t vitamin v&agrave; chất dinh dưỡng, ngăn m&ugrave;i hiệu quả, kh&ocirc;ng ph&aacute;t sinh chất độc hại.</p>\r\n<p>Sự thay đổi li&ecirc;n tục mẫu m&atilde; sản phẩm của&nbsp;<span>Lock&amp;Lock</span>&nbsp;đ&atilde; biến tất cả những vật dụng quen thuộc h&agrave;ng ng&agrave;y như: b&aacute;t đũa, ấm ch&eacute;n, nồi nấu, hộp đựng thức ăn,&hellip; th&agrave;nh những vật dụng sinh hoạt c&oacute; h&igrave;nh d&aacute;ng mới mẻ v&agrave; mang lại những trải nghiệm th&uacute; vị v&agrave; sự an t&acirc;m nơi kh&aacute;ch h&agrave;ng.</p>\r\n<p>&nbsp;</p>\r\n<h2>3. C&aacute;c d&ograve;ng sản phẩm nổi bật</h2>\r\n<p>Từ c&ocirc;ng nghệ kh&oacute;a 4 cạnh độc quyền đ&atilde; l&agrave;m n&ecirc;n thương hiệu,&nbsp;<span>Lock&amp;Lock</span>&nbsp;kh&ocirc;ng ngừng cải tiến đa dạng h&oacute;a sản phẩm từ nhựa, sứ, thủy tinh nhằm chiếm lĩnh thị trường. Khi sự tiện dụng phải gắn liền với sức khỏe cũng l&agrave; thời điểm th&aacute;ch thức cho c&aacute;c thương hiệu h&agrave;ng đầu,&nbsp;<span>Lock&amp;Lock</span>&nbsp;một lần nữa đ&atilde; mang những sản phẩm &ldquo;xanh&rdquo; đến người ti&ecirc;u d&ugrave;ng, chia đều trong 7 danh mục ch&iacute;nh: Hộp thực phẩm, dụng cụ bếp, b&igrave;nh giữ nhiệt, b&igrave;nh nước, đồ d&ugrave;ng ngo&agrave;i trời, đồ gia đ&igrave;nh, du lịch, hộp đựng.</p>\r\n<h2><img class=\"wp-image-27053\" title=\"\" src=\"https://i1.wp.com/styleguide.leflair.vn/wp-content/uploads/2018/07/6.jpg?resize=500%2C500&amp;ssl=1\" alt=\"D&ograve;ng sản phẩm Bisfree dẫn đầu về sản phẩm &ldquo;xanh&rdquo;- Bảo quản thực phẩm với độ bền cao v&agrave; an to&agrave;n cho người sử dụng\" width=\"500\" height=\"500\" data-attachment-id=\"27053\" data-permalink=\"https://styleguide.leflair.vn/thuong-hieu-locklock/6-17/\" data-orig-file=\"https://i1.wp.com/styleguide.leflair.vn/wp-content/uploads/2018/07/6.jpg?fit=564%2C564&amp;ssl=1\" data-orig-size=\"564,564\" data-comments-opened=\"0\" data-image-meta=\"{\" data-image-title=\"6\" data-image-description=\"\" /></h2>\r\n<h2>D&ograve;ng sản phẩm Bisfree dẫn đầu về sản phẩm &ldquo;xanh&rdquo;- Bảo quản thực phẩm với độ bền cao v&agrave; an to&agrave;n cho người sử dụng&nbsp;</h2>\r\n<p>Ngo&agrave;i hộp đựng thực phẩm giữ nhiệt, khi nhắc đến&nbsp;<span>Lock&amp;Lock</span>, người ta nghĩ ngay đến c&aacute;c sản phẩm b&igrave;nh giữ nhiệt Hot&amp;Cool với mẫu m&atilde; đa dạng, bắt mắt v&agrave; mang t&iacute;nh thời trang như: D&ograve;ng sản phẩm nổi bật như FRUIT, COUPLE mang đến sự ngọt ng&agrave;o, CAPSULE hiện đại.</p>\r\n<h2><img class=\"wp-image-27055\" title=\"\" src=\"https://i1.wp.com/styleguide.leflair.vn/wp-content/uploads/2018/07/9.jpg?resize=500%2C350&amp;ssl=1\" alt=\"Lock&amp;Lock Emotion nhỏ gọn v&agrave; đầy m&agrave;u sắc l&agrave; lựa chọn h&agrave;ng đầu của d&acirc;n văn ph&ograve;ng\" width=\"500\" height=\"350\" data-attachment-id=\"27055\" data-permalink=\"https://styleguide.leflair.vn/thuong-hieu-locklock/9-8/\" data-orig-file=\"https://i1.wp.com/styleguide.leflair.vn/wp-content/uploads/2018/07/9.jpg?fit=600%2C420&amp;ssl=1\" data-orig-size=\"600,420\" data-comments-opened=\"0\" data-image-meta=\"{\" data-image-title=\"9\" data-image-description=\"\" /></h2>\r\n<h2>Lock&amp;Lock Emotion nhỏ gọn v&agrave; đầy m&agrave;u sắc l&agrave; lựa chọn h&agrave;ng đầu của d&acirc;n văn ph&ograve;ng</h2>\r\n<h2><img src=\"https://www.google.com/search?q=gi%E1%BB%9Bi+thi%E1%BB%87u+v%E1%BB%81+lock%26lock&amp;sxsrf=ALeKk01jpsxWsj131LCzHdx07YVioBSZiw:1598688484852&amp;source=lnms&amp;tbm=isch&amp;sa=X&amp;ved=2ahUKEwiJz_vZ-r_rAhUkxYsBHaZYAbwQ_AUoAXoECAwQAw&amp;biw=1920&amp;bih=937#imgrc=6rmu-ezy07F6AM\" alt=\"\" /></h2>\r\n</div>');
 
 -- --------------------------------------------------------
 
@@ -286,8 +288,8 @@ CREATE TABLE `table_product` (
 --
 
 INSERT INTO `table_product` (`id`, `cat1_id`, `cat2_id`, `ten`, `tenkhongdau`, `gia`, `giatext`, `masp`, `hethang`, `photo`, `chitietsanpham`, `thongtinsanpham`, `SP_Best`, `soldOut`, `box`, `online`, `link`, `craw_detail`, `ngaytao`) VALUES
-(1, 1, 1, 'Bộ 3 hộp thủy tinh L&L Euro (LLG214*2, LLG224*1)', 'bo-3-hop-thuy-tinh-ll-euro-llg2142-llg2241', 570000, '570,000₫', 'LLG224S3', 0, 'http://www.locknlock.vn/data/base/goods/small/201900833453671.jpg', '<p><img src=\"http://www.locknlock.vn/prod/spec_img/LLG224S3%5F1.jpg\" title=\"LLG224S3%5F1.jpg\"><br style=\"clear:both;\"> </p>', '\r\n						<table class=\"detail_gosi\">\n<caption>Thông tin Sản phẩm </caption>\r\n						<colgroup>\n<col width=\"25%\">\n<col width=\"\">\n</colgroup>\n<tbody>\n<tr>\n<th>Thương hiệu</th>\r\n								<td>Lock&amp;Lock<br>\n</td>\r\n							</tr>\n<tr>\n<th>Nơi sản xuất</th>\r\n								<td>Việt Nam</td>\r\n							</tr>\n<tr>\n<th>Chất liệu</th>\r\n								<td>Borosilicate</td>\r\n							</tr>\n<tr>\n<th>Dung tích</th>\r\n								<td>500ml*2; 750ml*1</td>\r\n							</tr>\n</tbody>\n</table>', 0, 1, 0, 0, 'http://locknlock.vn/goods/detail.asp?gno=43096&cate=652', 1, 1595786213),
-(2, 1, 1, 'HPL550- Hộp bảo quản gạo bằng nhựa Lock&Lock 12kg', 'hpl550-hop-bao-quan-gao-bang-nhua-locklock-12kg', 290000, '290,000₫', 'HPL550', 0, 'http://www.locknlock.vn/data/base/goods/small/201900832117140.jpg', '<p><img src=\"http://www.locknlock.vn/prod/spec_img/HPL550%2D%5Fdesign.jpg\" title=\"HPL550%2D%5Fdesign.jpg\"><br style=\"clear:both;\"> </p>', '\r\n						<table class=\"detail_gosi\">\n<caption>Thông tin Sản phẩm </caption>\r\n						<colgroup>\n<col width=\"25%\">\n<col width=\"\">\n</colgroup>\n<tbody>\n<tr>\n<th>Thương hiệu</th>\r\n								<td>Lock&amp;Lock</td>\r\n							</tr>\n<tr>\n<th>Nơi Sản xuất</th>\r\n								<td>Trung Quốc<br>\n</td>\r\n							</tr>\n<tr>\n<th>Kích thước</th>\r\n								<td>370 x 215 x 290 (mm)</td>\r\n							</tr>\n<tr>\n<th>Chất liệu</th>\r\n								<td>Nhựa PP , PS</td>\r\n							</tr>\n<tr>\n<th>Màu sắc</th>\r\n								<td>Trắng</td>\r\n							</tr>\n</tbody>\n</table>', 0, 1, 0, 0, 'http://locknlock.vn/goods/detail.asp?gno=43095&cate=652', 1, 1595786213),
+(1, 1, 1, 'Bộ 3 hộp thủy tinh L&L Euro (LLG214*2, LLG224*1)', 'bo-3-hop-thuy-tinh-ll-euro-llg2142-llg2241', 570000, '570,000₫', 'LLG224S3', 0, 'http://www.locknlock.vn/data/base/goods/etc/201901/201900833453671_3.jpg', '<p><img title=\"LLG224S3%5F1.jpg\" src=\"http://www.locknlock.vn/prod/spec_img/LLG224S3%5F1.jpg\" alt=\"\" /><br style=\"clear: both;\" />&nbsp;</p>', '\r\n						<table class=\"detail_gosi\">\n<caption>Thông tin Sản phẩm </caption>\r\n						<colgroup>\n<col width=\"25%\">\n<col width=\"\">\n</colgroup>\n<tbody>\n<tr>\n<th>Thương hiệu</th>\r\n								<td>Lock&amp;Lock<br>\n</td>\r\n							</tr>\n<tr>\n<th>Nơi sản xuất</th>\r\n								<td>Việt Nam</td>\r\n							</tr>\n<tr>\n<th>Chất liệu</th>\r\n								<td>Borosilicate</td>\r\n							</tr>\n<tr>\n<th>Dung tích</th>\r\n								<td>500ml*2; 750ml*1</td>\r\n							</tr>\n</tbody>\n</table>', 0, 1, 0, 1, 'http://locknlock.vn/goods/detail.asp?gno=43096&cate=652', 1, 1595786213),
+(2, 1, 1, 'HPL550- Hộp bảo quản gạo bằng nhựa Lock&Lock 12kg', 'hpl550-hop-bao-quan-gao-bang-nhua-locklock-12kg', 290000, '290,000₫', 'HPL550', 0, 'http://www.locknlock.vn/data/base/goods/small/201900832117140.jpg', '<p><img title=\"HPL550%2D%5Fdesign.jpg\" src=\"http://www.locknlock.vn/prod/spec_img/HPL550%2D%5Fdesign.jpg\" alt=\"\" /><br style=\"clear: both;\" />&nbsp;</p>', '\r\n						<table class=\"detail_gosi\">\n<caption>Thông tin Sản phẩm </caption>\r\n						<colgroup>\n<col width=\"25%\">\n<col width=\"\">\n</colgroup>\n<tbody>\n<tr>\n<th>Thương hiệu</th>\r\n								<td>Lock&amp;Lock</td>\r\n							</tr>\n<tr>\n<th>Nơi Sản xuất</th>\r\n								<td>Trung Quốc<br>\n</td>\r\n							</tr>\n<tr>\n<th>Kích thước</th>\r\n								<td>370 x 215 x 290 (mm)</td>\r\n							</tr>\n<tr>\n<th>Chất liệu</th>\r\n								<td>Nhựa PP , PS</td>\r\n							</tr>\n<tr>\n<th>Màu sắc</th>\r\n								<td>Trắng</td>\r\n							</tr>\n</tbody>\n</table>', 0, 1, 0, 1, 'http://locknlock.vn/goods/detail.asp?gno=43095&cate=652', 1, 1595786213),
 (3, 1, 1, 'Hộp nhựa L&L Twist Two way 360ml+310ml - Nắp màu đỏ', 'hop-nhua-ll-twist-two-way-360ml310ml-nap-mau-do', 85000, '85,000₫', 'LLS221R', 0, 'http://www.locknlock.vn/data/base/goods/small/201835450014217.jpg', '<p><img src=\"http://www.locknlock.vn/prod/spec_img/LLS221R.jpg\" title=\"LLS221R.jpg\"><br style=\"clear:both;\"> </p>', '\r\n						<table class=\"detail_gosi\">\n<caption>Thông tin Sản phẩm </caption>\r\n						<colgroup>\n<col width=\"25%\">\n<col width=\"\">\n</colgroup>\n<tbody>\n<tr>\n<th>Thương hiệu</th>\r\n								<td>Lock&amp;Lock</td>\r\n							</tr>\n<tr>\n<th>Nơi sản xuất</th>\r\n								<td>Việt Nam</td>\r\n							</tr>\n<tr>\n<th>Chất liệu</th>\r\n								<td>Nhựa PP</td>\r\n							</tr>\n<tr>\n<th>Dung tích</th>\r\n								<td>360ml+310ml</td>\r\n							</tr>\n</tbody>\n</table>', 0, 1, 0, 0, 'http://locknlock.vn/goods/detail.asp?gno=43064&cate=652', 1, 1595786213),
 (4, 1, 1, 'Bộ 6 hộp bảo quản Lock&Lock Classic (HPL806*2, HPL807*2, HPL816*1, HPL817*1)', 'bo-6-hop-bao-quan-locklock-classic-hpl8062-hpl8072-hpl8161-hpl8171', 380000, '380,000₫', 'HPL806S6', 0, 'http://www.locknlock.vn/data/base/goods/small/201834440539728.JPG', '<p><img src=\"http://www.locknlock.vn/prod/spec_img/3.JPG\" title=\"3.JPG\"><br style=\"clear:both;\"><img src=\"http://www.locknlock.vn/prod/spec_img/HPL806S6.JPG\" title=\"HPL806S6.JPG\"><br style=\"clear:both;\"><img src=\"http://www.locknlock.vn/prod/spec_img/HPL806S6%2DCover.JPG\" title=\"HPL806S6%2DCover.JPG\"><br style=\"clear:both;\"> </p>', '\r\n						<table class=\"detail_gosi\">\n<caption>Thông tin Sản phẩm </caption>\r\n						<colgroup>\n<col width=\"25%\">\n<col width=\"\">\n</colgroup>\n<tbody>\n<tr>\n<th>Thương hiệu</th>\r\n								<td>Lock&amp;Lock</td>\r\n							</tr>\n<tr>\n<th>Xuất xứ thương hiệu</th>\r\n								<td>Hàn Quốc</td>\r\n							</tr>\n<tr>\n<th>Sản xuất tại</th>\r\n								<td>Viêt Nam</td>\r\n							</tr>\n<tr>\n<th>Chất liệu</th>\r\n								<td>Nhựa PP</td>\r\n							</tr>\n</tbody>\n</table>', 2, 1, 1, 0, 'http://locknlock.vn/goods/detail.asp?gno=43049&cate=652', 1, 1595786213),
 (5, 1, 1, 'Bộ 6 hộp bảo quản Lock&Lock Classic (HPL817*2, HPL817C*1, HPL854*2, HPL855*1)', 'bo-6-hop-bao-quan-locklock-classic-hpl8172-hpl817c1-hpl8542-hpl8551', 530000, '530,000₫', 'HPL817S5', 0, 'http://www.locknlock.vn/data/base/goods/small/201834440539358.JPG', '<p><img src=\"http://www.locknlock.vn/prod/spec_img/HPL817S5%5Fcover%5F5.JPG\" title=\"HPL817S5%5Fcover%5F5.JPG\"><br style=\"clear:both;\"><img src=\"http://www.locknlock.vn/prod/spec_img/HPL817S5%5Fcover%5F2.JPG\" title=\"HPL817S5%5Fcover%5F2.JPG\"><br style=\"clear:both;\"><img src=\"http://www.locknlock.vn/prod/spec_img/HPL817S5%5Fcover%5F1.JPG\" title=\"HPL817S5%5Fcover%5F1.JPG\"><br style=\"clear:both;\"> </p>', '\r\n						<table class=\"detail_gosi\">\n<caption>Thông tin Sản phẩm </caption>\r\n						<colgroup>\n<col width=\"25%\">\n<col width=\"\">\n</colgroup>\n<tbody>\n<tr>\n<th>Thương hiệu</th>\r\n								<td>Lock&amp;Lock</td>\r\n							</tr>\n<tr>\n<th>Xuất xứ thương hiệu</th>\r\n								<td>Hàn Quốc</td>\r\n							</tr>\n<tr>\n<th>Sản xuất tại</th>\r\n								<td>Viêt Nam</td>\r\n							</tr>\n<tr>\n<th>Chất liệu</th>\r\n								<td>Nhựa PP</td>\r\n							</tr>\n</tbody>\n</table>', 0, 1, 1, 0, 'http://locknlock.vn/goods/detail.asp?gno=43048&cate=652', 1, 1595786213),
@@ -1786,8 +1788,9 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`ID`, `Firstname`, `Lastname`, `Gender`, `Email`, `Password`, `Phone`, `Address`) VALUES
-(13, 'nguyen', 'van toan b', 'Male', 'b@gmail', '$2y$10$IYovXK2kTPPhw4QEdOX3duyQPNSofkEVKPhLPwciw7KWYJyfv0l4O', '123', '202 tphcm'),
-(15, 'le', 'the', 'Male', 'the@gmail', '$2y$10$uq8DkpJeqgb/H8J/zf45buzjU584KefbfLND0Qz3Up1BvCWILIxCK', '12345', '202 tphcm');
+(13, 'nguyen', 'van toan b ', 'Male', 'b@gmail', '$2y$10$Wu4b7x.H3c4WYfEHTrWVuuKU.xU4dv9usc.BJbnDuxOd5qKgkxbQ.', '1234', '202 tphcm'),
+(15, 'le', 'the', 'Male', 'the@gmail', '$2y$10$uq8DkpJeqgb/H8J/zf45buzjU584KefbfLND0Qz3Up1BvCWILIxCK', '12345', '202 tphcm'),
+(16, 'B', 'Nguyen', 'Male', 'admin@gmail', '$2y$10$ATS4He2SjZBVkBvv7WtGVemjYtX3eFf.XdOcJrcVsAClNI7N0QgoO', '11', '1122tphcm');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -1869,25 +1872,19 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT cho bảng `donhang`
 --
 ALTER TABLE `donhang`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT cho bảng `table_category_1`
 --
 ALTER TABLE `table_category_1`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT cho bảng `table_category_2`
 --
 ALTER TABLE `table_category_2`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
-
---
--- AUTO_INCREMENT cho bảng `table_congty`
---
-ALTER TABLE `table_congty`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT cho bảng `table_post`
@@ -1899,19 +1896,19 @@ ALTER TABLE `table_post`
 -- AUTO_INCREMENT cho bảng `table_product`
 --
 ALTER TABLE `table_product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=418;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=419;
 
 --
 -- AUTO_INCREMENT cho bảng `table_product_image`
 --
 ALTER TABLE `table_product_image`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1031;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1040;
 
 --
 -- AUTO_INCREMENT cho bảng `user`
 --
 ALTER TABLE `user`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
