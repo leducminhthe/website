@@ -4,12 +4,22 @@
 	include '../classes/donhang.php';  
 
 	$donhang = new donhang(); 
+
+	if (isset($_GET['donhang'])) {
+		$email = $_GET['donhang']; // Lấy catid trên host
+    	$delDonhang = $donhang -> del_donhang($email);
+	}
 ?>
 
         <div class="grid_10">
             <div class="box round first grid">
                 <h2>Đơn hàng khách hàng</h2>
                 <div class="block">  
+                	<?php 
+            			if(isset($delDonhang)){
+                		echo $delDonhang;
+            		}
+         			?>
 		            <table class="data display datatable" id="example">
 					<thead>
 						<tr>
@@ -22,6 +32,7 @@
 							<th>TenSP</th>
 							<th>MaSP</th>
 							<th>SL</th>
+							<th></th>
 						</tr>
 					</thead>
 					<tbody>
@@ -48,6 +59,7 @@
 							<td><?php echo $result['TenSP'] ?></td>
 							<td><?php echo $result['MaSP'] ?></td>
 							<td><?php echo $result['SL'] ?></td>
+							<td><a href="?donhang=<?php echo $result['Email'] ?>" title="">Hoàn thành</a></td>
 						</tr>
 						<?php
 									

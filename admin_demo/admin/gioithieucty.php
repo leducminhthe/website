@@ -21,7 +21,7 @@
     <div class="box round first grid">
         <h2>Company</h2>
         <?php 
-            if(isset($insertCompany) || isset($updateCompany) || $show_company){
+            if(!$show_company == null ){
             foreach ($show_company as $key => $value) { ?>
 
                 <div class="block">
@@ -48,8 +48,32 @@
                 </div>
             <?php } ?>
 
-        <?php } ?>
+        <?php }else{ ?>
 
+            <div class="block">
+                    <form action="" method="post" enctype="multipart/form-data">
+                        <table class="form">
+                            
+                            <tr>
+                                <td style="vertical-align: top; padding-top: 9px;">
+                                    <label>Company</label>
+                                </td>
+                                <td>
+                                    <textarea name="company_desc" class="tinymce"></textarea>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <input type="submit" name="submit" Value="Save" />
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+
+        <?php } ?>
     </div>
 </div>
 <!-- Load TinyMCE -->

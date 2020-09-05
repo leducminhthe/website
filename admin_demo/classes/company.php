@@ -38,7 +38,11 @@
 		{
 			$query = "SELECT * FROM table_congty ";
 			$result = $this->db->select($query);
-			return $result;
+			if ($result) {
+				return $result;
+			}else{
+				return null;
+			}
 		}
 
 		public function update_company($data)

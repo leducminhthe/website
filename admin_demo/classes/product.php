@@ -213,11 +213,11 @@
 			$qr = "DELETE FROM table_product_image where product_id = '$id' ";
 			$result_img = $this->db->delete($qr);
 			if($result_img){
-				$alert = "<span class='success'>Product Deleted Successfully</span>";
-				return $alert;
+				echo "<script>alert('Xóa sản phẩm thành công')</script>";
+				echo "<script>window.location= '/website/admin_demo/admin/productlist.php'</script>";
 			}else {
-				$alert = "<span class='success'>Product Deleted Not Success</span>";
-				return $alert;
+				echo "<script>alert('Xóa sản phẩm không thành công')</script>";
+				echo "<script>window.location= '/website/admin_demo/admin/productlist.php'</script>";
 			}
 		}
 		public function getproductbyId($id)

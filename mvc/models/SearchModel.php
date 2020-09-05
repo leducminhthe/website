@@ -4,7 +4,7 @@
 
 		public function SP($sotin1trang,$from,$search){
 
-	        $qr = "SELECT * FROM table_product WHERE ten LIKE '%$search%' OR masp = '$search' LIMIT $from,$sotin1trang";
+	        $qr = "SELECT * FROM table_product WHERE ten LIKE '%$search%' OR masp = '$search' OR gia LIKE '%$search%'  LIMIT $from,$sotin1trang";
 	        $rows = mysqli_query($this->con2, $qr);
 	        if ( mysqli_num_rows ( $rows ) ) {
         		return $rows;
